@@ -4,5 +4,5 @@ namespace RemoteControlUbuntu.Application.Abstractions;
 
 public interface IExecuteCommandService
 {
-    Task Execute(UserConnectionCommandDto request);
+    Task Execute(ConnectionCommandDto request);
 }

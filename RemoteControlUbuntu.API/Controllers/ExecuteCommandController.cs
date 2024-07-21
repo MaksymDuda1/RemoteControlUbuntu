@@ -9,9 +9,9 @@ namespace RemoteControlUbuntu.API.Controllers;
 public class ExecuteCommandController(IExecuteCommandService executeCommandService) : ControllerBase
 {
     [HttpPost]
-    public async Task<IActionResult> Execute([FromBody] UserConnectionCommandDto request)
+    public async Task<IActionResult> Execute([FromBody] ConnectionCommandDto request)
     {
         await executeCommandService.Execute(request);
-        return Ok();
+        return Ok();                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
     }
 }

@@ -13,3 +13,4 @@
 /home/maksi/RiderProjects/RemoteControlUbuntu/RemoteControlUbuntu.Application/obj/Release/net8.0/refint/RemoteControlUbuntu.Application.dll
 /home/maksi/RiderProjects/RemoteControlUbuntu/RemoteControlUbuntu.Application/obj/Release/net8.0/RemoteControlUbuntu.Application.pdb
 /home/maksi/RiderProjects/RemoteControlUbuntu/RemoteControlUbuntu.Application/obj/Release/net8.0/ref/RemoteControlUbuntu.Application.dll
+/home/maksi/RiderProjects/RemoteControlUbuntu/RemoteControlUbuntu.Application/obj/Release/net8.0/RemoteControlUbuntu.Application.sourcelink.json

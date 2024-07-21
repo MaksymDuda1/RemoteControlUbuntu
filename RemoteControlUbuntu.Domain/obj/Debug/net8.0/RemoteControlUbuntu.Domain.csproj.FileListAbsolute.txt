@@ -10,3 +10,4 @@
 /home/maksi/RiderProjects/RemoteControlUbuntu/RemoteControlUbuntu.Domain/obj/Debug/net8.0/refint/RemoteControlUbuntu.Domain.dll
 /home/maksi/RiderProjects/RemoteControlUbuntu/RemoteControlUbuntu.Domain/obj/Debug/net8.0/RemoteControlUbuntu.Domain.pdb
 /home/maksi/RiderProjects/RemoteControlUbuntu/RemoteControlUbuntu.Domain/obj/Debug/net8.0/ref/RemoteControlUbuntu.Domain.dll
+/home/maksi/RiderProjects/RemoteControlUbuntu/RemoteControlUbuntu.Domain/obj/Debug/net8.0/RemoteControlUbuntu.Domain.sourcelink.json

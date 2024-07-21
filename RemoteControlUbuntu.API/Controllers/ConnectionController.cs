@@ -7,7 +7,9 @@ namespace RemoteControlUbuntu.API.Controllers;
 
 [ApiController]
 [Route("api/connection")]
-public class ConnectionController(IConnectionService connectionService, IUnitOfWork unitOfWork) : ControllerBase
+public class ConnectionController(
+    IConnectionService connectionService,
+    IUnitOfWork unitOfWork) : ControllerBase
 {
     [HttpGet]
     public async Task<ActionResult<ConnectionDto>> GetAll()

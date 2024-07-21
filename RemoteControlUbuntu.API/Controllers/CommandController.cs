@@ -9,7 +9,9 @@ namespace RemoteControlUbuntu.API.Controllers;
 
 [ApiController]
 [Route("api/command")]
-public class CommandController(ICommandService commandService, IUnitOfWork unitOfWork) : ControllerBase
+public class CommandController(
+    ICommandService commandService,
+    IUnitOfWork unitOfWork) : ControllerBase
 {
 
     [HttpGet]

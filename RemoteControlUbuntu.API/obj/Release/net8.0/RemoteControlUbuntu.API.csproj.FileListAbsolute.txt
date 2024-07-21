@@ -128,3 +128,4 @@
 /home/maksi/RiderProjects/RemoteControlUbuntu/RemoteControlUbuntu.API/obj/Release/net8.0/RemoteControlUbuntu.API.pdb
 /home/maksi/RiderProjects/RemoteControlUbuntu/RemoteControlUbuntu.API/obj/Release/net8.0/RemoteControlUbuntu.API.genruntimeconfig.cache
 /home/maksi/RiderProjects/RemoteControlUbuntu/RemoteControlUbuntu.API/obj/Release/net8.0/ref/RemoteControlUbuntu.API.dll
+/home/maksi/RiderProjects/RemoteControlUbuntu/RemoteControlUbuntu.API/obj/Release/net8.0/RemoteControlUbuntu.API.sourcelink.json
