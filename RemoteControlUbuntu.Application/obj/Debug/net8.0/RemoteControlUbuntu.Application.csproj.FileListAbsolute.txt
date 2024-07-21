@@ -1,0 +1,15 @@
+/home/maksi/RiderProjects/RemoteControlUbuntu/RemoteControlUbuntu.Application/bin/Debug/net8.0/RemoteControlUbuntu.Application.deps.json
+/home/maksi/RiderProjects/RemoteControlUbuntu/RemoteControlUbuntu.Application/bin/Debug/net8.0/RemoteControlUbuntu.Application.dll
+/home/maksi/RiderProjects/RemoteControlUbuntu/RemoteControlUbuntu.Application/bin/Debug/net8.0/RemoteControlUbuntu.Application.pdb
+/home/maksi/RiderProjects/RemoteControlUbuntu/RemoteControlUbuntu.Application/bin/Debug/net8.0/RemoteControlUbuntu.Domain.dll
+/home/maksi/RiderProjects/RemoteControlUbuntu/RemoteControlUbuntu.Application/bin/Debug/net8.0/RemoteControlUbuntu.Domain.pdb
+/home/maksi/RiderProjects/RemoteControlUbuntu/RemoteControlUbuntu.Application/obj/Debug/net8.0/RemoteControlUbuntu.Application.csproj.AssemblyReference.cache
+/home/maksi/RiderProjects/RemoteControlUbuntu/RemoteControlUbuntu.Application/obj/Debug/net8.0/RemoteControlUbuntu.Application.GeneratedMSBuildEditorConfig.editorconfig
+/home/maksi/RiderProjects/RemoteControlUbuntu/RemoteControlUbuntu.Application/obj/Debug/net8.0/RemoteControlUbuntu.Application.AssemblyInfoInputs.cache
+/home/maksi/RiderProjects/RemoteControlUbuntu/RemoteControlUbuntu.Application/obj/Debug/net8.0/RemoteControlUbuntu.Application.AssemblyInfo.cs
+/home/maksi/RiderProjects/RemoteControlUbuntu/RemoteControlUbuntu.Application/obj/Debug/net8.0/RemoteControlUbuntu.Application.csproj.CoreCompileInputs.cache
+/home/maksi/RiderProjects/RemoteControlUbuntu/RemoteControlUbuntu.Application/obj/Debug/net8.0/RemoteControlUbuntu.Application.csproj.CopyComplete
+/home/maksi/RiderProjects/RemoteControlUbuntu/RemoteControlUbuntu.Application/obj/Debug/net8.0/RemoteControlUbuntu.Application.dll
+/home/maksi/RiderProjects/RemoteControlUbuntu/RemoteControlUbuntu.Application/obj/Debug/net8.0/refint/RemoteControlUbuntu.Application.dll
+/home/maksi/RiderProjects/RemoteControlUbuntu/RemoteControlUbuntu.Application/obj/Debug/net8.0/RemoteControlUbuntu.Application.pdb
+/home/maksi/RiderProjects/RemoteControlUbuntu/RemoteControlUbuntu.Application/obj/Debug/net8.0/ref/RemoteControlUbuntu.Application.dll

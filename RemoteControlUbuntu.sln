@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RemoteControlUbuntu.API", "RemoteControlUbuntu.API\RemoteControlUbuntu.API.csproj", "{F7DD3028-5C79-4341-9535-C1CF927B1F66}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RemoteControlUbuntu.Application", "RemoteControlUbuntu.Application\RemoteControlUbuntu.Application.csproj", "{02324102-3E8E-464F-B1C6-47A5725B84D1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RemoteControlUbuntu.Infrastructure", "RemoteControlUbuntu.Infrastructure\RemoteControlUbuntu.Infrastructure.csproj", "{595E35EA-E3EA-45F1-9A8D-1DCBC23D0C69}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RemoteControlUbuntu.Domain", "RemoteControlUbuntu.Domain\RemoteControlUbuntu.Domain.csproj", "{63B8721F-A39B-4514-8A57-16081EDFA024}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F7DD3028-5C79-4341-9535-C1CF927B1F66}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7DD3028-5C79-4341-9535-C1CF927B1F66}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7DD3028-5C79-4341-9535-C1CF927B1F66}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7DD3028-5C79-4341-9535-C1CF927B1F66}.Release|Any CPU.Build.0 = Release|Any CPU
+		{02324102-3E8E-464F-B1C6-47A5725B84D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02324102-3E8E-464F-B1C6-47A5725B84D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02324102-3E8E-464F-B1C6-47A5725B84D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02324102-3E8E-464F-B1C6-47A5725B84D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{595E35EA-E3EA-45F1-9A8D-1DCBC23D0C69}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{595E35EA-E3EA-45F1-9A8D-1DCBC23D0C69}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{595E35EA-E3EA-45F1-9A8D-1DCBC23D0C69}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{595E35EA-E3EA-45F1-9A8D-1DCBC23D0C69}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63B8721F-A39B-4514-8A57-16081EDFA024}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63B8721F-A39B-4514-8A57-16081EDFA024}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63B8721F-A39B-4514-8A57-16081EDFA024}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63B8721F-A39B-4514-8A57-16081EDFA024}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

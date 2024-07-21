@@ -1,0 +1,8 @@
+{
+    "appService.zipIgnorePattern": [
+        "node_modules{,/**}",
+        ".vscode{,/**}"
+    ],
+    "appService.defaultWebAppToDeploy": "/subscriptions/068a3b80-8081-479f-9339-762493af4ce1/resourceGroups/northeurope/providers/Microsoft.Web/sites/ubunturemoteweb-layer",
+    "appService.deploySubpath": "dist/web-layer"
+}

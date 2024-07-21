@@ -1,0 +1,778 @@
+0 verbose cli /usr/bin/node /usr/bin/npm
+1 info using npm@10.7.0
+2 info using node@v20.15.1
+3 silly config:load:file:/usr/lib/node_modules/npm/npmrc
+4 silly config:load:file:/home/ubuntu/.npmrc
+5 silly config:load:file:/usr/etc/npmrc
+6 verbose title npm install @angular/cli
+7 verbose argv "install" "--global" "@angular/cli"
+8 verbose logfile logs-max:10 dir:/home/ubuntu/.npm/_logs/2024-07-21T12_28_22_949Z-
+9 verbose logfile /home/ubuntu/.npm/_logs/2024-07-21T12_28_22_949Z-debug-0.log
+10 silly logfile done cleaning log files
+11 silly idealTree buildDeps
+12 silly fetch manifest @angular/cli@*
+13 http fetch GET 200 https://registry.npmjs.org/@angular%2fcli 1100ms (cache miss)
+14 silly placeDep ROOT @angular/cli@18.1.1 OK for:  want: *
+15 silly fetch manifest ini@4.1.3
+16 http fetch GET 200 https://registry.npmjs.org/ini 83ms (cache miss)
+17 silly fetch manifest yargs@17.7.2
+18 http fetch GET 200 https://registry.npmjs.org/yargs 90ms (cache miss)
+19 silly fetch manifest listr2@8.2.3
+20 http fetch GET 200 https://registry.npmjs.org/listr2 528ms (cache miss)
+21 silly fetch manifest pacote@18.0.6
+22 http fetch GET 200 https://registry.npmjs.org/pacote 57ms (cache miss)
+23 silly fetch manifest semver@7.6.2
+24 http fetch GET 200 https://registry.npmjs.org/semver 38ms (cache miss)
+25 silly fetch manifest resolve@1.22.8
+26 http fetch GET 200 https://registry.npmjs.org/resolve 51ms (cache miss)
+27 silly fetch manifest jsonc-parser@3.3.1
+28 http fetch GET 200 https://registry.npmjs.org/jsonc-parser 46ms (cache miss)
+29 silly fetch manifest npm-package-arg@11.0.2
+30 http fetch GET 200 https://registry.npmjs.org/npm-package-arg 42ms (cache miss)
+31 silly fetch manifest @inquirer/prompts@5.0.7
+32 http fetch GET 200 https://registry.npmjs.org/@inquirer%2fprompts 981ms (cache miss)
+33 silly fetch manifest @yarnpkg/lockfile@1.1.0
+34 http fetch GET 200 https://registry.npmjs.org/@yarnpkg%2flockfile 124ms (cache miss)
+35 silly fetch manifest npm-pick-manifest@9.0.1
+36 http fetch GET 200 https://registry.npmjs.org/npm-pick-manifest 31ms (cache miss)
+37 silly fetch manifest symbol-observable@4.0.0
+38 http fetch GET 200 https://registry.npmjs.org/symbol-observable 481ms (cache miss)
+39 silly fetch manifest @schematics/angular@18.1.1
+40 http fetch GET 200 https://registry.npmjs.org/@schematics%2fangular 144ms (cache miss)
+41 silly fetch manifest @angular-devkit/core@18.1.1
+42 http fetch GET 200 https://registry.npmjs.org/@angular-devkit%2fcore 992ms (cache miss)
+43 silly fetch manifest @angular-devkit/architect@0.1801.1
+44 http fetch GET 200 https://registry.npmjs.org/@angular-devkit%2farchitect 990ms (cache miss)
+45 silly fetch manifest @angular-devkit/schematics@18.1.1
+46 http fetch GET 200 https://registry.npmjs.org/@angular-devkit%2fschematics 1055ms (cache miss)
+47 silly fetch manifest @listr2/prompt-adapter-inquirer@2.0.13
+48 http fetch GET 200 https://registry.npmjs.org/@listr2%2fprompt-adapter-inquirer 994ms (cache miss)
+49 silly fetch manifest chokidar@^3.5.2
+50 http fetch GET 200 https://registry.npmjs.org/chokidar 34ms (cache miss)
+51 silly placeDep node_modules/@angular/cli @angular-devkit/architect@0.1801.1 OK for: @angular/cli@18.1.1 want: 0.1801.1
+52 silly placeDep node_modules/@angular/cli @angular-devkit/core@18.1.1 OK for: @angular/cli@18.1.1 want: 18.1.1
+53 silly placeDep node_modules/@angular/cli @angular-devkit/schematics@18.1.1 OK for: @angular/cli@18.1.1 want: 18.1.1
+54 silly placeDep node_modules/@angular/cli @inquirer/prompts@5.0.7 OK for: @angular/cli@18.1.1 want: 5.0.7
+55 silly placeDep node_modules/@angular/cli @listr2/prompt-adapter-inquirer@2.0.13 OK for: @angular/cli@18.1.1 want: 2.0.13
+56 silly placeDep node_modules/@angular/cli @schematics/angular@18.1.1 OK for: @angular/cli@18.1.1 want: 18.1.1
+57 silly placeDep node_modules/@angular/cli @yarnpkg/lockfile@1.1.0 OK for: @angular/cli@18.1.1 want: 1.1.0
+58 silly placeDep node_modules/@angular/cli ini@4.1.3 OK for: @angular/cli@18.1.1 want: 4.1.3
+59 silly placeDep node_modules/@angular/cli jsonc-parser@3.3.1 OK for: @angular/cli@18.1.1 want: 3.3.1
+60 silly placeDep node_modules/@angular/cli listr2@8.2.3 OK for: @angular/cli@18.1.1 want: 8.2.3
+61 silly placeDep node_modules/@angular/cli npm-package-arg@11.0.2 OK for: @angular/cli@18.1.1 want: 11.0.2
+62 silly placeDep node_modules/@angular/cli npm-pick-manifest@9.0.1 OK for: @angular/cli@18.1.1 want: 9.0.1
+63 silly placeDep node_modules/@angular/cli pacote@18.0.6 OK for: @angular/cli@18.1.1 want: 18.0.6
+64 silly placeDep node_modules/@angular/cli resolve@1.22.8 OK for: @angular/cli@18.1.1 want: 1.22.8
+65 silly placeDep node_modules/@angular/cli semver@7.6.2 OK for: @angular/cli@18.1.1 want: 7.6.2
+66 silly placeDep node_modules/@angular/cli symbol-observable@4.0.0 OK for: @angular/cli@18.1.1 want: 4.0.0
+67 silly placeDep node_modules/@angular/cli yargs@17.7.2 OK for: @angular/cli@18.1.1 want: 17.7.2
+68 silly fetch manifest rxjs@7.8.1
+69 http fetch GET 200 https://registry.npmjs.org/rxjs 568ms (cache miss)
+70 silly fetch manifest ajv@8.16.0
+71 http fetch GET 200 https://registry.npmjs.org/ajv 47ms (cache miss)
+72 silly fetch manifest picomatch@4.0.2
+73 http fetch GET 200 https://registry.npmjs.org/picomatch 57ms (cache miss)
+74 silly fetch manifest source-map@0.7.4
+75 http fetch GET 200 https://registry.npmjs.org/source-map 41ms (cache miss)
+76 silly fetch manifest ajv-formats@3.0.1
+77 http fetch GET 200 https://registry.npmjs.org/ajv-formats 56ms (cache miss)
+78 silly fetch manifest ora@5.4.1
+79 http fetch GET 200 https://registry.npmjs.org/ora 61ms (cache miss)
+80 silly fetch manifest magic-string@0.30.10
+81 http fetch GET 200 https://registry.npmjs.org/magic-string 46ms (cache miss)
+82 silly fetch manifest @inquirer/input@^2.1.11
+83 http fetch GET 200 https://registry.npmjs.org/@inquirer%2finput 100ms (cache miss)
+84 silly fetch manifest @inquirer/editor@^2.1.11
+85 http fetch GET 200 https://registry.npmjs.org/@inquirer%2feditor 990ms (cache miss)
+86 silly fetch manifest @inquirer/expand@^2.1.11
+87 http fetch GET 200 https://registry.npmjs.org/@inquirer%2fexpand 1025ms (cache miss)
+88 silly fetch manifest @inquirer/select@^2.3.7
+89 http fetch GET 200 https://registry.npmjs.org/@inquirer%2fselect 968ms (cache miss)
+90 silly fetch manifest @inquirer/confirm@^3.1.11
+91 http fetch GET 200 https://registry.npmjs.org/@inquirer%2fconfirm 996ms (cache miss)
+92 silly fetch manifest @inquirer/rawlist@^2.1.11
+93 http fetch GET 200 https://registry.npmjs.org/@inquirer%2frawlist 1109ms (cache miss)
+94 silly fetch manifest @inquirer/checkbox@^2.3.7
+95 http fetch GET 200 https://registry.npmjs.org/@inquirer%2fcheckbox 967ms (cache miss)
+96 silly fetch manifest @inquirer/password@^2.1.11
+97 http fetch GET 200 https://registry.npmjs.org/@inquirer%2fpassword 991ms (cache miss)
+98 silly fetch manifest @inquirer/type@^1.3.3
+99 http fetch GET 200 https://registry.npmjs.org/@inquirer%2ftype 77ms (cache miss)
+100 silly fetch manifest cli-truncate@^4.0.0
+101 http fetch GET 200 https://registry.npmjs.org/cli-truncate 59ms (cache miss)
+102 silly fetch manifest colorette@^2.0.20
+103 http fetch GET 200 https://registry.npmjs.org/colorette 53ms (cache miss)
+104 silly fetch manifest eventemitter3@^5.0.1
+105 http fetch GET 200 https://registry.npmjs.org/eventemitter3 43ms (cache miss)
+106 silly fetch manifest log-update@^6.0.0
+107 http fetch GET 200 https://registry.npmjs.org/log-update 34ms (cache miss)
+108 silly fetch manifest rfdc@^1.4.1
+109 http fetch GET 200 https://registry.npmjs.org/rfdc 89ms (cache miss)
+110 silly fetch manifest wrap-ansi@^9.0.0
+111 http fetch GET 200 https://registry.npmjs.org/wrap-ansi 35ms (cache miss)
+112 silly fetch manifest semver@^7.3.5
+113 silly fetch manifest proc-log@^4.0.0
+114 http fetch GET 200 https://registry.npmjs.org/proc-log 32ms (cache miss)
+115 silly fetch manifest hosted-git-info@^7.0.0
+116 http fetch GET 200 https://registry.npmjs.org/hosted-git-info 30ms (cache miss)
+117 silly fetch manifest validate-npm-package-name@^5.0.0
+118 http fetch GET 200 https://registry.npmjs.org/validate-npm-package-name 30ms (cache miss)
+119 silly fetch manifest npm-install-checks@^6.0.0
+120 http fetch GET 200 https://registry.npmjs.org/npm-install-checks 45ms (cache miss)
+121 silly fetch manifest npm-normalize-package-bin@^3.0.0
+122 http fetch GET 200 https://registry.npmjs.org/npm-normalize-package-bin 30ms (cache miss)
+123 silly fetch manifest tar@^6.1.11
+124 http fetch GET 200 https://registry.npmjs.org/tar 60ms (cache miss)
+125 silly fetch manifest ssri@^10.0.0
+126 http fetch GET 200 https://registry.npmjs.org/ssri 44ms (cache miss)
+127 silly fetch manifest cacache@^18.0.0
+128 http fetch GET 200 https://registry.npmjs.org/cacache 46ms (cache miss)
+129 silly fetch manifest minipass@^7.0.2
+130 http fetch GET 200 https://registry.npmjs.org/minipass 37ms (cache miss)
+131 silly fetch manifest sigstore@^2.2.0
+132 http fetch GET 200 https://registry.npmjs.org/sigstore 95ms (cache miss)
+133 silly fetch manifest @npmcli/git@^5.0.0
+134 http fetch GET 200 https://registry.npmjs.org/@npmcli%2fgit 75ms (cache miss)
+135 silly fetch manifest fs-minipass@^3.0.0
+136 http fetch GET 200 https://registry.npmjs.org/fs-minipass 31ms (cache miss)
+137 silly fetch manifest npm-packlist@^8.0.0
+138 http fetch GET 200 https://registry.npmjs.org/npm-packlist 49ms (cache miss)
+139 silly fetch manifest promise-retry@^2.0.1
+140 http fetch GET 200 https://registry.npmjs.org/promise-retry 32ms (cache miss)
+141 silly fetch manifest @npmcli/run-script@^8.0.0
+142 http fetch GET 200 https://registry.npmjs.org/@npmcli%2frun-script 57ms (cache miss)
+143 silly fetch manifest npm-registry-fetch@^17.0.0
+144 http fetch GET 200 https://registry.npmjs.org/npm-registry-fetch 40ms (cache miss)
+145 silly fetch manifest @npmcli/package-json@^5.1.0
+146 http fetch GET 200 https://registry.npmjs.org/@npmcli%2fpackage-json 104ms (cache miss)
+147 silly fetch manifest @npmcli/promise-spawn@^7.0.0
+148 http fetch GET 200 https://registry.npmjs.org/@npmcli%2fpromise-spawn 85ms (cache miss)
+149 silly fetch manifest @npmcli/installed-package-contents@^2.0.1
+150 http fetch GET 200 https://registry.npmjs.org/@npmcli%2finstalled-package-contents 58ms (cache miss)
+151 silly fetch manifest is-core-module@^2.13.0
+152 http fetch GET 200 https://registry.npmjs.org/is-core-module 43ms (cache miss)
+153 silly fetch manifest path-parse@^1.0.7
+154 http fetch GET 200 https://registry.npmjs.org/path-parse 32ms (cache miss)
+155 silly fetch manifest supports-preserve-symlinks-flag@^1.0.0
+156 http fetch GET 200 https://registry.npmjs.org/supports-preserve-symlinks-flag 497ms (cache miss)
+157 silly fetch manifest y18n@^5.0.5
+158 http fetch GET 200 https://registry.npmjs.org/y18n 36ms (cache miss)
+159 silly fetch manifest cliui@^8.0.1
+160 http fetch GET 200 https://registry.npmjs.org/cliui 28ms (cache miss)
+161 silly fetch manifest escalade@^3.1.1
+162 http fetch GET 200 https://registry.npmjs.org/escalade 30ms (cache miss)
+163 silly fetch manifest string-width@^4.2.3
+164 http fetch GET 200 https://registry.npmjs.org/string-width 50ms (cache miss)
+165 silly fetch manifest yargs-parser@^21.1.1
+166 http fetch GET 200 https://registry.npmjs.org/yargs-parser 35ms (cache miss)
+167 silly fetch manifest get-caller-file@^2.0.5
+168 http fetch GET 200 https://registry.npmjs.org/get-caller-file 29ms (cache miss)
+169 silly fetch manifest require-directory@^2.1.1
+170 http fetch GET 200 https://registry.npmjs.org/require-directory 31ms (cache miss)
+171 silly placeDep node_modules/@angular/cli rxjs@7.8.1 OK for: @angular-devkit/architect@0.1801.1 want: 7.8.1
+172 silly fetch manifest tslib@^2.1.0
+173 http fetch GET 200 https://registry.npmjs.org/tslib 38ms (cache miss)
+174 silly placeDep node_modules/@angular/cli ajv@8.16.0 OK for: @angular-devkit/core@18.1.1 want: 8.16.0
+175 silly placeDep node_modules/@angular/cli ajv-formats@3.0.1 OK for: @angular-devkit/core@18.1.1 want: 3.0.1
+176 silly placeDep node_modules/@angular/cli picomatch@4.0.2 OK for: @angular-devkit/core@18.1.1 want: 4.0.2
+177 silly placeDep node_modules/@angular/cli source-map@0.7.4 OK for: @angular-devkit/core@18.1.1 want: 0.7.4
+178 silly fetch manifest uri-js@^4.4.1
+179 http fetch GET 200 https://registry.npmjs.org/uri-js 36ms (cache miss)
+180 silly fetch manifest fast-deep-equal@^3.1.3
+181 http fetch GET 200 https://registry.npmjs.org/fast-deep-equal 38ms (cache miss)
+182 silly fetch manifest require-from-string@^2.0.2
+183 http fetch GET 200 https://registry.npmjs.org/require-from-string 31ms (cache miss)
+184 silly fetch manifest json-schema-traverse@^1.0.0
+185 http fetch GET 200 https://registry.npmjs.org/json-schema-traverse 36ms (cache miss)
+186 silly placeDep node_modules/@angular/cli magic-string@0.30.10 OK for: @angular-devkit/schematics@18.1.1 want: 0.30.10
+187 silly placeDep node_modules/@angular/cli ora@5.4.1 OK for: @angular-devkit/schematics@18.1.1 want: 5.4.1
+188 silly fetch manifest @jridgewell/sourcemap-codec@^1.4.15
+189 http fetch GET 200 https://registry.npmjs.org/@jridgewell%2fsourcemap-codec 59ms (cache miss)
+190 silly fetch manifest bl@^4.1.0
+191 http fetch GET 200 https://registry.npmjs.org/bl 104ms (cache miss)
+192 silly fetch manifest chalk@^4.1.0
+193 http fetch GET 200 https://registry.npmjs.org/chalk 41ms (cache miss)
+194 silly fetch manifest wcwidth@^1.0.1
+195 http fetch GET 200 https://registry.npmjs.org/wcwidth 41ms (cache miss)
+196 silly fetch manifest cli-cursor@^3.1.0
+197 http fetch GET 200 https://registry.npmjs.org/cli-cursor 45ms (cache miss)
+198 silly fetch manifest strip-ansi@^6.0.0
+199 http fetch GET 200 https://registry.npmjs.org/strip-ansi 37ms (cache miss)
+200 silly fetch manifest log-symbols@^4.1.0
+201 http fetch GET 200 https://registry.npmjs.org/log-symbols 39ms (cache miss)
+202 silly fetch manifest cli-spinners@^2.5.0
+203 http fetch GET 200 https://registry.npmjs.org/cli-spinners 30ms (cache miss)
+204 silly fetch manifest is-interactive@^1.0.0
+205 http fetch GET 200 https://registry.npmjs.org/is-interactive 33ms (cache miss)
+206 silly fetch manifest is-unicode-supported@^0.1.0
+207 http fetch GET 200 https://registry.npmjs.org/is-unicode-supported 33ms (cache miss)
+208 silly placeDep node_modules/@angular/cli @inquirer/checkbox@2.4.1 OK for: @inquirer/prompts@5.0.7 want: ^2.3.7
+209 silly placeDep node_modules/@angular/cli @inquirer/confirm@3.1.16 OK for: @inquirer/prompts@5.0.7 want: ^3.1.11
+210 silly placeDep node_modules/@angular/cli @inquirer/editor@2.1.16 OK for: @inquirer/prompts@5.0.7 want: ^2.1.11
+211 silly placeDep node_modules/@angular/cli @inquirer/expand@2.1.16 OK for: @inquirer/prompts@5.0.7 want: ^2.1.11
+212 silly placeDep node_modules/@angular/cli @inquirer/input@2.2.3 OK for: @inquirer/prompts@5.0.7 want: ^2.1.11
+213 silly placeDep node_modules/@angular/cli @inquirer/password@2.1.16 OK for: @inquirer/prompts@5.0.7 want: ^2.1.11
+214 silly placeDep node_modules/@angular/cli @inquirer/rawlist@2.1.16 OK for: @inquirer/prompts@5.0.7 want: ^2.1.11
+215 silly placeDep node_modules/@angular/cli @inquirer/select@2.4.1 OK for: @inquirer/prompts@5.0.7 want: ^2.3.7
+216 silly fetch manifest @inquirer/core@^9.0.4
+217 http fetch GET 200 https://registry.npmjs.org/@inquirer%2fcore 966ms (cache miss)
+218 silly fetch manifest @inquirer/figures@^1.0.4
+219 http fetch GET 200 https://registry.npmjs.org/@inquirer%2ffigures 996ms (cache miss)
+220 silly fetch manifest @inquirer/type@^1.5.0
+221 silly fetch manifest ansi-escapes@^4.3.2
+222 http fetch GET 200 https://registry.npmjs.org/ansi-escapes 50ms (cache miss)
+223 silly fetch manifest yoctocolors-cjs@^2.1.2
+224 http fetch GET 200 https://registry.npmjs.org/yoctocolors-cjs 474ms (cache miss)
+225 silly fetch manifest external-editor@^3.1.0
+226 http fetch GET 200 https://registry.npmjs.org/external-editor 31ms (cache miss)
+227 silly placeDep node_modules/@angular/cli @inquirer/core@9.0.4 OK for: @inquirer/checkbox@2.4.1 want: ^9.0.4
+228 silly placeDep node_modules/@angular/cli @inquirer/figures@1.0.4 OK for: @inquirer/checkbox@2.4.1 want: ^1.0.4
+229 silly placeDep node_modules/@angular/cli @inquirer/type@1.5.0 OK for: @inquirer/checkbox@2.4.1 want: ^1.5.0
+230 silly placeDep node_modules/@angular/cli ansi-escapes@4.3.2 OK for: @inquirer/checkbox@2.4.1 want: ^4.3.2
+231 silly placeDep node_modules/@angular/cli yoctocolors-cjs@2.1.2 OK for: @inquirer/checkbox@2.4.1 want: ^2.1.2
+232 silly fetch manifest @types/mute-stream@^0.0.4
+233 http fetch GET 200 https://registry.npmjs.org/@types%2fmute-stream 959ms (cache miss)
+234 silly fetch manifest @types/node@^20.14.11
+235 http fetch GET 200 https://registry.npmjs.org/@types%2fnode 343ms (cache miss)
+236 silly fetch manifest @types/wrap-ansi@^3.0.0
+237 http fetch GET 200 https://registry.npmjs.org/@types%2fwrap-ansi 64ms (cache miss)
+238 silly fetch manifest cli-spinners@^2.9.2
+239 silly fetch manifest cli-width@^4.1.0
+240 http fetch GET 200 https://registry.npmjs.org/cli-width 42ms (cache miss)
+241 silly fetch manifest mute-stream@^1.0.0
+242 http fetch GET 200 https://registry.npmjs.org/mute-stream 34ms (cache miss)
+243 silly fetch manifest signal-exit@^4.1.0
+244 http fetch GET 200 https://registry.npmjs.org/signal-exit 45ms (cache miss)
+245 silly fetch manifest strip-ansi@^6.0.1
+246 silly fetch manifest wrap-ansi@^6.2.0
+247 silly fetch manifest type-fest@^0.21.3
+248 http fetch GET 200 https://registry.npmjs.org/type-fest 44ms (cache miss)
+249 silly placeDep node_modules/@angular/cli @types/mute-stream@0.0.4 OK for: @inquirer/core@9.0.4 want: ^0.0.4
+250 silly placeDep node_modules/@angular/cli @types/node@20.14.11 OK for: @inquirer/core@9.0.4 want: ^20.14.11
+251 silly placeDep node_modules/@angular/cli @types/wrap-ansi@3.0.0 OK for: @inquirer/core@9.0.4 want: ^3.0.0
+252 silly placeDep node_modules/@angular/cli cli-spinners@2.9.2 OK for: @inquirer/core@9.0.4 want: ^2.9.2
+253 silly placeDep node_modules/@angular/cli cli-width@4.1.0 OK for: @inquirer/core@9.0.4 want: ^4.1.0
+254 silly placeDep node_modules/@angular/cli mute-stream@1.0.0 OK for: @inquirer/core@9.0.4 want: ^1.0.0
+255 silly placeDep node_modules/@angular/cli signal-exit@4.1.0 OK for: @inquirer/core@9.0.4 want: ^4.1.0
+256 silly placeDep node_modules/@angular/cli strip-ansi@6.0.1 OK for: @inquirer/core@9.0.4 want: ^6.0.1
+257 silly placeDep node_modules/@angular/cli wrap-ansi@6.2.0 OK for: @inquirer/core@9.0.4 want: ^6.2.0
+258 silly fetch manifest @types/node@*
+259 silly fetch manifest undici-types@~5.26.4
+260 http fetch GET 200 https://registry.npmjs.org/undici-types 36ms (cache miss)
+261 silly fetch manifest ansi-regex@^5.0.1
+262 http fetch GET 200 https://registry.npmjs.org/ansi-regex 33ms (cache miss)
+263 silly fetch manifest ansi-styles@^4.0.0
+264 http fetch GET 200 https://registry.npmjs.org/ansi-styles 34ms (cache miss)
+265 silly fetch manifest string-width@^4.1.0
+266 silly placeDep node_modules/@angular/cli external-editor@3.1.0 OK for: @inquirer/editor@2.1.16 want: ^3.1.0
+267 silly fetch manifest chardet@^0.7.0
+268 http fetch GET 200 https://registry.npmjs.org/chardet 34ms (cache miss)
+269 silly fetch manifest iconv-lite@^0.4.24
+270 http fetch GET 200 https://registry.npmjs.org/iconv-lite 30ms (cache miss)
+271 silly fetch manifest tmp@^0.0.33
+272 http fetch GET 200 https://registry.npmjs.org/tmp 33ms (cache miss)
+273 silly placeDep node_modules/@angular/cli undici-types@5.26.5 OK for: @types/node@20.14.11 want: ~5.26.4
+274 silly placeDep node_modules/@angular/cli fast-deep-equal@3.1.3 OK for: ajv@8.16.0 want: ^3.1.3
+275 silly placeDep node_modules/@angular/cli json-schema-traverse@1.0.0 OK for: ajv@8.16.0 want: ^1.0.0
+276 silly placeDep node_modules/@angular/cli require-from-string@2.0.2 OK for: ajv@8.16.0 want: ^2.0.2
+277 silly placeDep node_modules/@angular/cli uri-js@4.4.1 OK for: ajv@8.16.0 want: ^4.4.1
+278 silly fetch manifest punycode@^2.1.0
+279 http fetch GET 200 https://registry.npmjs.org/punycode 33ms (cache miss)
+280 silly placeDep node_modules/@angular/cli type-fest@0.21.3 OK for: ansi-escapes@4.3.2 want: ^0.21.3
+281 silly placeDep node_modules/@angular/cli chardet@0.7.0 OK for: external-editor@3.1.0 want: ^0.7.0
+282 silly placeDep node_modules/@angular/cli iconv-lite@0.4.24 OK for: external-editor@3.1.0 want: ^0.4.24
+283 silly placeDep node_modules/@angular/cli tmp@0.0.33 OK for: external-editor@3.1.0 want: ^0.0.33
+284 silly fetch manifest safer-buffer@>= 2.1.2 < 3
+285 http fetch GET 200 https://registry.npmjs.org/safer-buffer 33ms (cache miss)
+286 silly fetch manifest os-tmpdir@~1.0.2
+287 http fetch GET 200 https://registry.npmjs.org/os-tmpdir 31ms (cache miss)
+288 silly placeDep node_modules/@angular/cli safer-buffer@2.1.2 OK for: iconv-lite@0.4.24 want: >= 2.1.2 < 3
+289 silly placeDep node_modules/@angular/cli cli-truncate@4.0.0 OK for: listr2@8.2.3 want: ^4.0.0
+290 silly placeDep node_modules/@angular/cli colorette@2.0.20 OK for: listr2@8.2.3 want: ^2.0.20
+291 silly placeDep node_modules/@angular/cli eventemitter3@5.0.1 OK for: listr2@8.2.3 want: ^5.0.1
+292 silly placeDep node_modules/@angular/cli log-update@6.0.0 OK for: listr2@8.2.3 want: ^6.0.0
+293 silly placeDep node_modules/@angular/cli rfdc@1.4.1 OK for: listr2@8.2.3 want: ^1.4.1
+294 silly placeDep node_modules/@angular/cli/node_modules/listr2 wrap-ansi@9.0.0 OK for: listr2@8.2.3 want: ^9.0.0
+295 silly fetch manifest slice-ansi@^5.0.0
+296 http fetch GET 200 https://registry.npmjs.org/slice-ansi 37ms (cache miss)
+297 silly fetch manifest string-width@^7.0.0
+298 silly fetch manifest ansi-escapes@^6.2.0
+299 silly fetch manifest cli-cursor@^4.0.0
+300 silly fetch manifest slice-ansi@^7.0.0
+301 silly fetch manifest strip-ansi@^7.1.0
+302 silly fetch manifest ansi-styles@^6.2.1
+303 silly placeDep node_modules/@angular/cli slice-ansi@5.0.0 OK for: cli-truncate@4.0.0 want: ^5.0.0
+304 silly placeDep node_modules/@angular/cli string-width@7.2.0 OK for: cli-truncate@4.0.0 want: ^7.0.0
+305 silly fetch manifest ansi-styles@^6.0.0
+306 silly fetch manifest is-fullwidth-code-point@^4.0.0
+307 http fetch GET 200 https://registry.npmjs.org/is-fullwidth-code-point 33ms (cache miss)
+308 silly fetch manifest emoji-regex@^10.3.0
+309 http fetch GET 200 https://registry.npmjs.org/emoji-regex 35ms (cache miss)
+310 silly fetch manifest get-east-asian-width@^1.0.0
+311 http fetch GET 200 https://registry.npmjs.org/get-east-asian-width 470ms (cache miss)
+312 silly placeDep node_modules/@angular/cli/node_modules/log-update ansi-escapes@6.2.1 OK for: log-update@6.0.0 want: ^6.2.0
+313 silly placeDep node_modules/@angular/cli cli-cursor@4.0.0 OK for: log-update@6.0.0 want: ^4.0.0
+314 silly placeDep node_modules/@angular/cli/node_modules/log-update slice-ansi@7.1.0 OK for: log-update@6.0.0 want: ^7.0.0
+315 silly placeDep node_modules/@angular/cli/node_modules/log-update strip-ansi@7.1.0 OK for: log-update@6.0.0 want: ^7.1.0
+316 silly placeDep node_modules/@angular/cli/node_modules/log-update wrap-ansi@9.0.0 OK for: log-update@6.0.0 want: ^9.0.0
+317 silly fetch manifest restore-cursor@^4.0.0
+318 http fetch GET 200 https://registry.npmjs.org/restore-cursor 40ms (cache miss)
+319 silly fetch manifest is-fullwidth-code-point@^5.0.0
+320 silly fetch manifest ansi-regex@^6.0.1
+321 silly placeDep node_modules/@angular/cli restore-cursor@4.0.0 OK for: cli-cursor@4.0.0 want: ^4.0.0
+322 silly fetch manifest onetime@^5.1.0
+323 http fetch GET 200 https://registry.npmjs.org/onetime 31ms (cache miss)
+324 silly fetch manifest signal-exit@^3.0.2
+325 silly placeDep node_modules/@angular/cli @jridgewell/sourcemap-codec@1.5.0 OK for: magic-string@0.30.10 want: ^1.4.15
+326 silly placeDep node_modules/@angular/cli hosted-git-info@7.0.2 OK for: npm-package-arg@11.0.2 want: ^7.0.0
+327 silly placeDep node_modules/@angular/cli proc-log@4.2.0 OK for: npm-package-arg@11.0.2 want: ^4.0.0
+328 silly placeDep node_modules/@angular/cli validate-npm-package-name@5.0.1 OK for: npm-package-arg@11.0.2 want: ^5.0.0
+329 silly fetch manifest lru-cache@^10.0.1
+330 http fetch GET 200 https://registry.npmjs.org/lru-cache 37ms (cache miss)
+331 silly placeDep node_modules/@angular/cli lru-cache@10.4.3 OK for: hosted-git-info@7.0.2 want: ^10.0.1
+332 silly placeDep node_modules/@angular/cli npm-install-checks@6.3.0 OK for: npm-pick-manifest@9.0.1 want: ^6.0.0
+333 silly placeDep node_modules/@angular/cli npm-normalize-package-bin@3.0.1 OK for: npm-pick-manifest@9.0.1 want: ^3.0.0
+334 silly placeDep node_modules/@angular/cli bl@4.1.0 OK for: ora@5.4.1 want: ^4.1.0
+335 silly placeDep node_modules/@angular/cli chalk@4.1.2 OK for: ora@5.4.1 want: ^4.1.0
+336 silly placeDep node_modules/@angular/cli/node_modules/ora cli-cursor@3.1.0 OK for: ora@5.4.1 want: ^3.1.0
+337 silly placeDep node_modules/@angular/cli is-interactive@1.0.0 OK for: ora@5.4.1 want: ^1.0.0
+338 silly placeDep node_modules/@angular/cli is-unicode-supported@0.1.0 OK for: ora@5.4.1 want: ^0.1.0
+339 silly placeDep node_modules/@angular/cli log-symbols@4.1.0 OK for: ora@5.4.1 want: ^4.1.0
+340 silly placeDep node_modules/@angular/cli wcwidth@1.0.1 OK for: ora@5.4.1 want: ^1.0.1
+341 silly fetch manifest buffer@^5.5.0
+342 http fetch GET 200 https://registry.npmjs.org/buffer 49ms (cache miss)
+343 silly fetch manifest inherits@^2.0.4
+344 http fetch GET 200 https://registry.npmjs.org/inherits 32ms (cache miss)
+345 silly fetch manifest readable-stream@^3.4.0
+346 http fetch GET 200 https://registry.npmjs.org/readable-stream 36ms (cache miss)
+347 silly fetch manifest ansi-styles@^4.1.0
+348 silly fetch manifest supports-color@^7.1.0
+349 http fetch GET 200 https://registry.npmjs.org/supports-color 37ms (cache miss)
+350 silly fetch manifest restore-cursor@^3.1.0
+351 silly fetch manifest defaults@^1.0.3
+352 http fetch GET 200 https://registry.npmjs.org/defaults 32ms (cache miss)
+353 silly placeDep node_modules/@angular/cli buffer@5.7.1 OK for: bl@4.1.0 want: ^5.5.0
+354 silly placeDep node_modules/@angular/cli inherits@2.0.4 OK for: bl@4.1.0 want: ^2.0.4
+355 silly placeDep node_modules/@angular/cli readable-stream@3.6.2 OK for: bl@4.1.0 want: ^3.4.0
+356 silly fetch manifest base64-js@^1.3.1
+357 http fetch GET 200 https://registry.npmjs.org/base64-js 42ms (cache miss)
+358 silly fetch manifest ieee754@^1.1.13
+359 http fetch GET 200 https://registry.npmjs.org/ieee754 36ms (cache miss)
+360 silly fetch manifest string_decoder@^1.1.1
+361 http fetch GET 200 https://registry.npmjs.org/string_decoder 35ms (cache miss)
+362 silly fetch manifest util-deprecate@^1.0.1
+363 http fetch GET 200 https://registry.npmjs.org/util-deprecate 31ms (cache miss)
+364 silly placeDep node_modules/@angular/cli base64-js@1.5.1 OK for: buffer@5.7.1 want: ^1.3.1
+365 silly placeDep node_modules/@angular/cli ieee754@1.2.1 OK for: buffer@5.7.1 want: ^1.1.13
+366 silly placeDep node_modules/@angular/cli ansi-styles@4.3.0 OK for: chalk@4.1.2 want: ^4.1.0
+367 silly placeDep node_modules/@angular/cli supports-color@7.2.0 OK for: chalk@4.1.2 want: ^7.1.0
+368 silly fetch manifest color-convert@^2.0.1
+369 http fetch GET 200 https://registry.npmjs.org/color-convert 32ms (cache miss)
+370 silly fetch manifest has-flag@^4.0.0
+371 http fetch GET 200 https://registry.npmjs.org/has-flag 32ms (cache miss)
+372 silly placeDep node_modules/@angular/cli color-convert@2.0.1 OK for: ansi-styles@4.3.0 want: ^2.0.1
+373 silly fetch manifest color-name@~1.1.4
+374 http fetch GET 200 https://registry.npmjs.org/color-name 96ms (cache miss)
+375 silly placeDep node_modules/@angular/cli color-name@1.1.4 OK for: color-convert@2.0.1 want: ~1.1.4
+376 silly placeDep node_modules/@angular/cli @npmcli/git@5.0.8 OK for: pacote@18.0.6 want: ^5.0.0
+377 silly placeDep node_modules/@angular/cli @npmcli/installed-package-contents@2.1.0 OK for: pacote@18.0.6 want: ^2.0.1
+378 silly placeDep node_modules/@angular/cli @npmcli/package-json@5.2.0 OK for: pacote@18.0.6 want: ^5.1.0
+379 silly placeDep node_modules/@angular/cli @npmcli/promise-spawn@7.0.2 OK for: pacote@18.0.6 want: ^7.0.0
+380 silly placeDep node_modules/@angular/cli @npmcli/run-script@8.1.0 OK for: pacote@18.0.6 want: ^8.0.0
+381 silly placeDep node_modules/@angular/cli cacache@18.0.4 OK for: pacote@18.0.6 want: ^18.0.0
+382 silly placeDep node_modules/@angular/cli fs-minipass@3.0.3 OK for: pacote@18.0.6 want: ^3.0.0
+383 silly placeDep node_modules/@angular/cli minipass@7.1.2 OK for: pacote@18.0.6 want: ^7.0.2
+384 silly placeDep node_modules/@angular/cli npm-packlist@8.0.2 OK for: pacote@18.0.6 want: ^8.0.0
+385 silly placeDep node_modules/@angular/cli npm-registry-fetch@17.1.0 OK for: pacote@18.0.6 want: ^17.0.0
+386 silly placeDep node_modules/@angular/cli promise-retry@2.0.1 OK for: pacote@18.0.6 want: ^2.0.1
+387 silly placeDep node_modules/@angular/cli sigstore@2.3.1 OK for: pacote@18.0.6 want: ^2.2.0
+388 silly placeDep node_modules/@angular/cli ssri@10.0.6 OK for: pacote@18.0.6 want: ^10.0.0
+389 silly placeDep node_modules/@angular/cli tar@6.2.1 OK for: pacote@18.0.6 want: ^6.1.11
+390 silly fetch manifest promise-inflight@^1.0.1
+391 http fetch GET 200 https://registry.npmjs.org/promise-inflight 36ms (cache miss)
+392 silly fetch manifest which@^4.0.0
+393 http fetch GET 200 https://registry.npmjs.org/which 36ms (cache miss)
+394 silly fetch manifest npm-bundled@^3.0.0
+395 http fetch GET 200 https://registry.npmjs.org/npm-bundled 36ms (cache miss)
+396 silly fetch manifest glob@^10.2.2
+397 http fetch GET 200 https://registry.npmjs.org/glob 39ms (cache miss)
+398 silly fetch manifest json-parse-even-better-errors@^3.0.0
+399 http fetch GET 200 https://registry.npmjs.org/json-parse-even-better-errors 30ms (cache miss)
+400 silly fetch manifest normalize-package-data@^6.0.0
+401 http fetch GET 200 https://registry.npmjs.org/normalize-package-data 35ms (cache miss)
+402 silly fetch manifest node-gyp@^10.0.0
+403 http fetch GET 200 https://registry.npmjs.org/node-gyp 36ms (cache miss)
+404 silly fetch manifest @npmcli/node-gyp@^3.0.0
+405 http fetch GET 200 https://registry.npmjs.org/@npmcli%2fnode-gyp 68ms (cache miss)
+406 silly fetch manifest @npmcli/fs@^3.1.0
+407 http fetch GET 200 https://registry.npmjs.org/@npmcli%2ffs 76ms (cache miss)
+408 silly fetch manifest minipass@^7.0.3
+409 silly fetch manifest minipass-collect@^2.0.1
+410 http fetch GET 200 https://registry.npmjs.org/minipass-collect 35ms (cache miss)
+411 silly fetch manifest minipass-flush@^1.0.5
+412 http fetch GET 200 https://registry.npmjs.org/minipass-flush 45ms (cache miss)
+413 silly fetch manifest minipass-pipeline@^1.2.4
+414 http fetch GET 200 https://registry.npmjs.org/minipass-pipeline 34ms (cache miss)
+415 silly fetch manifest p-map@^4.0.0
+416 http fetch GET 200 https://registry.npmjs.org/p-map 33ms (cache miss)
+417 silly fetch manifest unique-filename@^3.0.0
+418 http fetch GET 200 https://registry.npmjs.org/unique-filename 64ms (cache miss)
+419 silly fetch manifest ignore-walk@^6.0.4
+420 http fetch GET 200 https://registry.npmjs.org/ignore-walk 49ms (cache miss)
+421 silly fetch manifest @npmcli/redact@^2.0.0
+422 http fetch GET 200 https://registry.npmjs.org/@npmcli%2fredact 81ms (cache miss)
+423 silly fetch manifest jsonparse@^1.3.1
+424 http fetch GET 200 https://registry.npmjs.org/jsonparse 65ms (cache miss)
+425 silly fetch manifest make-fetch-happen@^13.0.0
+426 http fetch GET 200 https://registry.npmjs.org/make-fetch-happen 41ms (cache miss)
+427 silly fetch manifest minipass-fetch@^3.0.0
+428 http fetch GET 200 https://registry.npmjs.org/minipass-fetch 42ms (cache miss)
+429 silly fetch manifest minizlib@^2.1.2
+430 http fetch GET 200 https://registry.npmjs.org/minizlib 30ms (cache miss)
+431 silly fetch manifest err-code@^2.0.2
+432 http fetch GET 200 https://registry.npmjs.org/err-code 30ms (cache miss)
+433 silly fetch manifest retry@^0.12.0
+434 http fetch GET 200 https://registry.npmjs.org/retry 455ms (cache miss)
+435 silly fetch manifest @sigstore/bundle@^2.3.2
+436 http fetch GET 200 https://registry.npmjs.org/@sigstore%2fbundle 65ms (cache miss)
+437 silly fetch manifest @sigstore/core@^1.0.0
+438 http fetch GET 200 https://registry.npmjs.org/@sigstore%2fcore 62ms (cache miss)
+439 silly fetch manifest @sigstore/protobuf-specs@^0.3.2
+440 http fetch GET 200 https://registry.npmjs.org/@sigstore%2fprotobuf-specs 55ms (cache miss)
+441 silly fetch manifest @sigstore/sign@^2.3.2
+442 http fetch GET 200 https://registry.npmjs.org/@sigstore%2fsign 76ms (cache miss)
+443 silly fetch manifest @sigstore/tuf@^2.3.4
+444 http fetch GET 200 https://registry.npmjs.org/@sigstore%2ftuf 56ms (cache miss)
+445 silly fetch manifest @sigstore/verify@^1.2.1
+446 http fetch GET 200 https://registry.npmjs.org/@sigstore%2fverify 68ms (cache miss)
+447 silly fetch manifest chownr@^2.0.0
+448 http fetch GET 200 https://registry.npmjs.org/chownr 31ms (cache miss)
+449 silly fetch manifest mkdirp@^1.0.3
+450 http fetch GET 200 https://registry.npmjs.org/mkdirp 33ms (cache miss)
+451 silly fetch manifest yallist@^4.0.0
+452 http fetch GET 200 https://registry.npmjs.org/yallist 31ms (cache miss)
+453 silly fetch manifest minipass@^5.0.0
+454 silly fetch manifest minizlib@^2.1.1
+455 silly fetch manifest fs-minipass@^2.0.0
+456 silly placeDep node_modules/@angular/cli promise-inflight@1.0.1 OK for: @npmcli/git@5.0.8 want: ^1.0.1
+457 silly placeDep node_modules/@angular/cli which@4.0.0 OK for: @npmcli/git@5.0.8 want: ^4.0.0
+458 silly fetch manifest isexe@^3.1.1
+459 http fetch GET 200 https://registry.npmjs.org/isexe 34ms (cache miss)
+460 silly placeDep node_modules/@angular/cli npm-bundled@3.0.1 OK for: @npmcli/installed-package-contents@2.1.0 want: ^3.0.0
+461 silly placeDep node_modules/@angular/cli glob@10.4.5 OK for: @npmcli/package-json@5.2.0 want: ^10.2.2
+462 silly placeDep node_modules/@angular/cli json-parse-even-better-errors@3.0.2 OK for: @npmcli/package-json@5.2.0 want: ^3.0.0
+463 silly placeDep node_modules/@angular/cli normalize-package-data@6.0.2 OK for: @npmcli/package-json@5.2.0 want: ^6.0.0
+464 silly fetch manifest jackspeak@^3.1.2
+465 http fetch GET 200 https://registry.npmjs.org/jackspeak 35ms (cache miss)
+466 silly fetch manifest minimatch@^9.0.4
+467 http fetch GET 200 https://registry.npmjs.org/minimatch 35ms (cache miss)
+468 silly fetch manifest path-scurry@^1.11.1
+469 http fetch GET 200 https://registry.npmjs.org/path-scurry 28ms (cache miss)
+470 silly fetch manifest foreground-child@^3.1.0
+471 http fetch GET 200 https://registry.npmjs.org/foreground-child 30ms (cache miss)
+472 silly fetch manifest package-json-from-dist@^1.0.0
+473 http fetch GET 200 https://registry.npmjs.org/package-json-from-dist 32ms (cache miss)
+474 silly fetch manifest validate-npm-package-license@^3.0.4
+475 http fetch GET 200 https://registry.npmjs.org/validate-npm-package-license 31ms (cache miss)
+476 silly placeDep node_modules/@angular/cli @npmcli/node-gyp@3.0.0 OK for: @npmcli/run-script@8.1.0 want: ^3.0.0
+477 silly placeDep node_modules/@angular/cli node-gyp@10.2.0 OK for: @npmcli/run-script@8.1.0 want: ^10.0.0
+478 silly fetch manifest env-paths@^2.2.0
+479 http fetch GET 200 https://registry.npmjs.org/env-paths 513ms (cache miss)
+480 silly fetch manifest exponential-backoff@^3.1.1
+481 http fetch GET 200 https://registry.npmjs.org/exponential-backoff 31ms (cache miss)
+482 silly fetch manifest graceful-fs@^4.2.6
+483 http fetch GET 200 https://registry.npmjs.org/graceful-fs 35ms (cache miss)
+484 silly fetch manifest nopt@^7.0.0
+485 http fetch GET 200 https://registry.npmjs.org/nopt 41ms (cache miss)
+486 silly placeDep node_modules/@angular/cli @npmcli/fs@3.1.1 OK for: cacache@18.0.4 want: ^3.1.0
+487 silly placeDep node_modules/@angular/cli minipass-collect@2.0.1 OK for: cacache@18.0.4 want: ^2.0.1
+488 silly placeDep node_modules/@angular/cli minipass-flush@1.0.5 OK for: cacache@18.0.4 want: ^1.0.5
+489 silly placeDep node_modules/@angular/cli minipass-pipeline@1.2.4 OK for: cacache@18.0.4 want: ^1.2.4
+490 silly placeDep node_modules/@angular/cli p-map@4.0.0 OK for: cacache@18.0.4 want: ^4.0.0
+491 silly placeDep node_modules/@angular/cli unique-filename@3.0.0 OK for: cacache@18.0.4 want: ^3.0.0
+492 silly fetch manifest minipass@^3.0.0
+493 silly fetch manifest aggregate-error@^3.0.0
+494 http fetch GET 200 https://registry.npmjs.org/aggregate-error 25ms (cache miss)
+495 silly fetch manifest unique-slug@^4.0.0
+496 http fetch GET 200 https://registry.npmjs.org/unique-slug 37ms (cache miss)
+497 silly placeDep node_modules/@angular/cli foreground-child@3.2.1 OK for: glob@10.4.5 want: ^3.1.0
+498 silly placeDep node_modules/@angular/cli jackspeak@3.4.3 OK for: glob@10.4.5 want: ^3.1.2
+499 silly placeDep node_modules/@angular/cli minimatch@9.0.5 OK for: glob@10.4.5 want: ^9.0.4
+500 silly placeDep node_modules/@angular/cli package-json-from-dist@1.0.0 OK for: glob@10.4.5 want: ^1.0.0
+501 silly placeDep node_modules/@angular/cli path-scurry@1.11.1 OK for: glob@10.4.5 want: ^1.11.1
+502 silly fetch manifest cross-spawn@^7.0.0
+503 http fetch GET 200 https://registry.npmjs.org/cross-spawn 36ms (cache miss)
+504 silly fetch manifest @isaacs/cliui@^8.0.2
+505 http fetch GET 200 https://registry.npmjs.org/@isaacs%2fcliui 55ms (cache miss)
+506 silly fetch manifest @pkgjs/parseargs@^0.11.0
+507 http fetch GET 200 https://registry.npmjs.org/@pkgjs%2fparseargs 62ms (cache miss)
+508 silly fetch manifest brace-expansion@^2.0.1
+509 http fetch GET 200 https://registry.npmjs.org/brace-expansion 29ms (cache miss)
+510 silly placeDep node_modules/@angular/cli cross-spawn@7.0.3 OK for: foreground-child@3.2.1 want: ^7.0.0
+511 silly fetch manifest path-key@^3.1.0
+512 http fetch GET 200 https://registry.npmjs.org/path-key 39ms (cache miss)
+513 silly fetch manifest shebang-command@^2.0.0
+514 http fetch GET 200 https://registry.npmjs.org/shebang-command 29ms (cache miss)
+515 silly fetch manifest which@^2.0.1
+516 silly placeDep node_modules/@angular/cli path-key@3.1.1 OK for: cross-spawn@7.0.3 want: ^3.1.0
+517 silly placeDep node_modules/@angular/cli shebang-command@2.0.0 OK for: cross-spawn@7.0.3 want: ^2.0.0
+518 silly placeDep node_modules/@angular/cli/node_modules/cross-spawn which@2.0.2 OK for: cross-spawn@7.0.3 want: ^2.0.1
+519 silly fetch manifest shebang-regex@^3.0.0
+520 http fetch GET 200 https://registry.npmjs.org/shebang-regex 34ms (cache miss)
+521 silly fetch manifest isexe@^2.0.0
+522 silly placeDep node_modules/@angular/cli @isaacs/cliui@8.0.2 OK for: jackspeak@3.4.3 want: ^8.0.2
+523 silly placeDep node_modules/@angular/cli @pkgjs/parseargs@0.11.0 OK for: jackspeak@3.4.3 want: ^0.11.0
+524 silly fetch manifest string-width@^5.1.2
+525 silly fetch manifest string-width-cjs@npm:string-width@^4.2.0
+526 silly fetch manifest strip-ansi@^7.0.1
+527 silly fetch manifest strip-ansi-cjs@npm:strip-ansi@^6.0.1
+528 silly fetch manifest wrap-ansi@^8.1.0
+529 silly fetch manifest wrap-ansi-cjs@npm:wrap-ansi@^7.0.0
+530 silly placeDep node_modules/@angular/cli/node_modules/@isaacs/cliui string-width@5.1.2 OK for: @isaacs/cliui@8.0.2 want: ^5.1.2
+531 silly placeDep node_modules/@angular/cli string-width-cjs@4.2.3 OK for: @isaacs/cliui@8.0.2 want: npm:string-width@^4.2.0
+532 silly placeDep node_modules/@angular/cli/node_modules/@isaacs/cliui strip-ansi@7.1.0 OK for: @isaacs/cliui@8.0.2 want: ^7.0.1
+533 silly placeDep node_modules/@angular/cli strip-ansi-cjs@6.0.1 OK for: @isaacs/cliui@8.0.2 want: npm:strip-ansi@^6.0.1
+534 silly placeDep node_modules/@angular/cli/node_modules/@isaacs/cliui wrap-ansi@8.1.0 OK for: @isaacs/cliui@8.0.2 want: ^8.1.0
+535 silly placeDep node_modules/@angular/cli wrap-ansi-cjs@7.0.0 OK for: @isaacs/cliui@8.0.2 want: npm:wrap-ansi@^7.0.0
+536 silly fetch manifest emoji-regex@^9.2.2
+537 silly fetch manifest eastasianwidth@^0.2.0
+538 http fetch GET 200 https://registry.npmjs.org/eastasianwidth 31ms (cache miss)
+539 silly fetch manifest emoji-regex@^8.0.0
+540 silly fetch manifest is-fullwidth-code-point@^3.0.0
+541 silly fetch manifest ansi-styles@^6.1.0
+542 silly placeDep node_modules/@angular/cli brace-expansion@2.0.1 OK for: minimatch@9.0.5 want: ^2.0.1
+543 silly fetch manifest balanced-match@^1.0.0
+544 http fetch GET 200 https://registry.npmjs.org/balanced-match 31ms (cache miss)
+545 silly placeDep node_modules/@angular/cli balanced-match@1.0.2 OK for: brace-expansion@2.0.1 want: ^1.0.0
+546 silly placeDep node_modules/@angular/cli/node_modules/minipass-flush minipass@3.3.6 OK for: minipass-flush@1.0.5 want: ^3.0.0
+547 silly placeDep node_modules/@angular/cli/node_modules/minipass-pipeline minipass@3.3.6 OK for: minipass-pipeline@1.2.4 want: ^3.0.0
+548 silly placeDep node_modules/@angular/cli env-paths@2.2.1 OK for: node-gyp@10.2.0 want: ^2.2.0
+549 silly placeDep node_modules/@angular/cli exponential-backoff@3.1.1 OK for: node-gyp@10.2.0 want: ^3.1.1
+550 silly placeDep node_modules/@angular/cli graceful-fs@4.2.11 OK for: node-gyp@10.2.0 want: ^4.2.6
+551 silly placeDep node_modules/@angular/cli make-fetch-happen@13.0.1 OK for: node-gyp@10.2.0 want: ^13.0.0
+552 silly placeDep node_modules/@angular/cli nopt@7.2.1 OK for: node-gyp@10.2.0 want: ^7.0.0
+553 silly fetch manifest is-lambda@^1.0.1
+554 http fetch GET 200 https://registry.npmjs.org/is-lambda 30ms (cache miss)
+555 silly fetch manifest negotiator@^0.6.3
+556 http fetch GET 200 https://registry.npmjs.org/negotiator 36ms (cache miss)
+557 silly fetch manifest @npmcli/agent@^2.0.0
+558 http fetch GET 200 https://registry.npmjs.org/@npmcli%2fagent 62ms (cache miss)
+559 silly fetch manifest http-cache-semantics@^4.1.1
+560 http fetch GET 200 https://registry.npmjs.org/http-cache-semantics 37ms (cache miss)
+561 silly fetch manifest abbrev@^2.0.0
+562 http fetch GET 200 https://registry.npmjs.org/abbrev 35ms (cache miss)
+563 silly placeDep node_modules/@angular/cli @npmcli/agent@2.2.2 OK for: make-fetch-happen@13.0.1 want: ^2.0.0
+564 silly placeDep node_modules/@angular/cli http-cache-semantics@4.1.1 OK for: make-fetch-happen@13.0.1 want: ^4.1.1
+565 silly placeDep node_modules/@angular/cli is-lambda@1.0.1 OK for: make-fetch-happen@13.0.1 want: ^1.0.1
+566 silly placeDep node_modules/@angular/cli minipass-fetch@3.0.5 OK for: make-fetch-happen@13.0.1 want: ^3.0.0
+567 silly placeDep node_modules/@angular/cli negotiator@0.6.3 OK for: make-fetch-happen@13.0.1 want: ^0.6.3
+568 silly fetch manifest agent-base@^7.1.0
+569 http fetch GET 200 https://registry.npmjs.org/agent-base 30ms (cache miss)
+570 silly fetch manifest http-proxy-agent@^7.0.0
+571 http fetch GET 200 https://registry.npmjs.org/http-proxy-agent 30ms (cache miss)
+572 silly fetch manifest https-proxy-agent@^7.0.1
+573 http fetch GET 200 https://registry.npmjs.org/https-proxy-agent 29ms (cache miss)
+574 silly fetch manifest socks-proxy-agent@^8.0.3
+575 http fetch GET 200 https://registry.npmjs.org/socks-proxy-agent 32ms (cache miss)
+576 silly fetch manifest minipass-sized@^1.0.3
+577 http fetch GET 200 https://registry.npmjs.org/minipass-sized 93ms (cache miss)
+578 silly fetch manifest encoding@^0.1.13
+579 http fetch GET 200 https://registry.npmjs.org/encoding 31ms (cache miss)
+580 silly placeDep node_modules/@angular/cli agent-base@7.1.1 OK for: @npmcli/agent@2.2.2 want: ^7.1.0
+581 silly placeDep node_modules/@angular/cli http-proxy-agent@7.0.2 OK for: @npmcli/agent@2.2.2 want: ^7.0.0
+582 silly placeDep node_modules/@angular/cli https-proxy-agent@7.0.5 OK for: @npmcli/agent@2.2.2 want: ^7.0.1
+583 silly placeDep node_modules/@angular/cli socks-proxy-agent@8.0.4 OK for: @npmcli/agent@2.2.2 want: ^8.0.3
+584 silly fetch manifest debug@^4.3.4
+585 http fetch GET 200 https://registry.npmjs.org/debug 35ms (cache miss)
+586 silly fetch manifest debug@4
+587 silly fetch manifest socks@^2.8.3
+588 http fetch GET 200 https://registry.npmjs.org/socks 32ms (cache miss)
+589 silly placeDep node_modules/@angular/cli debug@4.3.5 OK for: agent-base@7.1.1 want: ^4.3.4
+590 silly fetch manifest ms@2.1.2
+591 http fetch GET 200 https://registry.npmjs.org/ms 33ms (cache miss)
+592 silly placeDep node_modules/@angular/cli ms@2.1.2 OK for: debug@4.3.5 want: 2.1.2
+593 silly placeDep node_modules/@angular/cli encoding@0.1.13 OK for: minipass-fetch@3.0.5 want: ^0.1.13
+594 silly placeDep node_modules/@angular/cli minipass-sized@1.0.3 OK for: minipass-fetch@3.0.5 want: ^1.0.3
+595 silly placeDep node_modules/@angular/cli minizlib@2.1.2 OK for: minipass-fetch@3.0.5 want: ^2.1.2
+596 silly fetch manifest iconv-lite@^0.6.2
+597 silly placeDep node_modules/@angular/cli/node_modules/encoding iconv-lite@0.6.3 OK for: encoding@0.1.13 want: ^0.6.2
+598 silly placeDep node_modules/@angular/cli/node_modules/minipass-sized minipass@3.3.6 OK for: minipass-sized@1.0.3 want: ^3.0.0
+599 silly placeDep node_modules/@angular/cli/node_modules/minizlib minipass@3.3.6 OK for: minizlib@2.1.2 want: ^3.0.0
+600 silly placeDep node_modules/@angular/cli yallist@4.0.0 OK for: minizlib@2.1.2 want: ^4.0.0
+601 silly placeDep node_modules/@angular/cli abbrev@2.0.0 OK for: nopt@7.2.1 want: ^2.0.0
+602 silly placeDep node_modules/@angular/cli validate-npm-package-license@3.0.4 OK for: normalize-package-data@6.0.2 want: ^3.0.4
+603 silly fetch manifest spdx-correct@^3.0.0
+604 http fetch GET 200 https://registry.npmjs.org/spdx-correct 42ms (cache miss)
+605 silly fetch manifest spdx-expression-parse@^3.0.0
+606 http fetch GET 200 https://registry.npmjs.org/spdx-expression-parse 30ms (cache miss)
+607 silly placeDep node_modules/@angular/cli ignore-walk@6.0.5 OK for: npm-packlist@8.0.2 want: ^6.0.4
+608 silly placeDep node_modules/@angular/cli @npmcli/redact@2.0.1 OK for: npm-registry-fetch@17.1.0 want: ^2.0.0
+609 silly placeDep node_modules/@angular/cli jsonparse@1.3.1 OK for: npm-registry-fetch@17.1.0 want: ^1.3.1
+610 silly placeDep node_modules/@angular/cli aggregate-error@3.1.0 OK for: p-map@4.0.0 want: ^3.0.0
+611 silly fetch manifest clean-stack@^2.0.0
+612 http fetch GET 200 https://registry.npmjs.org/clean-stack 29ms (cache miss)
+613 silly fetch manifest indent-string@^4.0.0
+614 http fetch GET 200 https://registry.npmjs.org/indent-string 30ms (cache miss)
+615 silly placeDep node_modules/@angular/cli clean-stack@2.2.0 OK for: aggregate-error@3.1.0 want: ^2.0.0
+616 silly placeDep node_modules/@angular/cli indent-string@4.0.0 OK for: aggregate-error@3.1.0 want: ^4.0.0
+617 silly placeDep node_modules/@angular/cli err-code@2.0.3 OK for: promise-retry@2.0.1 want: ^2.0.2
+618 silly placeDep node_modules/@angular/cli retry@0.12.0 OK for: promise-retry@2.0.1 want: ^0.12.0
+619 silly placeDep node_modules/@angular/cli string_decoder@1.3.0 OK for: readable-stream@3.6.2 want: ^1.1.1
+620 silly placeDep node_modules/@angular/cli util-deprecate@1.0.2 OK for: readable-stream@3.6.2 want: ^1.0.1
+621 silly fetch manifest safe-buffer@~5.2.0
+622 http fetch GET 200 https://registry.npmjs.org/safe-buffer 54ms (cache miss)
+623 silly placeDep node_modules/@angular/cli is-core-module@2.15.0 OK for: resolve@1.22.8 want: ^2.13.0
+624 silly placeDep node_modules/@angular/cli path-parse@1.0.7 OK for: resolve@1.22.8 want: ^1.0.7
+625 silly placeDep node_modules/@angular/cli supports-preserve-symlinks-flag@1.0.0 OK for: resolve@1.22.8 want: ^1.0.0
+626 silly fetch manifest hasown@^2.0.2
+627 http fetch GET 200 https://registry.npmjs.org/hasown 30ms (cache miss)
+628 silly placeDep node_modules/@angular/cli hasown@2.0.2 OK for: is-core-module@2.15.0 want: ^2.0.2
+629 silly fetch manifest function-bind@^1.1.2
+630 http fetch GET 200 https://registry.npmjs.org/function-bind 30ms (cache miss)
+631 silly placeDep node_modules/@angular/cli function-bind@1.1.2 OK for: hasown@2.0.2 want: ^1.1.2
+632 silly placeDep node_modules/@angular/cli onetime@5.1.2 OK for: restore-cursor@4.0.0 want: ^5.1.0
+633 silly placeDep node_modules/@angular/cli/node_modules/restore-cursor signal-exit@3.0.7 OK for: restore-cursor@4.0.0 want: ^3.0.2
+634 silly fetch manifest mimic-fn@^2.1.0
+635 http fetch GET 200 https://registry.npmjs.org/mimic-fn 56ms (cache miss)
+636 silly placeDep node_modules/@angular/cli mimic-fn@2.1.0 OK for: onetime@5.1.2 want: ^2.1.0
+637 silly placeDep node_modules/@angular/cli tslib@2.6.3 OK for: rxjs@7.8.1 want: ^2.1.0
+638 silly placeDep node_modules/@angular/cli shebang-regex@3.0.0 OK for: shebang-command@2.0.0 want: ^3.0.0
+639 silly placeDep node_modules/@angular/cli @sigstore/bundle@2.3.2 OK for: sigstore@2.3.1 want: ^2.3.2
+640 silly placeDep node_modules/@angular/cli @sigstore/core@1.1.0 OK for: sigstore@2.3.1 want: ^1.0.0
+641 silly placeDep node_modules/@angular/cli @sigstore/protobuf-specs@0.3.2 OK for: sigstore@2.3.1 want: ^0.3.2
+642 silly placeDep node_modules/@angular/cli @sigstore/sign@2.3.2 OK for: sigstore@2.3.1 want: ^2.3.2
+643 silly placeDep node_modules/@angular/cli @sigstore/tuf@2.3.4 OK for: sigstore@2.3.1 want: ^2.3.4
+644 silly placeDep node_modules/@angular/cli @sigstore/verify@1.2.1 OK for: sigstore@2.3.1 want: ^1.2.1
+645 silly fetch manifest tuf-js@^2.2.1
+646 http fetch GET 200 https://registry.npmjs.org/tuf-js 28ms (cache miss)
+647 silly placeDep node_modules/@angular/cli tuf-js@2.2.1 OK for: @sigstore/tuf@2.3.4 want: ^2.2.1
+648 silly fetch manifest @tufjs/models@2.0.1
+649 http fetch GET 200 https://registry.npmjs.org/@tufjs%2fmodels 59ms (cache miss)
+650 silly placeDep node_modules/@angular/cli/node_modules/slice-ansi ansi-styles@6.2.1 OK for: slice-ansi@5.0.0 want: ^6.0.0
+651 silly placeDep node_modules/@angular/cli is-fullwidth-code-point@4.0.0 OK for: slice-ansi@5.0.0 want: ^4.0.0
+652 silly placeDep node_modules/@angular/cli socks@2.8.3 OK for: socks-proxy-agent@8.0.4 want: ^2.8.3
+653 silly fetch manifest ip-address@^9.0.5
+654 http fetch GET 200 https://registry.npmjs.org/ip-address 36ms (cache miss)
+655 silly fetch manifest smart-buffer@^4.2.0
+656 http fetch GET 200 https://registry.npmjs.org/smart-buffer 27ms (cache miss)
+657 silly placeDep node_modules/@angular/cli ip-address@9.0.5 OK for: socks@2.8.3 want: ^9.0.5
+658 silly placeDep node_modules/@angular/cli smart-buffer@4.2.0 OK for: socks@2.8.3 want: ^4.2.0
+659 silly fetch manifest jsbn@1.1.0
+660 http fetch GET 200 https://registry.npmjs.org/jsbn 26ms (cache miss)
+661 silly fetch manifest sprintf-js@^1.1.3
+662 http fetch GET 200 https://registry.npmjs.org/sprintf-js 35ms (cache miss)
+663 silly placeDep node_modules/@angular/cli jsbn@1.1.0 OK for: ip-address@9.0.5 want: 1.1.0
+664 silly placeDep node_modules/@angular/cli sprintf-js@1.1.3 OK for: ip-address@9.0.5 want: ^1.1.3
+665 silly placeDep node_modules/@angular/cli safe-buffer@5.2.1 OK for: string_decoder@1.3.0 want: ~5.2.0
+666 silly placeDep node_modules/@angular/cli emoji-regex@10.3.0 OK for: string-width@7.2.0 want: ^10.3.0
+667 silly placeDep node_modules/@angular/cli get-east-asian-width@1.2.0 OK for: string-width@7.2.0 want: ^1.0.0
+668 silly placeDep node_modules/@angular/cli/node_modules/string-width strip-ansi@7.1.0 OK for: string-width@7.2.0 want: ^7.1.0
+669 silly placeDep node_modules/@angular/cli/node_modules/string-width-cjs emoji-regex@8.0.0 OK for: string-width@4.2.3 want: ^8.0.0
+670 silly placeDep node_modules/@angular/cli/node_modules/string-width-cjs is-fullwidth-code-point@3.0.0 OK for: string-width@4.2.3 want: ^3.0.0
+671 silly placeDep node_modules/@angular/cli ansi-regex@5.0.1 OK for: strip-ansi@6.0.1 want: ^5.0.1
+672 silly placeDep node_modules/@angular/cli has-flag@4.0.0 OK for: supports-color@7.2.0 want: ^4.0.0
+673 silly placeDep node_modules/@angular/cli chownr@2.0.0 OK for: tar@6.2.1 want: ^2.0.0
+674 silly placeDep node_modules/@angular/cli/node_modules/tar fs-minipass@2.1.0 OK for: tar@6.2.1 want: ^2.0.0
+675 silly placeDep node_modules/@angular/cli/node_modules/tar minipass@5.0.0 OK for: tar@6.2.1 want: ^5.0.0
+676 silly placeDep node_modules/@angular/cli mkdirp@1.0.4 OK for: tar@6.2.1 want: ^1.0.3
+677 silly placeDep node_modules/@angular/cli os-tmpdir@1.0.2 OK for: tmp@0.0.33 want: ~1.0.2
+678 silly placeDep node_modules/@angular/cli @tufjs/models@2.0.1 OK for: tuf-js@2.2.1 want: 2.0.1
+679 silly fetch manifest @tufjs/canonical-json@2.0.0
+680 http fetch GET 200 https://registry.npmjs.org/@tufjs%2fcanonical-json 152ms (cache miss)
+681 silly placeDep node_modules/@angular/cli @tufjs/canonical-json@2.0.0 OK for: @tufjs/models@2.0.1 want: 2.0.0
+682 silly placeDep node_modules/@angular/cli unique-slug@4.0.0 OK for: unique-filename@3.0.0 want: ^4.0.0
+683 silly fetch manifest imurmurhash@^0.1.4
+684 http fetch GET 200 https://registry.npmjs.org/imurmurhash 34ms (cache miss)
+685 silly placeDep node_modules/@angular/cli imurmurhash@0.1.4 OK for: unique-slug@4.0.0 want: ^0.1.4
+686 silly placeDep node_modules/@angular/cli punycode@2.3.1 OK for: uri-js@4.4.1 want: ^2.1.0
+687 silly placeDep node_modules/@angular/cli spdx-correct@3.2.0 OK for: validate-npm-package-license@3.0.4 want: ^3.0.0
+688 silly placeDep node_modules/@angular/cli spdx-expression-parse@3.0.1 OK for: validate-npm-package-license@3.0.4 want: ^3.0.0
+689 silly fetch manifest spdx-license-ids@^3.0.0
+690 http fetch GET 200 https://registry.npmjs.org/spdx-license-ids 32ms (cache miss)
+691 silly fetch manifest spdx-exceptions@^2.1.0
+692 http fetch GET 200 https://registry.npmjs.org/spdx-exceptions 31ms (cache miss)
+693 silly placeDep node_modules/@angular/cli spdx-license-ids@3.0.18 OK for: spdx-correct@3.2.0 want: ^3.0.0
+694 silly placeDep node_modules/@angular/cli spdx-exceptions@2.5.0 OK for: spdx-expression-parse@3.0.1 want: ^2.1.0
+695 silly placeDep node_modules/@angular/cli defaults@1.0.4 OK for: wcwidth@1.0.1 want: ^1.0.3
+696 silly fetch manifest clone@^1.0.2
+697 http fetch GET 200 https://registry.npmjs.org/clone 57ms (cache miss)
+698 silly placeDep node_modules/@angular/cli clone@1.0.4 OK for: defaults@1.0.4 want: ^1.0.2
+699 silly placeDep node_modules/@angular/cli isexe@3.1.1 OK for: which@4.0.0 want: ^3.1.1
+700 silly placeDep node_modules/@angular/cli/node_modules/wrap-ansi string-width@4.2.3 OK for: wrap-ansi@6.2.0 want: ^4.1.0
+701 silly placeDep node_modules/@angular/cli/node_modules/wrap-ansi-cjs string-width@4.2.3 OK for: wrap-ansi@7.0.0 want: ^4.1.0
+702 silly placeDep node_modules/@angular/cli cliui@8.0.1 OK for: yargs@17.7.2 want: ^8.0.1
+703 silly placeDep node_modules/@angular/cli escalade@3.1.2 OK for: yargs@17.7.2 want: ^3.1.1
+704 silly placeDep node_modules/@angular/cli get-caller-file@2.0.5 OK for: yargs@17.7.2 want: ^2.0.5
+705 silly placeDep node_modules/@angular/cli require-directory@2.1.1 OK for: yargs@17.7.2 want: ^2.1.1
+706 silly placeDep node_modules/@angular/cli/node_modules/yargs string-width@4.2.3 OK for: yargs@17.7.2 want: ^4.2.3
+707 silly placeDep node_modules/@angular/cli y18n@5.0.8 OK for: yargs@17.7.2 want: ^5.0.5
+708 silly placeDep node_modules/@angular/cli yargs-parser@21.1.1 OK for: yargs@17.7.2 want: ^21.1.1
+709 silly fetch manifest string-width@^4.2.0
+710 silly fetch manifest wrap-ansi@^7.0.0
+711 silly placeDep node_modules/@angular/cli/node_modules/cliui string-width@4.2.3 OK for: cliui@8.0.1 want: ^4.2.0
+712 silly placeDep node_modules/@angular/cli/node_modules/cliui wrap-ansi@7.0.0 OK for: cliui@8.0.1 want: ^7.0.0
+713 silly placeDep node_modules/@angular/cli eastasianwidth@0.2.0 OK for: string-width@5.1.2 want: ^0.2.0
+714 silly placeDep node_modules/@angular/cli/node_modules/@isaacs/cliui emoji-regex@9.2.2 OK for: string-width@5.1.2 want: ^9.2.2
+715 silly placeDep node_modules/@angular/cli/node_modules/@isaacs/cliui ansi-regex@6.0.1 OK for: strip-ansi@7.1.0 want: ^6.0.1
+716 silly placeDep node_modules/@angular/cli/node_modules/@isaacs/cliui ansi-styles@6.2.1 OK for: wrap-ansi@8.1.0 want: ^6.1.0
+717 silly placeDep node_modules/@angular/cli/node_modules/cliui emoji-regex@8.0.0 OK for: string-width@4.2.3 want: ^8.0.0
+718 silly placeDep node_modules/@angular/cli/node_modules/cliui is-fullwidth-code-point@3.0.0 OK for: string-width@4.2.3 want: ^3.0.0
+719 silly placeDep node_modules/@angular/cli/node_modules/cross-spawn isexe@2.0.0 OK for: which@2.0.2 want: ^2.0.0
+720 silly placeDep node_modules/@angular/cli/node_modules/listr2 ansi-styles@6.2.1 OK for: wrap-ansi@9.0.0 want: ^6.2.1
+721 silly placeDep node_modules/@angular/cli/node_modules/listr2 strip-ansi@7.1.0 OK for: wrap-ansi@9.0.0 want: ^7.1.0
+722 silly placeDep node_modules/@angular/cli/node_modules/listr2 ansi-regex@6.0.1 OK for: strip-ansi@7.1.0 want: ^6.0.1
+723 silly placeDep node_modules/@angular/cli/node_modules/log-update ansi-styles@6.2.1 OK for: slice-ansi@7.1.0 want: ^6.2.1
+724 silly placeDep node_modules/@angular/cli/node_modules/log-update is-fullwidth-code-point@5.0.0 OK for: slice-ansi@7.1.0 want: ^5.0.0
+725 silly placeDep node_modules/@angular/cli/node_modules/log-update ansi-regex@6.0.1 OK for: strip-ansi@7.1.0 want: ^6.0.1
+726 silly placeDep node_modules/@angular/cli/node_modules/ora restore-cursor@3.1.0 OK for: cli-cursor@3.1.0 want: ^3.1.0
+727 silly placeDep node_modules/@angular/cli/node_modules/ora signal-exit@3.0.7 OK for: restore-cursor@3.1.0 want: ^3.0.2
+728 silly placeDep node_modules/@angular/cli/node_modules/string-width ansi-regex@6.0.1 OK for: strip-ansi@7.1.0 want: ^6.0.1
+729 silly placeDep node_modules/@angular/cli/node_modules/tar/node_modules/fs-minipass minipass@3.3.6 OK for: fs-minipass@2.1.0 want: ^3.0.0
+730 silly placeDep node_modules/@angular/cli/node_modules/wrap-ansi-cjs emoji-regex@8.0.0 OK for: string-width@4.2.3 want: ^8.0.0
+731 silly placeDep node_modules/@angular/cli/node_modules/wrap-ansi-cjs is-fullwidth-code-point@3.0.0 OK for: string-width@4.2.3 want: ^3.0.0
+732 silly placeDep node_modules/@angular/cli/node_modules/wrap-ansi emoji-regex@8.0.0 OK for: string-width@4.2.3 want: ^8.0.0
+733 silly placeDep node_modules/@angular/cli/node_modules/wrap-ansi is-fullwidth-code-point@3.0.0 OK for: string-width@4.2.3 want: ^3.0.0
+734 silly placeDep node_modules/@angular/cli/node_modules/yargs emoji-regex@8.0.0 OK for: string-width@4.2.3 want: ^8.0.0
+735 silly placeDep node_modules/@angular/cli/node_modules/yargs is-fullwidth-code-point@3.0.0 OK for: string-width@4.2.3 want: ^3.0.0
+736 silly reify moves {}
+737 verbose stack Error: EACCES: permission denied, mkdir '/usr/lib/node_modules/@angular'
+737 verbose stack     at async mkdir (node:internal/fs/promises:858:10)
+737 verbose stack     at async /usr/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/reify.js:624:20
+737 verbose stack     at async Promise.allSettled (index 0)
+737 verbose stack     at async [reifyPackages] (/usr/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/reify.js:325:11)
+737 verbose stack     at async Arborist.reify (/usr/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/reify.js:142:5)
+737 verbose stack     at async Install.exec (/usr/lib/node_modules/npm/lib/commands/install.js:150:5)
+737 verbose stack     at async module.exports (/usr/lib/node_modules/npm/lib/cli/entry.js:74:5)
+738 verbose cwd /home/ubuntu/web-layer
+739 verbose Linux 6.8.0-1009-aws
+740 verbose node v20.15.1
+741 verbose npm  v10.7.0
+742 error code EACCES
+743 error syscall mkdir
+744 error path /usr/lib/node_modules/@angular
+745 error errno -13
+746 error Error: EACCES: permission denied, mkdir '/usr/lib/node_modules/@angular'
+746 error     at async mkdir (node:internal/fs/promises:858:10)
+746 error     at async /usr/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/reify.js:624:20
+746 error     at async Promise.allSettled (index 0)
+746 error     at async [reifyPackages] (/usr/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/reify.js:325:11)
+746 error     at async Arborist.reify (/usr/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/reify.js:142:5)
+746 error     at async Install.exec (/usr/lib/node_modules/npm/lib/commands/install.js:150:5)
+746 error     at async module.exports (/usr/lib/node_modules/npm/lib/cli/entry.js:74:5) {
+746 error   errno: -13,
+746 error   code: 'EACCES',
+746 error   syscall: 'mkdir',
+746 error   path: '/usr/lib/node_modules/@angular'
+746 error }
+747 error
+747 error The operation was rejected by your operating system.
+747 error It is likely you do not have the permissions to access this file as the current user
+747 error
+747 error If you believe this might be a permissions issue, please double-check the
+747 error permissions of the file and its containing directories, or try running
+747 error the command again as root/Administrator.
+748 verbose exit -13
+749 verbose code -13
+750 silly unfinished npm timer reify 1721564903375
+751 silly unfinished npm timer reify:createSparse 1721564933926
+752 error A complete log of this run can be found in: /home/ubuntu/.npm/_logs/2024-07-21T12_28_22_949Z-debug-0.log

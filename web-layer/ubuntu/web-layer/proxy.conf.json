@@ -1,0 +1,14 @@
+{
+    "/api": {
+        "target" : "https://remotecontrollubuntuapi.azurewebsites.net",
+        "secure": "false",
+        "changeOrigin": "true"
+    },
+    
+    "/Images/*": {
+        "target": "https://remotecontrollubuntuapi.azurewebsites.net",
+        "secure": false,
+        "logLevel": "debug",
+        "changeOrigin": true
+      }
+}

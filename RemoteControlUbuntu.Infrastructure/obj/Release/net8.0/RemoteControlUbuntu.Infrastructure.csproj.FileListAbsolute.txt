@@ -1,0 +1,15 @@
+/home/maksi/RiderProjects/RemoteControlUbuntu/RemoteControlUbuntu.Infrastructure/bin/Release/net8.0/RemoteControlUbuntu.Infrastructure.deps.json
+/home/maksi/RiderProjects/RemoteControlUbuntu/RemoteControlUbuntu.Infrastructure/bin/Release/net8.0/RemoteControlUbuntu.Infrastructure.dll
+/home/maksi/RiderProjects/RemoteControlUbuntu/RemoteControlUbuntu.Infrastructure/bin/Release/net8.0/RemoteControlUbuntu.Infrastructure.pdb
+/home/maksi/RiderProjects/RemoteControlUbuntu/RemoteControlUbuntu.Infrastructure/bin/Release/net8.0/RemoteControlUbuntu.Domain.dll
+/home/maksi/RiderProjects/RemoteControlUbuntu/RemoteControlUbuntu.Infrastructure/bin/Release/net8.0/RemoteControlUbuntu.Domain.pdb
+/home/maksi/RiderProjects/RemoteControlUbuntu/RemoteControlUbuntu.Infrastructure/obj/Release/net8.0/RemoteControlUbuntu.Infrastructure.csproj.AssemblyReference.cache
+/home/maksi/RiderProjects/RemoteControlUbuntu/RemoteControlUbuntu.Infrastructure/obj/Release/net8.0/RemoteControlUbuntu.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+/home/maksi/RiderProjects/RemoteControlUbuntu/RemoteControlUbuntu.Infrastructure/obj/Release/net8.0/RemoteControlUbuntu.Infrastructure.AssemblyInfoInputs.cache
+/home/maksi/RiderProjects/RemoteControlUbuntu/RemoteControlUbuntu.Infrastructure/obj/Release/net8.0/RemoteControlUbuntu.Infrastructure.AssemblyInfo.cs
+/home/maksi/RiderProjects/RemoteControlUbuntu/RemoteControlUbuntu.Infrastructure/obj/Release/net8.0/RemoteControlUbuntu.Infrastructure.csproj.CoreCompileInputs.cache
+/home/maksi/RiderProjects/RemoteControlUbuntu/RemoteControlUbuntu.Infrastructure/obj/Release/net8.0/RemoteControlUbuntu.Infrastructure.csproj.CopyComplete
+/home/maksi/RiderProjects/RemoteControlUbuntu/RemoteControlUbuntu.Infrastructure/obj/Release/net8.0/RemoteControlUbuntu.Infrastructure.dll
+/home/maksi/RiderProjects/RemoteControlUbuntu/RemoteControlUbuntu.Infrastructure/obj/Release/net8.0/refint/RemoteControlUbuntu.Infrastructure.dll
+/home/maksi/RiderProjects/RemoteControlUbuntu/RemoteControlUbuntu.Infrastructure/obj/Release/net8.0/RemoteControlUbuntu.Infrastructure.pdb
+/home/maksi/RiderProjects/RemoteControlUbuntu/RemoteControlUbuntu.Infrastructure/obj/Release/net8.0/ref/RemoteControlUbuntu.Infrastructure.dll
