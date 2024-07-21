@@ -21,6 +21,8 @@ export class CommandComponent {
 
   onCommandExecute()
   {
+    this.connectionCommandModel.connectionId = "760486dd-4c3c-48a1-b51f-f63dd447c3a7";
+    this.connectionCommandModel.commandId = "c027e865-0c02-4fc2-933e-2c8d1eaac5ba";
     this.commandService.execute(this.connectionCommandModel).subscribe(data =>{},
       errorResponse => this.errorMessage = errorResponse
     )
