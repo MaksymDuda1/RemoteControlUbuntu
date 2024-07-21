@@ -2,7 +2,7 @@ using RemoteControlUbuntu.Domain.Entities;
 
 namespace RemoteControlUbuntu.Domain.Dtos;
 
-public class UserConnectionCommandDto
+public class ConnectionCommandDto
 {
     public Guid ConnectionId { get; set; }
 
