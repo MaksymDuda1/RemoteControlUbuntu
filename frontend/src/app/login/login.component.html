@@ -1,0 +1,19 @@
+<div class="container">
+    <form>
+
+        <div class="main-text">Login page</div>
+
+        <div class="form-group">
+          <label for="exampleInputEmail1">Email address</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" name="email" [(ngModel)]="loginModel.email">
+          <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Password</label>
+          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="password" [(ngModel)]="loginModel.password">
+        </div>
+        <button type="submit" (click)="onLogin()"  class="btn btn-dark">Login</button> 
+        <a routerLink="/registration"><small id="emailHelp" class="form-text text-muted">Don't have acount? Click here.</small></a>
+      </form>
+      {{errorMessage}}
+</div>

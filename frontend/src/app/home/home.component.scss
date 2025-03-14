@@ -1,0 +1,56 @@
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.role-section {
+    width: 88vw;
+    display: flex;
+    justify-content: center;
+    gap: 200px;
+    padding: 20px;
+    border: 1px solid #d8d2d2;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+}
+
+.table{
+    width: 50vh;
+    height: 32vh;
+}
+
+.brick {
+    width: 36vw;
+    height: 38vh;
+    // border: 2px solid #000;
+    // border-radius: 12px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+mat-list {
+    width: 100%;
+}
+  
+.item {
+    background-color: #f0f0f0;  /* Soft light gray */
+    padding: 10px;
+    border-radius: 4px;
+    margin: 5px 0;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transition on hover */
+    width: 100%;
+  }
+  
+  /* Hover effect */
+  .item:hover {
+    transform: scale(1.03);  /* Slight scale effect */
+  }
+  

@@ -1,0 +1,12 @@
+<nav class="navbar navbar-light">
+    <div class="container d-flex justify-content-between">
+        <div class="logo">
+            <a routerLink="/landing">
+                <span class="logo-text">Remote controll </span>
+            </a>
+        </div>
+
+        <button (click)="onLogout()" class="btn btn-dark">Logout</button>
+    </div>
+</nav>
+<router-outlet />
