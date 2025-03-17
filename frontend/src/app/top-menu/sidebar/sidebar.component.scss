@@ -1,0 +1,34 @@
+.offcanvas {
+    width: 30%;
+}
+
+.category-container {
+    margin-top: 12vh;
+    display: block;
+    align-items: center;
+}
+
+.btn {
+    position: relative;
+    width: 100%;
+    height: 64px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 32px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.5;
+    color: black;
+}
+
+.btn:hover {
+    background-color: #e3e6f9;
+}
+
+span {
+    font-size: 20px;
+}

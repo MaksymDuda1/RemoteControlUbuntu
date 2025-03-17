@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { CommandService } from '../../services/command.service';
+import { CommandService } from '../../../services/command.service';
 
-import { ConnectionCommandModel } from '../../models/connectionCommand.model';
+import { ConnectionCommandModel } from '../../../models/connectionCommand.model';
 import { FormsModule } from '@angular/forms';
 
 @Component({

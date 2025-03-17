@@ -1,12 +1,30 @@
-<nav class="navbar navbar-light">
-    <div class="container d-flex justify-content-between">
+<div class="pos-f-t">
+    <div class="collapse" id="navbarToggleExternalContent">
+        <div class="bg-dark p-4">
+            <h5 class="text-white h4">Collapsed content</h5>
+            <span class="text-muted">Toggleable via the navbar brand.</span>
+        </div>
+    </div>
+    <nav class="navbar navbar-Light ">
+        <button class="btn btn-toggle" type="button" data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
+            <div class="btn-icon-burger">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="100%" height="100%">
+                    <path d="M3 6h18v1H3zM3 16h18v1H3zM3 11h18v1H3z"></path>
+                </svg>
+            </div>
+            <span class="menu-text">Menu</span>
+        </button>
         <div class="logo">
-            <a routerLink="/landing">
-                <span class="logo-text">Remote controll </span>
-            </a>
+            <h2>Remote Controll</h2>
         </div>
 
-        <button (click)="onLogout()" class="btn btn-dark">Logout</button>
-    </div>
-</nav>
-<router-outlet />
+
+        <div class="btn exit-btn">
+
+            <button *ngIf="isAuthorized" class="btn btn-dark" (click)="onLogout()">Exit</button>
+        </div>
+    </nav>
+</div>
+<app-sidebar></app-sidebar>
+<router-outlet></router-outlet>

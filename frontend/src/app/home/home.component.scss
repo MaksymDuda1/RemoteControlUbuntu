@@ -4,36 +4,63 @@
     align-items: center;
     justify-content: center;
     padding: 20px;
+    background: linear-gradient(135deg, #f3f4f6, #e0e7ff); /* Soft blue-gray gradient */
+    height: 100vh;
 }
 
 .role-section {
     width: 88vw;
     display: flex;
-    justify-content: center;
-    gap: 200px;
-    padding: 20px;
-    border: 1px solid #d8d2d2;
-    border-radius: 10px;
+    justify-content: space-around;
+    gap: 40px;
+    padding: 25px;
+    border-radius: 12px;
     margin-bottom: 30px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background-color: #f9f9f9;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    background: #ffffff;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.table{
-    width: 50vh;
-    height: 32vh;
+/* Slight elevation effect */
+.role-section:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
 }
 
 .brick {
-    width: 36vw;
-    height: 38vh;
-    // border: 2px solid #000;
-    // border-radius: 12px;
+    width: 38vw;
+    height: 32vh;
+    background: #ffffff;
+    border-radius: 10px;
     overflow-y: auto;
-    overflow-x: hidden;
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 15px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+/* Custom scrollbar for better UI */
+.brick::-webkit-scrollbar {
+    width: 6px;
+}
+
+.brick::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 3px;
+}
+
+.brick::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+h2 {
+    font-size: 1.8rem;
+    color: #333;
+    border-bottom: 3px solid #6366f1; /* Soft blue highlight */
+    display: inline-block;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
 }
 
 mat-list {
@@ -41,16 +68,43 @@ mat-list {
 }
   
 .item {
-    background-color: #f0f0f0;  /* Soft light gray */
-    padding: 10px;
-    border-radius: 4px;
+    background: #e3e6f9; /* Soft pastel blue */
+    padding: 12px;
+    border-radius: 6px;
     margin: 5px 0;
-    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transition on hover */
+    transition: all 0.3s ease;
     width: 100%;
-  }
-  
-  /* Hover effect */
-  .item:hover {
-    transform: scale(1.03);  /* Slight scale effect */
-  }
-  
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+/* Enhanced Hover Effect */
+.item:hover {
+    transform: scale(1.05);
+    background: #d1d5ff; /* Darker shade on hover */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Connections & Commands section specific styles */
+.connections, .commands {
+    width: 100%;
+    text-align: center;
+}
+
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .role-section {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .brick {
+        width: 80vw;
+        height: 35vh;
+    }
+}
