@@ -1,0 +1,19 @@
+{
+    "app.hello": "Hello {{value}}",
+    "app.title": "Translation Demo",
+    "home.command": "Commands",
+    "home.connections": "Connections",
+    "home.testCommand": "Test command",
+    "home.testConnection": "Test connection",
+    "statistics.availableConnections": "Available Connections",
+    "statistics.totalConnections": "Total number of connections",
+    "statistics.availableCommands": "Commands",
+    "statistics.totalCommands": "Total number of commands",
+    "statistics.executedConnections": "Connections Executed",
+    "statistics.executedCommands": "Commands Executed",
+    "sidebar.connections": "Connections",
+    "sidebar.commands": "Commands",
+    "sidebar.history": "History",
+    "sidebar.instructions": "Instructions",
+    "app.exit": "Exit"
+}

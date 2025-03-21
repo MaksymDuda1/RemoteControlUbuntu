@@ -10,11 +10,12 @@ import { ConnectionService } from '../../services/connection.service';
 import { CommandService } from '../../services/command.service';
 import { LocalService } from '../../services/local.service';
 import { JwtHelperService } from '@auth0/angular-jwt';
+import { TranslateDirective, TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, RouterModule, StatisticsComponent, MatDividerModule, MatListModule], 
+  imports: [CommonModule, RouterModule, StatisticsComponent, MatDividerModule, MatListModule, TranslatePipe, TranslateDirective], 
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })

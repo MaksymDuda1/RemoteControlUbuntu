@@ -3,16 +3,24 @@
         <div class="offcanvas-body">
             <div class="category-container">
                 <div class="category-title">
-                    <button [routerLink]="'/available-cars'" class="btn" data-bs-dismiss="offcanvas">З'єднання <span>&gt;</span></button>
+                    <button [routerLink]="'/available-cars'" class="btn" data-bs-dismiss="offcanvas">
+                        {{ 'sidebar.connections' | translate }} <span>&gt;</span>
+                    </button>
                 </div>
                 <div class="category-title">
-                    <button [routerLink]="'/available-cars'" class="btn" data-bs-dismiss="offcanvas">Команди <span>&gt;</span></button>
+                    <button [routerLink]="'/available-cars'" class="btn" data-bs-dismiss="offcanvas">
+                        {{ 'sidebar.commands' | translate }} <span>&gt;</span>
+                    </button>
                 </div> 
                 <div class="category-title">
-                    <button [routerLink]="'/about-us'" class="btn" data-bs-dismiss="offcanvas">Історія<span>&gt;</span></button>
+                    <button [routerLink]="'/about-us'" class="btn" data-bs-dismiss="offcanvas">
+                        {{ 'sidebar.history' | translate }} <span>&gt;</span>
+                    </button>
                 </div>
                 <div class="category-title">
-                    <button [routerLink]="'/career'" class="btn" data-bs-dismiss="offcanvas">Інструкція<span>&gt;</span></button>
+                    <button [routerLink]="'/career'" class="btn" data-bs-dismiss="offcanvas">
+                        {{ 'sidebar.instructions' | translate }} <span>&gt;</span>
+                    </button>
                 </div>
             </div>
         </div>

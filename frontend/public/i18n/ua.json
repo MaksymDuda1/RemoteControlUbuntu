@@ -1,0 +1,17 @@
+{
+    "app.hello": "Привіт {{value}}",
+    "app.title": "Демонстрація перекладу",
+    "home.command": "Команди",
+    "home.connections": "З'єднання",
+    "statistics.availableConnections": "Доступні з'єднання",
+    "statistics.totalConnections": "Загальна кількість з'єднань",
+    "statistics.availableCommands": "Команди",
+    "statistics.totalCommands": "Загальна кількість команд",
+    "statistics.executedConnections": "З'єднань виконано",
+    "statistics.executedCommands": "Виконано команд",
+    "sidebar.connections": "З'єднання",
+    "sidebar.commands": "Команди",
+    "sidebar.history": "Історія",
+    "sidebar.instructions": "Інструкція",
+    "app.exit": "Вийти"
+}
