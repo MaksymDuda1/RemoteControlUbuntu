@@ -13,5 +13,17 @@
     "sidebar.commands": "Команди",
     "sidebar.history": "Історія",
     "sidebar.instructions": "Інструкція",
-    "app.exit": "Вийти"
-}
+    "app.exit": "Вийти",
+    "login.pageTitle": "Сторінка входу",
+    "login.emailLabel": "Email",
+    "login.passwordLabel": "Пароль",
+    "login.loginButton": "Увійти",
+    "login.noAccountText": "Немає акаунту? Зареєструйтесь тут.",
+    "register.pageTitle": "Сторінка реєстрації",
+    "register.usernameLabel": "Ім'я користувача",
+    "register.emailLabel": "Email",
+    "register.passwordLabel": "Пароль",
+    "register.registerButton": "Зареєструватися",
+    "register.haveAccountText": "Вже маєте акаунт? Увійдіть."
+  }
+  
