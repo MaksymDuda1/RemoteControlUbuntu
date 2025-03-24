@@ -24,6 +24,7 @@
     "register.emailLabel": "Email",
     "register.passwordLabel": "Пароль",
     "register.registerButton": "Зареєструватися",
-    "register.haveAccountText": "Вже маєте акаунт? Увійдіть."
+    "register.haveAccountText": "Вже маєте акаунт? Увійдіть.",
+    "app.menu": "Меню"
   }
   
