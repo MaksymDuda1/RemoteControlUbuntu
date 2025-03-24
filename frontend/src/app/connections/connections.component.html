@@ -1,0 +1,76 @@
+<div class="page-layout carded fullwidth inner-scroll configuration-page">
+    <!-- TOP BACKGROUND -->
+    <div class="top-bg"></div>
+    <!-- / TOP BACKGROUND -->
+
+    <!-- CENTER -->
+    <div class="center pb-10">
+        <!-- HEADER -->
+        <div class="pt-12 pb-12" fxLayout="row" fxLayoutAlign="start center">
+            <div fxLayout="column" fxLayoutAlign="start start"
+                 [@animate]="{value:'*',params:{delay:'100ms',x:'-25px'}}">
+                <div class="h2 title">
+                    Connections
+                </div>
+
+                <div class="subtitle secondary-text">
+                    <span>Connectons</span>
+                </div>
+            </div>
+        </div>
+        <!-- / HEADER -->
+
+        <!-- CONTENT CARD -->
+        <div class="content-card">
+            <form [formGroup]="filterForm" fxLayout="row" fxLayoutWrap fxLayoutGap="1%">
+
+                <mat-form-field fxFlex="20%">
+                    <input (input)="applyFilters()" matInput formControlName="name"
+                           placeholder="Input name" >
+                </mat-form-field>
+                
+                <mat-form-field fxFlex="20%">
+                    <input (input)="applyFilters()" matInput formControlName="host"
+                           placeholder="Input host" >
+                </mat-form-field>
+
+                <mat-form-field fxFlex="20%">
+                    <input (input)="applyFilters()" matInput formControlName="username"
+                           placeholder="Input username" >
+                </mat-form-field>
+
+                <!-- Filter Button -->
+                <div fxLayout="row" fxLayoutAlign="space-between center" fxFlex="20%">
+                    <button (click)="applyFilters()" mat-raised-button color="warn">
+                        Apply Filters
+                    </button>
+                    <button (click)="resetFilters()" mat-raised-button color="primary">
+                        Reset
+                    </button>
+                </div>
+            </form>
+
+            <div class="content">
+                <app-connection-table
+                    [connections]="connections"
+                    [errorMessage]="'No available connections'"
+                    [disabled]="false"
+                >
+                </app-connection-table>
+            </div>
+        </div>
+
+        <mat-paginator
+            #paginator
+            [length]="totalItems"
+            [pageIndex]="0"
+            [pageSize]="15"
+            [pageSizeOptions]="[5, 15, 50, 100]"
+            (page)="onPageChange($event)"
+            class="configuration-table-paginator"
+        >
+        </mat-paginator>
+        <!-- / CONTENT CARD -->
+    </div>
+    <!-- / CENTER -->
+</div>

@@ -11,6 +11,7 @@ import { errorInterceptor } from '../interceptor/errorHandingInterceptor';
 import { routes } from './app.routes';
 import {provideTranslateService, TranslateLoader} from "@ngx-translate/core";
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { provideAnimations } from '@angular/platform-browser/animations';
 
 const httpLoaderFactory: (http: HttpClient) => TranslateHttpLoader = (http: HttpClient) =>
   new TranslateHttpLoader(http, './i18n/', '.json');
@@ -18,6 +19,7 @@ const httpLoaderFactory: (http: HttpClient) => TranslateHttpLoader = (http: Http
 export const appConfig: ApplicationConfig = {
   providers: [provideRouter(routes),
   provideClientHydration(),
+  provideAnimations(),
   provideTranslateService({
     loader: {
       provide: TranslateLoader,
@@ -41,3 +43,4 @@ export const appConfig: ApplicationConfig = {
     }),
   ])]
 };
+

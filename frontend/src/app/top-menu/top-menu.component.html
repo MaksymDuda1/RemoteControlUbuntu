@@ -5,7 +5,7 @@
             <span class="text-muted">Toggleable via the navbar brand.</span>
         </div>
     </div>
-    <nav class="navbar navbar-Light ">
+    <nav class="navbar navbar-light">
         <button class="btn btn-toggle" type="button" data-bs-toggle="offcanvas"
             data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
             <div class="btn-icon-burger">
@@ -16,16 +16,19 @@
             <span class="menu-text">Menu</span>
         </button>
         <div class="logo">
-            <h2>Remote Controll</h2>
+            <h2>Remote Control</h2>
         </div>
 
-        <div class="language-switcher">
-            <button class="btn btn-link" (click)="changeLanguage('en')">🇪🇳</button>
-            <button class="btn btn-link" (click)="changeLanguage('ua')">🇺🇦</button>
-        </div>                            
-
-        <div class="btn exit-btn">
-
+        <div class="exit-btn d-flex justify-content-between">
+            <div class="language-switcher">
+                <button class="btn btn-link" (click)="changeLanguage('en')">
+                    <img src="flag-for-flag-united-kingdom.svg" alt="English" class="flag-icon">
+                </button>
+                <button class="btn btn-link" (click)="changeLanguage('ua')">
+                    <img src="flag-ua.svg" alt="Ukrainian" class="flag-icon">
+                </button>
+            </div>                            
+                
             <button *ngIf="isAuthorized" class="btn btn-dark" (click)="onLogout()">{{'app.exit' | translate}}</button>
         </div>
     </nav>

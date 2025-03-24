@@ -1,40 +1,45 @@
 .navbar {
-    color: black;
-    display: flex;
-  }
-  
-  .btn {
-    display: flex;
-    align-items: center; /* Align items vertically in the button */
-  }
-  
-  .btn-icon-burger {
-    width: 40px;
-    height: 40px;
-  }
-  
-  .menu-text {
-    margin-left: 10px; /* Adjust the margin based on your design */
-  }
-  
-  .brand-text {
-    margin-left: auto; /* Push the brand text to the right */
-  }
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
 
-  .language-switcher {
-    display: flex;
-    gap: 10px;
-    align-items: center;
+.btn {
+  display: flex;
+  align-items: center;
+}
+
+.btn-icon-burger {
+  width: 40px;
+  height: 40px;
+}
+
+.menu-text {
+  margin-left: 10px;
+}
+
+.language-switcher {
+  display: flex;
+  gap: 10px;
+  align-items: center;
 }
 
 .language-switcher button {
-    font-size: 24px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    transition: transform 0.2s ease-in-out;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+  padding: 5px;
 }
 
 .language-switcher button:hover {
-    transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.flag-icon {
+  width: 32px;
+  height: 24px;
+  border-radius: 4px;
 }

@@ -15,7 +15,7 @@ import { TranslateDirective, TranslatePipe } from '@ngx-translate/core';
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, RouterModule, StatisticsComponent, MatDividerModule, MatListModule, TranslatePipe, TranslateDirective], 
+  imports: [CommonModule, RouterModule, StatisticsComponent, MatDividerModule, MatListModule, TranslatePipe], 
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })

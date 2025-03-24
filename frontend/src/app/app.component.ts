@@ -6,7 +6,7 @@ import { TranslateDirective, TranslatePipe, TranslateService } from '@ngx-transl
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, CommonModule, TranslatePipe, TranslateDirective],
+  imports: [RouterOutlet, CommonModule, TranslatePipe],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
@@ -14,7 +14,7 @@ export class AppComponent {
   title = 'frontend';
 
   constructor(private translate: TranslateService) {
-    this.translate.addLangs(['de', 'en']);
+    this.translate.addLangs(['ua', 'en']);
     this.translate.setDefaultLang('en');
     this.translate.use('en');
 }
