@@ -4,6 +4,8 @@ namespace RemoteControlUbuntu.Domain.Dtos;
 
 public class AddConnectionDto
 {
+    public string Name { get; set; }
+    
     public string Host { get; set; } = null!;
 
     public string Username { get; set; } = null!;

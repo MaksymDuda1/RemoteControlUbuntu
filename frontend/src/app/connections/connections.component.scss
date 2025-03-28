@@ -1,0 +1,139 @@
+/* Page Layout */
+.page-layout {
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(135deg, #f3f4f6, #e0e7ff);
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Header */
+.header-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px;
+  margin-bottom: 15px;
+}
+
+.title-section {
+  text-align: left;
+}
+
+.title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #333;
+  border-bottom: 3px solid #6366f1;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.subtitle {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* Content Card */
+.content-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Hover Effect */
+.content-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Filters */
+.filter-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 15px;
+}
+
+.filter-item {
+  flex: 1;
+  min-width: 250px;
+  max-height: 40px;
+}
+
+mat-form-field {
+  width: 100%;
+  background: #fff;
+}
+
+/* Buttons */
+.filter-buttons {
+  display: flex;
+  align-items: center; /* Center vertically */
+  gap: 15px;
+  height: 40px; /* Match the height of the input fields */
+}
+
+.btn {
+  margin-top: 12px;
+  font-size: 16px;
+  padding: 8px 15px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.btn-danger {
+  background-color: #dc3545;
+  color: white;
+}
+
+.btn-danger:hover {
+  background-color: #c82333;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+/* Pagination */
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .content-card {
+    padding: 15px;
+  }
+
+  .filter-form {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .filter-item {
+    min-width: 100%;
+  }
+
+  .filter-buttons {
+    width: 100%;
+    justify-content: center;
+  }
+}

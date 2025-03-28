@@ -304,10 +304,14 @@
       },
       "RemoteControlUbuntu.Domain/1.0.0": {
         "dependencies": {
-          "Microsoft.AspNetCore.Identity.UI": "8.0.6"
+          "Microsoft.AspNetCore.Identity.UI": "8.0.6",
+          "Microsoft.EntityFrameworkCore": "8.0.6"
         },
         "runtime": {
-          "RemoteControlUbuntu.Domain.dll": {}
+          "RemoteControlUbuntu.Domain.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }

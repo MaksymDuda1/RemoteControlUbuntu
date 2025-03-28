@@ -1,6 +1,6 @@
 {
     "/api": {
-        "target" : "https://remotecontrollubuntuapi.azurewebsites.net",
+        "target" : "http://localhost:8000",
         "secure": "false",
         "changeOrigin": "true"
     },

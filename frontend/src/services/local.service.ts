@@ -19,21 +19,14 @@ export class LocalService {
     }
 
     put(name: string, value: string): void {
-        if (this.isLocalStorageAvailable()) {
-            localStorage.setItem(name, value);
-        }
+      localStorage.setItem(name, value);
     }
 
     get(name: string): string | null {
-        if (this.isLocalStorageAvailable())
-            return localStorage.getItem(name);
-
-        return null;
+      return localStorage.getItem(name);
     }
 
     remove(name: string): void {
-        if (this.isLocalStorageAvailable()) {
-            localStorage.removeItem(name);
-        }
+      localStorage.removeItem(name);
     }
 }

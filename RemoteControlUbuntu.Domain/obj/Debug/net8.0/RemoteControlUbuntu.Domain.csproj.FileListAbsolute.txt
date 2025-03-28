@@ -11,3 +11,16 @@
 /home/maksi/RiderProjects/RemoteControlUbuntu/RemoteControlUbuntu.Domain/obj/Debug/net8.0/RemoteControlUbuntu.Domain.pdb
 /home/maksi/RiderProjects/RemoteControlUbuntu/RemoteControlUbuntu.Domain/obj/Debug/net8.0/ref/RemoteControlUbuntu.Domain.dll
 /home/maksi/RiderProjects/RemoteControlUbuntu/RemoteControlUbuntu.Domain/obj/Debug/net8.0/RemoteControlUbuntu.Domain.sourcelink.json
+D:\projects\RemoteControlUbuntu\RemoteControlUbuntu.Domain\bin\Debug\net8.0\RemoteControlUbuntu.Domain.deps.json
+D:\projects\RemoteControlUbuntu\RemoteControlUbuntu.Domain\bin\Debug\net8.0\RemoteControlUbuntu.Domain.dll
+D:\projects\RemoteControlUbuntu\RemoteControlUbuntu.Domain\bin\Debug\net8.0\RemoteControlUbuntu.Domain.pdb
+D:\projects\RemoteControlUbuntu\RemoteControlUbuntu.Domain\obj\Debug\net8.0\RemoteControlUbuntu.Domain.csproj.AssemblyReference.cache
+D:\projects\RemoteControlUbuntu\RemoteControlUbuntu.Domain\obj\Debug\net8.0\RemoteControlUbuntu.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\projects\RemoteControlUbuntu\RemoteControlUbuntu.Domain\obj\Debug\net8.0\RemoteControlUbuntu.Domain.AssemblyInfoInputs.cache
+D:\projects\RemoteControlUbuntu\RemoteControlUbuntu.Domain\obj\Debug\net8.0\RemoteControlUbuntu.Domain.AssemblyInfo.cs
+D:\projects\RemoteControlUbuntu\RemoteControlUbuntu.Domain\obj\Debug\net8.0\RemoteControlUbuntu.Domain.csproj.CoreCompileInputs.cache
+D:\projects\RemoteControlUbuntu\RemoteControlUbuntu.Domain\obj\Debug\net8.0\RemoteControlUbuntu.Domain.sourcelink.json
+D:\projects\RemoteControlUbuntu\RemoteControlUbuntu.Domain\obj\Debug\net8.0\RemoteControlUbuntu.Domain.dll
+D:\projects\RemoteControlUbuntu\RemoteControlUbuntu.Domain\obj\Debug\net8.0\refint\RemoteControlUbuntu.Domain.dll
+D:\projects\RemoteControlUbuntu\RemoteControlUbuntu.Domain\obj\Debug\net8.0\RemoteControlUbuntu.Domain.pdb
+D:\projects\RemoteControlUbuntu\RemoteControlUbuntu.Domain\obj\Debug\net8.0\ref\RemoteControlUbuntu.Domain.dll

@@ -9,17 +9,19 @@ export class TokenService{
     }
 
     getDecodedToken(){
-        var token = this.localService.get(LocalService.AuthTokenName);
+      const token = this.localService.get(LocalService.AuthTokenName);
 
-        if(token){
+      console.log('token', token);
+
+      if(token){
             return this.jwtHelperService.decodeToken(token);
         }
     }
 
     getUserId(){
         var decodedToken = this.getDecodedToken();
-
-        return decodedToken.nameId; 
+        console.log(decodedToken);
+        return decodedToken.nameid;
     }
 
     getRole(){

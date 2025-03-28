@@ -6,7 +6,7 @@ import { TranslateDirective, TranslatePipe, TranslateService } from '@ngx-transl
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, CommonModule, TranslatePipe],
+  imports: [RouterOutlet, CommonModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
@@ -17,5 +17,6 @@ export class AppComponent {
     this.translate.addLangs(['ua', 'en']);
     this.translate.setDefaultLang('en');
     this.translate.use('en');
+  }
 }
-}
+

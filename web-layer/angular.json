@@ -31,7 +31,8 @@
             ],
             "styles": [
               "src/styles.scss",
-              "node_modules/bootstrap/dist/css/bootstrap.min.css"
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "node_modules/@angular/material/prebuilt-themes/pink-bluegrey.css"
             ],
             "scripts": [
               "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"              
@@ -108,5 +109,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "4b170d10-77ea-4a6d-b1a7-79ed1e14da6a"
   }
 }

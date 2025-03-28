@@ -154,25 +154,25 @@ namespace RemoteControlUbuntu.Infrastructure.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("906c9272-1b21-4b17-a336-d4775104f6e0"),
+                            Id = new Guid("63126bb5-2fff-4887-bbd7-4ef25f268d22"),
                             Name = "Off",
                             TerminalCommand = "shutdown"
                         },
                         new
                         {
-                            Id = new Guid("20877430-d9c9-4109-b19b-60287f284ea9"),
+                            Id = new Guid("a00d46ef-6d0f-448f-bdcc-ab086ced72c2"),
                             Name = "Telegram",
                             TerminalCommand = "telegram-desktop"
                         },
                         new
                         {
-                            Id = new Guid("79c7f783-36f9-47f3-8e36-d5a07190b175"),
+                            Id = new Guid("0a2fb9f8-b585-4268-9add-c8284801daae"),
                             Name = "Firefox",
                             TerminalCommand = "firefox"
                         },
                         new
                         {
-                            Id = new Guid("819cce11-635c-4b49-bb4b-89a84f4ce160"),
+                            Id = new Guid("a7664bb4-5676-4b01-bb20-802aaef87ae1"),
                             Name = "List",
                             TerminalCommand = "ls -l"
                         });
@@ -185,6 +185,10 @@ namespace RemoteControlUbuntu.Infrastructure.Migrations
                         .HasColumnType("uuid");
 
                     b.Property<string>("Host")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("text");
 
@@ -235,13 +239,13 @@ namespace RemoteControlUbuntu.Infrastructure.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("58409bdf-86a2-417a-9d85-08c87feb6233"),
+                            Id = new Guid("bef74c03-d181-4f82-b1a5-ab42bb3948f2"),
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         },
                         new
                         {
-                            Id = new Guid("0547aad5-f29b-4ec2-9efe-e314df1ba780"),
+                            Id = new Guid("f4fc577f-ae82-4968-87d5-b6aed53c1c15"),
                             Name = "User",
                             NormalizedName = "USER"
                         });

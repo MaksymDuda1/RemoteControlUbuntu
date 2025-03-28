@@ -36,7 +36,7 @@ export class ConnectionTableComponent implements OnInit, OnChanges {
   @Input() errorMessage: string = 'No connections available';
   @Input() disabled: boolean = false;
 
-  public displayedColumns: string[] = ['id', 'host', 'username'];
+  public displayedColumns: string[] = ['id', 'name', 'host', 'username'];
   public dataSource = new MatTableDataSource<ConnectionModel>([]);
   public hasConnections: boolean = false;
 
@@ -56,7 +56,7 @@ export class ConnectionTableComponent implements OnInit, OnChanges {
     if (this.connections && this.connections.length > 0) {
       this.dataSource.data = this.connections;
       this.hasConnections = true;
-      
+
       // Apply sort after view is initialized
       setTimeout(() => {
         if (this.sort) {

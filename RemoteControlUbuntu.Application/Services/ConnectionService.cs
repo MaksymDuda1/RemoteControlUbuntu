@@ -4,6 +4,7 @@ using RemoteControlUbuntu.Application.Exceptions;
 using RemoteControlUbuntu.Domain.Abstractions;
 using RemoteControlUbuntu.Domain.Dtos;
 using RemoteControlUbuntu.Domain.Entities;
+using RemoteControlUbuntu.Domain.Models;
 
 namespace RemoteControlUbuntu.Application.Services;
 
@@ -12,12 +13,11 @@ public class ConnectionService(
     IUnitOfWork unitOfWork)
     : IConnectionService
 {
-    public async Task<List<ConnectionDto>> GetAllUserConnections(Guid userId)
+    public async Task<PaginatedList<ConnectionDto>> GetAllUserConnections(ConnectionFilterModel connectionFilterModel)
     {
-        var connections = await unitOfWork.Connections
-            .GetByConditionsAsync(c => c.UserId == userId);
+        var connections = await unitOfWork.Connections.GetUserConnections(connectionFilterModel);
 
-        return connections.Select(mapper.Map<ConnectionDto>).ToList();
+        return connections;
     }
 
     public async Task<ConnectionDto> GetConnectionById(Guid connectionId)

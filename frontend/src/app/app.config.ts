@@ -18,7 +18,6 @@ const httpLoaderFactory: (http: HttpClient) => TranslateHttpLoader = (http: Http
 
 export const appConfig: ApplicationConfig = {
   providers: [provideRouter(routes),
-  provideClientHydration(),
   provideAnimations(),
   provideTranslateService({
     loader: {

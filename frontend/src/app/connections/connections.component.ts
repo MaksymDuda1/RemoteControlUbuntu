@@ -1,6 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
-import { ActivatedRoute } from '@angular/router';
+import {ActivatedRoute, RouterModule} from '@angular/router';
 import { ConnectionService } from '../../services/connection.service';
 import { Subject } from 'rxjs';
 import { MatTableDataSource, MatTableModule } from '@angular/material/table';
@@ -11,16 +11,23 @@ import { ConnectionTableComponent } from "./connection-table/connection-table.co
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatIconModule} from '@angular/material/icon';
+import {TranslatePipe} from '@ngx-translate/core';
+import {PaginatedList} from '../../models/paginatedList';
 
 @Component({
   selector: 'app-connections',
   imports: [
     MatTableModule,
-     MatPaginatorModule,
-      ConnectionTableComponent,
-       MatFormFieldModule,
-        ReactiveFormsModule,
-         MatInputModule],
+    MatPaginatorModule,
+    ConnectionTableComponent,
+    MatFormFieldModule,
+    ReactiveFormsModule,
+    MatInputModule,
+    MatIconModule,
+    RouterModule,
+    TranslatePipe
+  ],
   templateUrl: './connections.component.html',
   styleUrl: './connections.component.scss'
 })
@@ -34,7 +41,7 @@ export class ConnectionsComponent implements OnInit, OnDestroy {
   }
 
   public errorMessage = 'No connections';
-  
+  public paginatedList: PaginatedList<ConnectionModel> = new PaginatedList<ConnectionModel>();
   public dataSource: MatTableDataSource<ConnectionModel> = new MatTableDataSource;
   public hasConnections: boolean = false;
   public searchControl: FormControl<string> = new FormControl;
@@ -57,7 +64,7 @@ export class ConnectionsComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
       this.userId = this.tokenService.getUserId();
       this.connectionService.getAllByUserId(this.userId).subscribe(data => {
-        this.connections = data;
+        this.connections = data.items;
       });
       // TODO rewrite to paginated list
       this.totalItems = 10;
@@ -76,19 +83,17 @@ export class ConnectionsComponent implements OnInit, OnDestroy {
 
   initFilterForm(): void {
       this.filterForm = this.formBuilder.group({
-          connectionName: [null],
-          host: [null],
-          username: [null],
-          name: [null]
+          host: [''],
+          username: [''],
+          name: ['']
       });
   }
 
   resetFilters(): void {
       this.filterForm.reset({
-        connectionName: [null],
-        host: [null],
-        username: [null],
-        name: [null]
+        host: null,
+        username: null,
+        name: null
       });
       this.applyFilters();
   }
@@ -116,9 +121,10 @@ export class ConnectionsComponent implements OnInit, OnDestroy {
           }
       };
 
-      this.connectionService.getAllByUserId(this.userId).subscribe(
+      this.connectionService.getAllByUserId(this.userId, requestPayload).subscribe(
           (data) => {
-              this.connections = data;
+              this.paginatedList = data;
+              this.connections = data.items;
               // this.totalItems = response.totalCount;
               this.dataSource.data = this.connections;
           },

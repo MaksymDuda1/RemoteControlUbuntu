@@ -1,10 +1,11 @@
 using RemoteControlUbuntu.Domain.Dtos;
+using RemoteControlUbuntu.Domain.Models;
 
 namespace RemoteControlUbuntu.Application.Abstractions;
 
 public interface IConnectionService
 {
-    Task<List<ConnectionDto>> GetAllUserConnections(Guid userId);
+    Task<PaginatedList<ConnectionDto>> GetAllUserConnections(ConnectionFilterModel connectionFilterModel);
     Task<ConnectionDto> GetConnectionById(Guid connectionId);
     Task AddConnection(AddConnectionDto connectionDto);
     Task UpdateConnection(UpdateConnectionDto updateConnectionDto);

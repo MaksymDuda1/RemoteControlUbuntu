@@ -15,7 +15,7 @@ import { TranslateDirective, TranslatePipe } from '@ngx-translate/core';
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, RouterModule, StatisticsComponent, MatDividerModule, MatListModule, TranslatePipe], 
+  imports: [CommonModule, RouterModule, StatisticsComponent, MatDividerModule, MatListModule, TranslatePipe],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
@@ -28,10 +28,10 @@ export class HomeComponent {
     if (token) {
       var decodedData = this.jwtHelperService.decodeToken(token);
       const userId = decodedData.id;
-      this.connectionService.getAllByUserId(userId).subscribe(data => 
-        this.connections = data
+      this.connectionService.getAllByUserId(userId).subscribe(data =>
+        this.connections = data.items
       );
-      this.commandService.getAllByUserId(userId).subscribe(data => 
+      this.commandService.getAllByUserId(userId).subscribe(data =>
         this.commands = data
       );
     }

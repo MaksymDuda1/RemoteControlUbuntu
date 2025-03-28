@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using RemoteControlUbuntu.Application.Abstractions;
 using RemoteControlUbuntu.Domain.Abstractions;
 using RemoteControlUbuntu.Domain.Dtos;
+using RemoteControlUbuntu.Domain.Models;
 
 namespace RemoteControlUbuntu.API.Controllers;
 
@@ -17,13 +18,21 @@ public class ConnectionController(
         return Ok(await unitOfWork.Connections.GetAllAsync());
     }
 
-    [HttpGet("{userId:guid}")]
-    public async Task<IActionResult> GetAllUserConnections(Guid userId)
+    [HttpGet("user/{userId:guid}")]
+    public async Task<IActionResult> GetAllUserConnections(
+        [FromRoute] Guid userId,
+        [FromQuery] string? name,
+        string? host,
+        string? username,
+        int pageIndex = 1,
+        int pageSize = 15)
     {
-        return Ok(await connectionService.GetAllUserConnections(userId));
+        var connections = await connectionService.GetAllUserConnections(new ConnectionFilterModel(userId, name, host, username, pageIndex, pageSize));
+        
+        return Ok(connections);
     }
 
-    [HttpGet("by-id/{connectionId:guid}")]
+    [HttpGet("{connectionId:guid}")]
     public async Task<IActionResult> GetConnectionById(Guid connectionId)
     {
         return Ok(await connectionService.GetConnectionById(connectionId));
