@@ -52,8 +52,9 @@ export class ConnectionComponent implements OnInit {
   }
 
   onAdd(){
-   this.connectionService.create(this.connectionForm.getRawValue()).subscribe(() => {
+   this.connectionService.create(this.connectionForm.getRawValue()).subscribe(id => {
      this.connection = this.connectionForm.getRawValue();
+     this.connection.id = id;
 
      this.dialogRef.close(this.connection);
    });

@@ -7,7 +7,7 @@ public interface IConnectionService
 {
     Task<PaginatedList<ConnectionDto>> GetAllUserConnections(ConnectionFilterModel connectionFilterModel);
     Task<ConnectionDto> GetConnectionById(Guid connectionId);
-    Task AddConnection(AddConnectionDto connectionDto);
+    Task<Guid> AddConnection(AddConnectionDto connectionDto);
     Task UpdateConnection(UpdateConnectionDto updateConnectionDto);
     Task DeleteConnection(Guid connectionId);
 }

@@ -148,8 +148,6 @@ export class ConnectionsComponent implements OnInit, OnDestroy {
 
       const index = this.connections.findIndex(conn => conn.id === connection.id);
 
-      console.log(index);
-
       if (index !== -1) {
         this.connections[index] = connection;
       } else {

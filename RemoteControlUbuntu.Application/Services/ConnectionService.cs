@@ -31,7 +31,7 @@ public class ConnectionService(
         return mapper.Map<ConnectionDto>(connection);
     }
 
-    public async Task AddConnection(AddConnectionDto connectionDto)
+    public async Task<Guid> AddConnection(AddConnectionDto connectionDto)
     {
         var user = await unitOfWork.Users
             .GetSingleByConditionAsync(u => u.Id == connectionDto.UserId);
@@ -43,6 +43,8 @@ public class ConnectionService(
         
         await unitOfWork.Connections.InsertAsync(connection);
         await unitOfWork.SaveAsync();
+        
+        return connection.Id;
     }
 
     public async Task UpdateConnection(UpdateConnectionDto updateConnectionDto)

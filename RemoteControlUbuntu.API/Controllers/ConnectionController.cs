@@ -41,8 +41,8 @@ public class ConnectionController(
     [HttpPost]
     public async Task<IActionResult> AddConnection([FromBody] AddConnectionDto connectionDto)
     {
-        await connectionService.AddConnection(connectionDto);
-        return NoContent();
+        var id = await connectionService.AddConnection(connectionDto);
+        return Ok(id);
     }
 
     [HttpPut("{id:guid}")]
