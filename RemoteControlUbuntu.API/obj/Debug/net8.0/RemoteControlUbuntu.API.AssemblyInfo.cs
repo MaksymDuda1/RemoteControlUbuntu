@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RemoteControlUbuntu.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+09dd5c70e685e17d21073dddf10673ca94b46fce")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+881ba1f5ba96748c81ef2468031c3d20179cc8a4")]
 [assembly: System.Reflection.AssemblyProductAttribute("RemoteControlUbuntu.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RemoteControlUbuntu.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

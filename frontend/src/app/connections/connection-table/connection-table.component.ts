@@ -1,5 +1,5 @@
 // connection-table.component.ts
-import { Component, Input, OnInit, ViewChild, OnChanges, SimpleChanges } from '@angular/core';
+import {Component, Input, OnInit, ViewChild, OnChanges, SimpleChanges, inject} from '@angular/core';
 import { MatSort, MatSortModule } from '@angular/material/sort';
 import { MatTableDataSource, MatTableModule } from '@angular/material/table';
 import { animate, state, style, transition, trigger } from '@angular/animations';
@@ -7,6 +7,8 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { ConnectionModel } from '../../../models/connection.mode';
 import { MatIconModule } from '@angular/material/icon'
+import {MatDialog, MatDialogModule} from '@angular/material/dialog';
+import { ConnectionComponent } from '../connection/connection.component';
 @Component({
   selector: 'app-connection-table',
   templateUrl: './connection-table.component.html',
@@ -27,6 +29,7 @@ import { MatIconModule } from '@angular/material/icon'
     CommonModule,
     MatSortModule,
     MatIconModule,
+    MatDialogModule
   ]
 })
 export class ConnectionTableComponent implements OnInit, OnChanges {
@@ -39,6 +42,8 @@ export class ConnectionTableComponent implements OnInit, OnChanges {
   public displayedColumns: string[] = ['id', 'name', 'host', 'username'];
   public dataSource = new MatTableDataSource<ConnectionModel>([]);
   public hasConnections: boolean = false;
+
+  readonly dialog = inject(MatDialog);
 
   constructor() {}
 
@@ -68,4 +73,29 @@ export class ConnectionTableComponent implements OnInit, OnChanges {
       this.hasConnections = false;
     }
   }
+
+  openDialog(id: string): void {
+    const dialogRef = this.dialog.open(ConnectionComponent, {
+      panelClass: 'custom-dialog',
+      data: { id: id },
+    });
+
+    dialogRef.afterClosed().subscribe((connection: ConnectionModel | undefined) => {
+      if (!connection) return;
+
+      const index = this.connections.findIndex(conn => conn.id === connection.id);
+
+      console.log(index);
+
+      if (index !== -1) {
+        this.connections[index] = connection;
+      } else {
+        this.connections = [...this.connections, connection];
+      }
+
+      this.initializeTable();
+    });
+  }
+
+
 }

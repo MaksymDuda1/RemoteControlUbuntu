@@ -30,10 +30,7 @@
 
           <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
 
-          <tr mat-row *matRowDef="let connection; columns: displayedColumns;"
-              [routerLink]="['/connection', connection.id]"
-              matRipple
-              [class.disabled]="disabled">
+          <tr mat-row *matRowDef="let connection; columns: displayedColumns;" (click)=" openDialog(connection.id)">
           </tr>
         </table>
       </div>

@@ -1,16 +1,22 @@
-/* connection-table.component.scss */
+.custom-dialog {
+  width: 80vw !important;
+  max-width: 90vw;
+  padding: 24px;
+  border-radius: 12px;
+}
+
 .page-layout {
     padding: 16px;
-    
+
     .table-container {
       border-radius: 8px;
       overflow: hidden;
     }
-    
+
     .connections-table {
       width: 100%;
       background-color: white;
-      
+
       th {
         font-weight: 500;
         color: rgba(0, 0, 0, 0.87);
@@ -18,41 +24,41 @@
         padding: 12px 16px;
         white-space: nowrap;
       }
-      
+
       td {
         padding: 12px 16px;
         border-bottom: 1px solid rgba(0, 0, 0, 0.12);
       }
-      
+
       tr.mat-row {
         height: 48px;
         transition: background-color 0.2s ease;
-        
+
         &:hover:not(.disabled) {
           background-color: rgba(0, 0, 0, 0.04);
           cursor: pointer;
         }
-        
+
         &.disabled {
           opacity: 0.6;
           cursor: default;
         }
       }
-      
+
       // Column widths
       .mat-column-id {
         max-width: 100px;
       }
-      
+
       .mat-column-host {
         max-width: none;
       }
-      
+
       .mat-column-username {
         max-width: 150px;
       }
     }
-    
+
     .no-data-container {
       display: flex;
       flex-direction: column;
@@ -62,7 +68,7 @@
       background-color: white;
       border-radius: 8px;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12);
-      
+
       mat-icon {
         font-size: 64px;
         width: 64px;
@@ -70,10 +76,15 @@
         margin-bottom: 16px;
         color: #888;
       }
-      
+
       span {
         font-size: 18px;
         color: #444;
       }
     }
   }
+
+.mat-dialog-container {
+  width: 80vw !important; /* Adjust as needed */
+  max-width: 90vw; /* Prevents it from getting too big */
+}

@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import {Component, inject, OnDestroy, OnInit} from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import {ActivatedRoute, RouterModule} from '@angular/router';
 import { ConnectionService } from '../../services/connection.service';
@@ -14,6 +14,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatIconModule} from '@angular/material/icon';
 import {TranslatePipe} from '@ngx-translate/core';
 import {PaginatedList} from '../../models/paginatedList';
+import {ConnectionComponent} from './connection/connection.component';
+import {MatDialog} from '@angular/material/dialog';
 
 @Component({
   selector: 'app-connections',
@@ -40,6 +42,7 @@ export class ConnectionsComponent implements OnInit, OnDestroy {
     this.unsubscribeAll = new Subject<any>();
   }
 
+  readonly dialog = inject(MatDialog);
   public errorMessage = 'No connections';
   public paginatedList: PaginatedList<ConnectionModel> = new PaginatedList<ConnectionModel>();
   public dataSource: MatTableDataSource<ConnectionModel> = new MatTableDataSource;
@@ -132,5 +135,26 @@ export class ConnectionsComponent implements OnInit, OnDestroy {
               this.errorMessage = error;
           }
       );
+  }
+
+  openDialog(id: string | null): void {
+    const dialogRef = this.dialog.open(ConnectionComponent, {
+      panelClass: 'custom-dialog',
+      data: {id: id},
+    });
+
+    dialogRef.afterClosed().subscribe((connection: ConnectionModel | undefined) => {
+      if (!connection) return;
+
+      const index = this.connections.findIndex(conn => conn.id === connection.id);
+
+      console.log(index);
+
+      if (index !== -1) {
+        this.connections[index] = connection;
+      } else {
+        this.connections = [...this.connections, connection];
+      }
+    });
   }
 }

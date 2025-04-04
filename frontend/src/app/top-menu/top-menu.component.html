@@ -15,7 +15,7 @@
             </div>
             <span class="menu-text">{{'app.menu' | translate}}</span>
         </button>
-        <div class="logo">
+        <div class="logo" [routerLink]="'/home'">
             <h2>Remote Control</h2>
         </div>
 
@@ -27,8 +27,8 @@
                 <button class="btn btn-link" (click)="changeLanguage('ua')">
                     <img src="flag-ua.svg" alt="Ukrainian" class="flag-icon">
                 </button>
-            </div>                            
-                
+            </div>
+
             <button *ngIf="isAuthorized" class="btn btn-dark" (click)="onLogout()">{{'app.exit' | translate}}</button>
         </div>
     </nav>

@@ -45,9 +45,11 @@ public class ConnectionController(
         return NoContent();
     }
 
-    [HttpPut]
-    public async Task<IActionResult> UpdateConnection([FromBody] UpdateConnectionDto updateConnectionDto)
+    [HttpPut("{id:guid}")]
+    public async Task<IActionResult> UpdateConnection([FromRoute] Guid id,[FromBody] UpdateConnectionDto updateConnectionDto)
     {
+        updateConnectionDto.ConnectionId = id;
+        
         await connectionService.UpdateConnection(updateConnectionDto);
         return NoContent();
     }

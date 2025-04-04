@@ -53,6 +53,7 @@ public class ConnectionService(
         if (connection == null)
             throw new EntityNotFoundException("Connection Not Found");
 
+        connection.Name = updateConnectionDto.Name;
         connection.Host = updateConnectionDto.Host;
         connection.Username = updateConnectionDto.Username;
         connection.Password = connection.Password;

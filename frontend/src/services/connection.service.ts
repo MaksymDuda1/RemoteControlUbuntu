@@ -36,7 +36,7 @@ export class ConnectionService{
       return this.client.get<PaginatedList<ConnectionModel>>(this.path + '/user' + `/${id}`, { params });
     }
 
-    getById(id: number) : Observable<ConnectionModel>{
+    getById(id: string) : Observable<ConnectionModel>{
         return this.client.get<ConnectionModel>(this.path + `/${id}`);
     }
 
@@ -48,7 +48,7 @@ export class ConnectionService{
         return this.client.post(this.path, connection);
     }
 
-    update(id: number, connection: ConnectionModel): Observable<any> {
+    update(id: string, connection: ConnectionModel): Observable<any> {
         return this.client.put(`${this.path}/${id}`, connection);
     }
 
