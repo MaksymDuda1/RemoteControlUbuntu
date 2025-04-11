@@ -5,13 +5,14 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using RemoteControlUbuntu.API.Middlewares;
 using RemoteControlUbuntu.Application.Abstractions;
-using RemoteControlUbuntu.Application.Connectors;
 using RemoteControlUbuntu.Application.MappingProfile;
 using RemoteControlUbuntu.Application.Models;
 using RemoteControlUbuntu.Application.Services;
 using RemoteControlUbuntu.Domain.Abstractions;
 using RemoteControlUbuntu.Domain.Entities;
 using RemoteControlUbuntu.Infrastructure;
+using RemoteControlUbuntu.Infrastructure.Connectors;
+using RemoteControlUbuntu.Infrastructure.OpenAIIntegration;
 using RemoteControlUbuntu.Infrastructure.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -32,6 +33,8 @@ builder.Services.AddTransient<IExecuteCommandService, ExecuteCommandService>();
 builder.Services.AddScoped<ITokenService, TokenService>();
 builder.Services.AddScoped<IAuthorizationService, AuthorizationService>();
 builder.Services.AddScoped(typeof(Lazy<>), typeof(LazyInstance<>));
+builder.Services.AddScoped<IOpenAICaller, OpenAICaller>();
+builder.Services.AddScoped<IOpenAIService, OpenAIService>();
 
 builder.Services.AddIdentity<User, Role>(options =>
     {

@@ -8,13 +8,13 @@
 
     <ItemGroup>
       <ProjectReference Include="..\RemoteControlUbuntu.Domain\RemoteControlUbuntu.Domain.csproj" />
+      <ProjectReference Include="..\RemoteControlUbuntu.Infrastructure\RemoteControlUbuntu.Infrastructure.csproj" />
     </ItemGroup>
 
     <ItemGroup>
       <PackageReference Include="AutoMapper" Version="13.0.1" />
       <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.6" />
       <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="8.0.6" />
-      <PackageReference Include="SSH.NET" Version="2024.1.0" />
     </ItemGroup>
 
 </Project>

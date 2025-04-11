@@ -1,9 +1,8 @@
 using AutoMapper;
 using RemoteControlUbuntu.Application.Abstractions;
-using RemoteControlUbuntu.Application.Connectors;
 using RemoteControlUbuntu.Domain.Dtos;
 using RemoteControlUbuntu.Domain.Entities;
-using Renci.SshNet.Common;
+using RemoteControlUbuntu.Infrastructure.Connectors;
 
 namespace RemoteControlUbuntu.Application.Services;
 

@@ -2,7 +2,7 @@ using RemoteControlUbuntu.Domain.Entities;
 using Renci.SshNet;
 using Renci.SshNet.Common;
 
-namespace RemoteControlUbuntu.Application.Connectors;
+namespace RemoteControlUbuntu.Infrastructure.Connectors;
 
 public class Connector() : IConnector
 {
