@@ -15,11 +15,14 @@ import {MatSelect} from '@angular/material/select';
 import {KENDO_CONVERSATIONALUI, Message, SendMessageEvent, User} from '@progress/kendo-angular-conversational-ui';
 import {MatButton} from '@angular/material/button';
 import {NgIf} from '@angular/common';
+import {MatIcon} from '@angular/material/icon';
+import { MatDialog } from '@angular/material/dialog';
+import {CommandTypeDialogComponent} from './command-type-dialog/command-type-dialog.component';
 
 @Component({
   selector: 'app-command',
   standalone: true,
-  imports: [FormsModule, KENDO_CONVERSATIONALUI, MatDatepicker, MatDatepickerInput, MatDatepickerToggle, MatFormField, MatInput, MatOption, MatPaginator, MatSelect, MatSuffix, ReactiveFormsModule, TranslatePipe, MatButton, NgIf],
+  imports: [FormsModule, KENDO_CONVERSATIONALUI, MatDatepicker, MatDatepickerInput, MatDatepickerToggle, MatFormField, MatInput, MatOption, MatPaginator, MatSelect, MatSuffix, ReactiveFormsModule, TranslatePipe, MatButton, NgIf, MatIcon],
   templateUrl: './command.component.html',
   styleUrl: './command.component.scss'
 })
@@ -39,16 +42,25 @@ export class CommandComponent implements OnInit {
   public user: User = { id: 1 };
   public bot: User = { id: 0 };
 
+  readonly dialog = inject(MatDialog);
+
+  openDialog(enterAnimationDuration: string, exitAnimationDuration: string): void {
+    this.dialog.open(CommandTypeDialogComponent, {
+      width: '450px',
+      enterAnimationDuration,
+      exitAnimationDuration,
+    });
+  }
 
   public messages: Message[] = [
     {
-      author: this.bot,
-      text: 'Do you like Angular?'
+      author: this.user,
+      text: 'Write a command to remove root folder',
     },
     {
-      author: this.user,
-      text: 'Definitely!',
-    }
+      author: this.bot,
+      text: 'Command is not allowed'
+    },
   ];
 
   public sendMessage(e: SendMessageEvent): void {

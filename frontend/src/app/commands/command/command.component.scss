@@ -18,6 +18,7 @@ label {
 }
 
 input {
+  background: #e3e6f9;
   padding: 14px;
   border: 1px solid #ddd;
   border-radius: 6px;
@@ -153,6 +154,12 @@ input {
   max-height: 400px;
 }
 
-input {
-  background: #e3e6f9;
+.chat-error {
+  background: #ffe6e6;
+  color: #cc0000;
+  padding: 10px 14px;
+  border: 1px solid #ffcccc;
+  border-radius: 6px;
+  font-size: 13px;
+  margin-top: 10px;
 }

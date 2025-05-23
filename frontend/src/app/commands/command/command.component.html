@@ -26,7 +26,7 @@
 
 
         <div class="hint-container d-flex" [class.expanded]="hintWindowsIsOpen">
-          <button class="ask-button" mat-flat-button (click)="toggleChat()">
+          <button class="ask-button" mat-flat-button (click)="openDialog('0ms', '0ms')">
             <ng-container *ngIf="!hintWindowsIsOpen">Ask AI</ng-container>
             <ng-container *ngIf="hintWindowsIsOpen">✕</ng-container>
           </button>
@@ -37,6 +37,11 @@
               [messages]="messages"
               (sendMessage)="sendMessage($event)"
             ></kendo-chat>
+
+            <div class="chat-error d-flex justify-content-between">
+              <span> Your command is related to Black List and might be dangerous. Please try again with another request!</span>
+              <mat-icon>info</mat-icon>
+            </div>
           </div>
         </div>
 

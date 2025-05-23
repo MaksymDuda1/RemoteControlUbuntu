@@ -1,0 +1,19 @@
+button {
+  margin-right: 8px;
+}
+
+.dialog-title {
+  margin: 0px;
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Optional: spacing between text and icon */
+}
+
+.dialog-title h{
+  height: 20px;
+}
+
+.dialog-title mat-icon {
+  font-size: 20px;
+}
+

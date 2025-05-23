@@ -18,11 +18,10 @@ import {ConnectionComponent} from '../connections/connection/connection.componen
 import {CommandModel} from '../../models/command.model';
 import {CommandService} from '../../services/command.service';
 import {MatDatepicker, MatDatepickerInput, MatDatepickerToggle} from '@angular/material/datepicker';
-import {CommandTableComponent} from './command-table/command-table.component';
 
 @Component({
   selector: 'app-commands',
-  imports: [MatPaginatorModule, MatTableModule, RouterModule, MatFormFieldModule, MatSelectModule, MatInput, ReactiveFormsModule, TranslatePipe, MatDatepickerInput, MatDatepickerToggle, MatDatepicker, CommandTableComponent],
+  imports: [MatPaginatorModule, MatTableModule, RouterModule, MatFormFieldModule, MatSelectModule, MatInput, ReactiveFormsModule, TranslatePipe, MatDatepickerInput, MatDatepickerToggle, MatDatepicker],
   templateUrl: './commands.component.html',
   styleUrl: './commands.component.scss'
 })
