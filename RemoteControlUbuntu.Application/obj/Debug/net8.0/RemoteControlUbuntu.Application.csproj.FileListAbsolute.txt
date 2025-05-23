@@ -30,3 +30,5 @@ D:\projects\RemoteControlUbuntu\RemoteControlUbuntu.Application\obj\Debug\net8.0
 D:\projects\RemoteControlUbuntu\RemoteControlUbuntu.Application\obj\Debug\net8.0\refint\RemoteControlUbuntu.Application.dll
 D:\projects\RemoteControlUbuntu\RemoteControlUbuntu.Application\obj\Debug\net8.0\RemoteControlUbuntu.Application.pdb
 D:\projects\RemoteControlUbuntu\RemoteControlUbuntu.Application\obj\Debug\net8.0\ref\RemoteControlUbuntu.Application.dll
+D:\projects\RemoteControlUbuntu\RemoteControlUbuntu.Application\bin\Debug\net8.0\RemoteControlUbuntu.Infrastructure.dll
+D:\projects\RemoteControlUbuntu\RemoteControlUbuntu.Application\bin\Debug\net8.0\RemoteControlUbuntu.Infrastructure.pdb

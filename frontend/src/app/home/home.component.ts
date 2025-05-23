@@ -11,11 +11,12 @@ import { CommandService } from '../../services/command.service';
 import { LocalService } from '../../services/local.service';
 import { JwtHelperService } from '@auth0/angular-jwt';
 import { TranslateDirective, TranslatePipe } from '@ngx-translate/core';
+import {MatButton} from '@angular/material/button';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, RouterModule, StatisticsComponent, MatDividerModule, MatListModule, TranslatePipe],
+  imports: [CommonModule, RouterModule, StatisticsComponent, MatDividerModule, MatListModule, TranslatePipe, MatButton],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
@@ -32,7 +33,7 @@ export class HomeComponent {
         this.connections = data.items
       );
       this.commandService.getAllByUserId(userId).subscribe(data =>
-        this.commands = data
+        this.commands = data.items
       );
     }
   }

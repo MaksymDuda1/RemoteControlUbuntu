@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RemoteControlUbuntu.Infrastructure")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+881ba1f5ba96748c81ef2468031c3d20179cc8a4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0e77df3001252e7d12a53449b33091b0cc3f2625")]
 [assembly: System.Reflection.AssemblyProductAttribute("RemoteControlUbuntu.Infrastructure")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RemoteControlUbuntu.Infrastructure")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,0 +1,158 @@
+.command-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+}
+
+.form-group {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-weight: 500;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+input {
+  padding: 14px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+/* Dialog Buttons */
+.dialog-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  padding-top: 15px;
+}
+
+.btn {
+  font-size: 14px;
+  padding: 8px 15px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background-color: #1a6072; /* light blue */
+  color: white !important; /* black text for contrast */
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #87ceeb;
+  color: white;
+}
+
+.btn-secondary {
+  background-color: #f0f0f0;
+  color: #333;
+  border: none;
+}
+
+.btn-secondary:hover {
+  background-color: #dcdcdc;
+}
+
+.header-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 20px;
+  padding-top: 20px;
+}
+
+.title-section {
+  text-align: left;
+}
+
+.title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #333;
+  border-bottom: 3px solid #6366f1;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.subtitle {
+  font-size: 1rem;
+  color: #666;
+}
+
+.content-card {
+  margin: 0 auto;
+  width: 48vw;
+  display: flex;
+  justify-content: space-around;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  background: #ffffff;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hint-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 15px;
+  transition: all 0.3s ease;
+  flex-wrap: wrap;
+}
+
+.ask-button {
+  background: linear-gradient(80deg, #6750A4 0%, #1A237E 100%);
+  color: white;
+  border-radius: 8px;
+  padding: 0.75rem 2rem;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+
+.create-button {
+  background: linear-gradient(80deg, #6750A4 0%, #1A237E 100%);
+  color: white;
+  align-self: end;
+  width: 40%;
+  border-radius: 8px;
+  padding: 0.75rem 2rem;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+
+.ask-button:hover {
+  background: linear-gradient(80deg, #7E57C2 0%, #3949AB 100%);
+}
+
+.chat-box {
+  flex-grow: 1;
+  width: 100%;
+  max-height: 30vh;
+  border-radius: 10px;
+  overflow: auto;
+  box-shadow: 0 0 0 1px #ddd, 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+::ng-deep kendo-chat {
+  height: 200px !important;
+  max-height: 400px;
+}
+
+input {
+  background: #e3e6f9;
+}

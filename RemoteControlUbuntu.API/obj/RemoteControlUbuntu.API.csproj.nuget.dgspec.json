@@ -53,6 +53,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Azure.AI.OpenAI": {
+              "target": "Package",
+              "version": "[2.1.0, )"
+            },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
               "version": "[8.0.6, )"
@@ -142,6 +146,9 @@
             "projectReferences": {
               "D:\\projects\\RemoteControlUbuntu\\RemoteControlUbuntu.Domain\\RemoteControlUbuntu.Domain.csproj": {
                 "projectPath": "D:\\projects\\RemoteControlUbuntu\\RemoteControlUbuntu.Domain\\RemoteControlUbuntu.Domain.csproj"
+              },
+              "D:\\projects\\RemoteControlUbuntu\\RemoteControlUbuntu.Infrastructure\\RemoteControlUbuntu.Infrastructure.csproj": {
+                "projectPath": "D:\\projects\\RemoteControlUbuntu\\RemoteControlUbuntu.Infrastructure\\RemoteControlUbuntu.Infrastructure.csproj"
               }
             }
           }
@@ -172,10 +179,6 @@
             "Microsoft.AspNetCore.Identity.UI": {
               "target": "Package",
               "version": "[8.0.6, )"
-            },
-            "SSH.NET": {
-              "target": "Package",
-              "version": "[2024.1.0, )"
             }
           },
           "imports": [
@@ -315,6 +318,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Azure.AI.OpenAI": {
+              "target": "Package",
+              "version": "[2.1.0, )"
+            },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
               "version": "[8.0.6, )"
@@ -331,9 +338,17 @@
               "target": "Package",
               "version": "[8.0.6, )"
             },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[8.0.4, )"
+            },
             "Npgsql.EntityFrameworkCore.PostgreSQL": {
               "target": "Package",
               "version": "[8.0.4, )"
+            },
+            "SSH.NET": {
+              "target": "Package",
+              "version": "[2024.2.0, )"
             }
           },
           "imports": [

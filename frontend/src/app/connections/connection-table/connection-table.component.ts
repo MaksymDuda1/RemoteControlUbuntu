@@ -96,6 +96,4 @@ export class ConnectionTableComponent implements OnInit, OnChanges {
       this.initializeTable();
     });
   }
-
-
 }

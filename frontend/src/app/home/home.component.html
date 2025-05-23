@@ -1,8 +1,13 @@
 <div class="content">
     <div class="role-section mt-5">
         <div class="commands">
+          <div class="header d-flex justify-content-between">
+
             <h2>{{ 'home.command' | translate }}</h2>
-            <div class="brick">
+
+            <button class="create-button" mat-flat-button>Create command</button>
+          </div>
+          <div class="brick">
                 <mat-list>
                     <mat-list-item class="item">{{ 'home.testCommand' | translate }}</mat-list-item>
                     <mat-divider></mat-divider>
@@ -35,8 +40,12 @@
         </div>
 
         <div class="connections">
+          <div class="header d-flex justify-content-between">
             <h2>{{ 'home.connections' | translate }}</h2>
-            <div class="brick">
+
+            <button class="create-button" mat-flat-button>Create connection</button>
+          </div>
+          <div class="brick">
                 <mat-list>
                     <mat-list-item class="item">{{ 'home.testConnection' | translate }}</mat-list-item>
                     <mat-divider></mat-divider>

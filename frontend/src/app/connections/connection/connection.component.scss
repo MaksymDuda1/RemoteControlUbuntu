@@ -1,6 +1,5 @@
 .custom-dialog {
-  width: 32vw; // Larger width
-  max-width: 90vw;
+  width: 52vw; // Larger width
   min-height: 400px; // Increased height
   background: #fff;
   border-radius: 12px;
@@ -48,8 +47,8 @@ input {
 }
 
 .btn-primary {
-  background-color: #add8e6; /* light blue */
-  color: #000; /* black text for contrast */
+  background-color: #1a6072; /* light blue */
+  color: white !important; /* black text for contrast */
   border: none;
 }
 
@@ -68,3 +67,8 @@ input {
   background-color: #dcdcdc;
 }
 
+::ng-deep{
+  .cdk-overlay-pane.mat-mdc-dialog-panel{
+    max-width: 72vw;
+  }
+}

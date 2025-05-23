@@ -70,7 +70,7 @@ builder.Services.AddAuthentication(options =>
     });
 
 builder.Services.AddDbContext<RemoteDbContext>(
-    options => options.UseNpgsql(builder.Configuration.GetConnectionString(nameof(RemoteDbContext))));
+    options => options.UseSqlServer(builder.Configuration.GetConnectionString(nameof(RemoteDbContext))));
 
 var app = builder.Build();
 

@@ -12,6 +12,7 @@ import { routes } from './app.routes';
 import {provideTranslateService, TranslateLoader} from "@ngx-translate/core";
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { provideAnimations } from '@angular/platform-browser/animations';
+import {provideNativeDateAdapter} from '@angular/material/core';
 
 const httpLoaderFactory: (http: HttpClient) => TranslateHttpLoader = (http: HttpClient) =>
   new TranslateHttpLoader(http, './i18n/', '.json');
@@ -19,6 +20,7 @@ const httpLoaderFactory: (http: HttpClient) => TranslateHttpLoader = (http: Http
 export const appConfig: ApplicationConfig = {
   providers: [provideRouter(routes),
   provideAnimations(),
+    provideNativeDateAdapter(),
   provideTranslateService({
     loader: {
       provide: TranslateLoader,

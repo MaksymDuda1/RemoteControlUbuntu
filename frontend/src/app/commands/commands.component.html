@@ -1,0 +1,89 @@
+<div class="page-layout carded fullwidth inner-scroll configuration-page">
+  <!-- TOP BACKGROUND -->
+  <div class="top-bg"></div>
+
+  <!-- CENTER -->
+  <div class="center pb-10">
+    <!-- HEADER -->
+    <div class="header-container">
+      <div class="title-section">
+        <h2 class="title">Command List</h2>
+        <p class="subtitle secondary-text">Filter and view available commands</p>
+      </div>
+    </div>
+    <!-- / HEADER -->
+
+    <!-- CONTENT CARD -->
+    <div class="content-card">
+      <form [formGroup]="filterForm" class="filter-form d-flex flex-wrap align-items-center justify-content-between">
+        <div class="filter-item">
+          <mat-form-field appearance="outline">
+            <input (input)="applyFilters()" matInput formControlName="name" placeholder="Command name">
+          </mat-form-field>
+        </div>
+
+        <div class="filter-item">
+          <mat-form-field appearance="outline">
+            <mat-select (change)="applyFilters()" formControlName="type" placeholder="Type">
+              <mat-option [value]="'open'">Open</mat-option>
+              <mat-option [value]="'open'">Create</mat-option>
+              <mat-option [value]="'open'">Delete</mat-option>
+              <mat-option [value]="'open'">Custom</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+
+        <div class="filter-item">
+          <mat-form-field appearance="outline">
+            <input matInput formControlName="dateFrom" [matDatepicker]="pickerFrom" placeholder="From date">
+            <mat-datepicker-toggle matIconSuffix [for]="pickerFrom"></mat-datepicker-toggle>
+            <mat-datepicker #pickerFrom></mat-datepicker>
+          </mat-form-field>
+        </div>
+
+        <div class="filter-item">
+          <mat-form-field appearance="outline">
+            <input matInput formControlName="dateTo" [matDatepicker]="pickerTo" placeholder="To date">
+            <mat-datepicker-toggle matIconSuffix [for]="pickerTo"></mat-datepicker-toggle>
+            <mat-datepicker #pickerTo></mat-datepicker>
+          </mat-form-field>
+        </div>
+
+
+        <!-- Buttons -->
+        <div class="filter-buttons">
+          <button (click)="resetFilters()" class="btn btn-dark">
+            {{ 'buttons.reset' | translate }}
+          </button>
+
+          <button [routerLink]="'command'" class="btn btn-dark">
+            {{ 'buttons.add' | translate }}
+          </button>
+        </div>
+      </form>
+
+      <!-- Connections Table -->
+      <div class="content">
+        <app-command-table
+          [commands]="commands"
+          [errorMessage]="'No commands available'"
+          [disabled]="false"
+        ></app-command-table>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pagination at the Bottom -->
+  <div class="pagination-container">
+    <mat-paginator
+      #paginator
+      [length]="totalItems"
+      [pageIndex]="0"
+      [pageSize]="15"
+      [pageSizeOptions]="[5, 15, 50, 100]"
+      (page)="onPageChange($event)"
+      class="configuration-table-paginator"
+    >
+    </mat-paginator>
+  </div>
+</div>

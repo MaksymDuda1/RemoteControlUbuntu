@@ -8,6 +8,7 @@ import { UserPageComponent } from './user-page/user-page.component';
 import { CommandComponent } from './commands/command/command.component';
 import { ConnectionComponent } from './user-connections/connection/connection.component';
 import { ConnectionsComponent } from './connections/connections.component';
+import {CommandsComponent} from './commands/commands.component';
 
 export const routes: Routes = [
     { path: 'login', component: LoginComponent },
@@ -20,7 +21,9 @@ export const routes: Routes = [
             { path: 'user-page', component: UserPageComponent },
             { path: 'home', component: HomeComponent },
             { path: "execute", component: CommandComponent },
-            { path: "connections", component: ConnectionsComponent}
+            { path: "connections", component: ConnectionsComponent},
+            { path: "commands", component: CommandsComponent},
+            { path: "command", component: CommandComponent },
         ]
     },
 ];

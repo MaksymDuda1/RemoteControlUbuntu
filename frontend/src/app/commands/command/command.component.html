@@ -1,18 +1,53 @@
-<!-- <div class="container">
-    <form>
-        <div class="form-group">
-            <label for="exampleInputcommand1">Connection Id</label>
-            <input type="command" class="form-control" id="exampleInputcommand1" aria-describedby="commandHelp"
-                placeholder="Enter command" name="command" [(ngModel)]="connectionCommandModel.commandId">
-        </div>
-        <div class="form-group">
-            <label for="exampleInputconnection1">Connection Id</label>
-            <input type="connection" class="form-control" id="exampleInputconnection1" placeholder="connection"
-                name="connection" [(ngModel)]="connectionCommandModel.connectionId">
-        </div>
-        <button type="submit" (click)="onCommandExecute()" class="btn btn-dark">Execute</button>
-    </form>
+<div class="page-layout carded fullwidth inner-scroll configuration-page">
+  <!-- TOP BACKGROUND -->
+  <div class="top-bg"></div>
 
-    <button (click)="onCommandExecute()">DOTA</button>
-    {{errorMessage}}
-</div> -->
+  <!-- CENTER -->
+  <div class="center pb-2">
+    <!-- HEADER -->
+    <div class="header-container">
+      <div class="title-section">
+        <h2 class="title">Create Command</h2>
+        <p class="subtitle secondary-text">Create New Command</p>
+      </div>
+    </div>
+    <!-- / HEADER -->
+
+    <!-- CONTENT CARD -->
+    <div class="content-card mt-0">
+      <form [formGroup]="commandForm" class="command-form">
+        <div class="form-group">
+          <input id="name" type="text" formControlName="name" placeholder="Name"/>
+        </div>
+
+        <div class="form-group">
+          <input id="type" type="text" formControlName="type" placeholder="Type"/>
+        </div>
+
+
+        <div class="hint-container d-flex" [class.expanded]="hintWindowsIsOpen">
+          <button class="ask-button" mat-flat-button (click)="toggleChat()">
+            <ng-container *ngIf="!hintWindowsIsOpen">Ask AI</ng-container>
+            <ng-container *ngIf="hintWindowsIsOpen">✕</ng-container>
+          </button>
+
+          <div class="chat-box" *ngIf="hintWindowsIsOpen">
+            <kendo-chat
+              [user]="user"
+              [messages]="messages"
+              (sendMessage)="sendMessage($event)"
+            ></kendo-chat>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <input id="command" type="text" formControlName="command" placeholder="Command"/>
+        </div>
+
+        <button class="create-button" mat-flat-button (click)="toggleChat()">
+          Next Step
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
