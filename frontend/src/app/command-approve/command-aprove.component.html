@@ -1,0 +1,35 @@
+<div class="content">
+  <div class="confirmation-page">
+    <div class="header">Congratulations! You have successfully created a command. Quick summary below:</div>
+
+    <div class="summary d-flex justify-content-between">
+      <div class="entities">
+        <div class="section">
+          <div class="section-title">Command:</div>
+          <div>{{ command }}</div>
+        </div>
+        <div class="section">
+          <div class="section-title">Connection:</div>
+          <div>{{ connection }}</div>
+        </div>
+      </div>
+
+      <div class="description">
+        <div class="section">
+          <div class="section-title">What will be executed:</div>
+          <div>{{ description }}</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer d-flex justify-content-between">
+      <div class="warning">
+        <strong>Warning!</strong> A <strong>custom command</strong> will be executed. Please verify the settings before proceeding.
+      </div>
+
+      <div class="actions">
+        <button class="confirm-button" (click)="confirmAction()">Yes, I confirm</button>
+      </div>
+    </div>
+  </div>
+</div>

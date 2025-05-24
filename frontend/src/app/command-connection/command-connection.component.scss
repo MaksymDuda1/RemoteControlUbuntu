@@ -1,0 +1,206 @@
+.container {
+  padding: 20px;
+  width: 60vw;
+}
+
+.message-banner {
+  display: flex;
+  align-items: center;
+  background-color: #fff3cd;
+  padding: 10px;
+  border: 1px solid #ffeeba;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.message-banner mat-icon {
+  margin-right: 8px;
+}
+
+.table{
+  max-height: 60vh !important;
+  overflow-y: auto;
+}
+
+.connection-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.connection-table th,
+.connection-table td {
+  text-align: left;
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+}
+
+.connection-table th:nth-child(1),
+.connection-table td:nth-child(1),
+.connection-table th:nth-child(2),
+.connection-table td:nth-child(2) {
+  width: 50%;
+}
+
+.select-button {
+  background-color: #1976d2;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.select-button:hover {
+  background-color: #1565c0;
+}
+
+.actions {
+  text-align: right;
+}
+
+tr {
+  gap: 8px
+}
+
+td, th {
+  background: #e3e6f9;
+}
+
+.role-section {
+  width: 60vw;
+  display: flex;
+  justify-content: space-around;
+  gap: 40px;
+  padding: 25px;
+  margin-top: 20px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  background: #ffffff;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Slight elevation effect */
+.role-section:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.brick {
+  width: 24vw;
+  height: 32vh;
+  background: #ffffff;
+  border-radius: 10px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+/* Custom scrollbar for better UI */
+.brick::-webkit-scrollbar {
+  width: 6px;
+}
+
+.brick::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 3px;
+}
+
+.brick::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+h2 {
+  font-size: 1.8rem;
+  color: #333;
+  border-bottom: 3px solid #6366f1; /* Soft blue highlight */
+  display: inline-block;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+}
+
+mat-list {
+  width: 100%;
+}
+
+.item {
+  background: #e3e6f9; /* Soft pastel blue */
+  padding: 12px;
+  border-radius: 6px;
+  margin: 5px 0;
+  transition: all 0.3s ease;
+  width: 100%;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+/* Enhanced Hover Effect */
+.item:hover {
+  transform: scale(1.05);
+  background: #d1d5ff; /* Darker shade on hover */
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Connections & Commands section specific styles */
+.connections, .commands {
+  width: 100%;
+  text-align: center;
+}
+
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .role-section {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .brick {
+    width: 60vw;
+    height: 35vh;
+  }
+}
+
+::ng-deep{
+  .create-button, select-button {
+    background: linear-gradient(80deg, #6750A4 0%, #1A237E 100%) !important;
+    color: white !important;
+    border-radius: 8px !important;
+    padding: 0.75rem 2rem !important;
+    font-weight: 500 !important;
+  }
+}
+.select-button {
+  background: linear-gradient(80deg, #6750A4 0%, #1A237E 100%) !important;
+  color: white !important;
+  border-radius: 8px !important;
+  padding: 0.75rem 2rem !important;
+  font-weight: 500 !important;
+}
+
+.connection-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.search-field {
+  width: 80%;
+}
+
+.top-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 16px;
+}
+
