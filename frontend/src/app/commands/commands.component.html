@@ -7,8 +7,8 @@
     <!-- HEADER -->
     <div class="header-container">
       <div class="title-section">
-        <h2 class="title">Command List</h2>
-        <p class="subtitle secondary-text">Filter and view available commands</p>
+        <h2 class="title">Список команд</h2>
+        <p class="subtitle secondary-text">Фільтруйте та переглядайте доступні команди</p>
       </div>
     </div>
     <!-- / HEADER -->
@@ -18,24 +18,24 @@
       <form [formGroup]="filterForm" class="filter-form d-flex flex-wrap align-items-center justify-content-between">
         <div class="filter-item">
           <mat-form-field appearance="outline">
-            <input (input)="applyFilters()" matInput formControlName="name" placeholder="Command name">
+            <input (input)="applyFilters()" matInput formControlName="name" placeholder="Назва команди">
           </mat-form-field>
         </div>
 
         <div class="filter-item">
           <mat-form-field appearance="outline">
-            <mat-select (change)="applyFilters()" formControlName="type" placeholder="Type">
-              <mat-option [value]="'open'">Open</mat-option>
-              <mat-option [value]="'open'">Create</mat-option>
-              <mat-option [value]="'open'">Delete</mat-option>
-              <mat-option [value]="'open'">Custom</mat-option>
+            <mat-select (change)="applyFilters()" formControlName="type" placeholder="Тип">
+              <mat-option [value]="'open'">Відкрити</mat-option>
+              <mat-option [value]="'create'">Створити</mat-option>
+              <mat-option [value]="'delete'">Видалити</mat-option>
+              <mat-option [value]="'custom'">Користувацька</mat-option>
             </mat-select>
           </mat-form-field>
         </div>
 
         <div class="filter-item">
           <mat-form-field appearance="outline">
-            <input matInput formControlName="dateFrom" [matDatepicker]="pickerFrom" placeholder="From date">
+            <input matInput formControlName="dateFrom" [matDatepicker]="pickerFrom" placeholder="Дата від">
             <mat-datepicker-toggle matIconSuffix [for]="pickerFrom"></mat-datepicker-toggle>
             <mat-datepicker #pickerFrom></mat-datepicker>
           </mat-form-field>
@@ -43,21 +43,22 @@
 
         <div class="filter-item">
           <mat-form-field appearance="outline">
-            <input matInput formControlName="dateTo" [matDatepicker]="pickerTo" placeholder="To date">
+            <input matInput formControlName="dateTo" [matDatepicker]="pickerTo" placeholder="Дата до">
             <mat-datepicker-toggle matIconSuffix [for]="pickerTo"></mat-datepicker-toggle>
             <mat-datepicker #pickerTo></mat-datepicker>
           </mat-form-field>
         </div>
 
-
         <!-- Buttons -->
         <div class="filter-buttons">
           <button (click)="resetFilters()" class="btn btn-dark">
-            {{ 'buttons.reset' | translate }}
+            {{ 'buttons.reset' | translate: { lang: 'uk' } }}
+            <!-- Або просто: Скинути -->
           </button>
 
           <button [routerLink]="'command'" class="btn btn-dark">
-            {{ 'buttons.add' | translate }}
+            {{ 'buttons.add' | translate: { lang: 'uk' } }}
+            <!-- Або просто: Додати -->
           </button>
         </div>
       </form>
@@ -66,7 +67,7 @@
       <div class="content">
         <!--<app-command-table
           [commands]="commands"
-          [errorMessage]="'No commands available'"
+          [errorMessage]="'Немає доступних команд'"
           [disabled]="false"
         ></app-command-table>-->
       </div>
@@ -83,6 +84,7 @@
       [pageSizeOptions]="[5, 15, 50, 100]"
       (page)="onPageChange($event)"
       class="configuration-table-paginator"
+      aria-label="Пагінація"
     >
     </mat-paginator>
   </div>

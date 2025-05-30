@@ -9,6 +9,8 @@ import { CommandComponent } from './commands/command/command.component';
 import { ConnectionComponent } from './user-connections/connection/connection.component';
 import { ConnectionsComponent } from './connections/connections.component';
 import {CommandsComponent} from './commands/commands.component';
+import {CommandConnectionComponent} from './command-connection/command-connection.component';
+import {CommandAproveComponent} from './command-approve/command-aprove.component';
 
 export const routes: Routes = [
     { path: 'login', component: LoginComponent },
@@ -24,6 +26,8 @@ export const routes: Routes = [
             { path: "connections", component: ConnectionsComponent},
             { path: "commands", component: CommandsComponent},
             { path: "command", component: CommandComponent },
+            { path: "command-connection", component: CommandConnectionComponent},
+            {path: "command-approve", component: CommandAproveComponent}
         ]
     },
 ];

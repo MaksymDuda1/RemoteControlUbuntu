@@ -4,11 +4,10 @@
   align-items: flex-start; /* Можна змінити на center для вертикального центрування */
   padding: 40px 20px;
   min-height: 100vh;
-  background-color: #f5f5f5; /* Для кращої візуалізації */
 }
 
 .confirmation-page {
-  background: #ffffff;
+  background-color: #f5f5f5; /* Для кращої візуалізації */
   padding: 25px;
   margin-top: 40px;
   border-radius: 12px;
@@ -30,7 +29,7 @@
   font-weight: 600;
   color: #333;
   margin-bottom: 15px;
-  border-bottom: 3px solid #6366f1;
+  border-bottom: 3px solid #1A237E;
   padding-bottom: 10px;
 }
 
@@ -61,9 +60,9 @@
 }
 
 .warning {
-  background-color: #fff4e5;
+  background-color: #dddada;
   padding: 12px 20px;
-  border-left: 6px solid #ffa726;
+  border-left: 6px solid #1A237E;
   border-radius: 8px;
   font-size: 0.95rem;
   color: #444;

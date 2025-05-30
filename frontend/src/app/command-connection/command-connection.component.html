@@ -2,18 +2,17 @@
   <!-- Повідомлення вгорі -->
   <div class="message-banner">
     <mat-icon color="warn">info</mat-icon>
-    <span>You are going to execute custom command, we cannot guarantee the command success. Be careful with your request</span>
+    <span>Ви збираєтесь виконати власну команду, ми не можемо гарантувати її успішність. Будьте обережні з вашим запитом</span>
   </div>
 
   <div class="top-actions">
-    <button class="create-button" mat-flat-button>Create connection</button>
+    <button class="create-button" mat-flat-button>Створити з'єднання</button>
   </div>
+
   <div class="role-section">
     <div class="commands">
       <div class="header d-flex justify-content-between">
-
-        <h2>Command</h2>
-
+        <h2>Команда</h2>
       </div>
       <div class="brick">
         <mat-list>
@@ -21,6 +20,7 @@
         </mat-list>
       </div>
     </div>
+
     <div class="connections">
       <div class="header d-flex justify-content-between">
         <h2>{{ 'home.connections' | translate }}</h2>
@@ -28,7 +28,7 @@
 
       <div class="connection-controls">
         <mat-form-field class="search-field" appearance="outline">
-          <input matInput placeholder="Command name">
+          <input matInput placeholder="Назва команди">
         </mat-form-field>
       </div>
 
@@ -36,28 +36,19 @@
         <mat-list>
           <mat-list-item class="item">{{ 'home.testConnection' | translate }}</mat-list-item>
           <mat-divider></mat-divider>
-
+          <!-- Повтори для інших елементів з'єднання -->
           <mat-list-item class="item">{{ 'home.testConnection' | translate }}</mat-list-item>
           <mat-divider></mat-divider>
-
           <mat-list-item class="item">{{ 'home.testConnection' | translate }}</mat-list-item>
           <mat-divider></mat-divider>
-
           <mat-list-item class="item">{{ 'home.testConnection' | translate }}</mat-list-item>
           <mat-divider></mat-divider>
-
           <mat-list-item class="item">{{ 'home.testConnection' | translate }}</mat-list-item>
           <mat-divider></mat-divider>
-
           <mat-list-item class="item">{{ 'home.testConnection' | translate }}</mat-list-item>
           <mat-divider></mat-divider>
-
           <mat-list-item class="item">{{ 'home.testConnection' | translate }}</mat-list-item>
           <mat-divider></mat-divider>
-
-          <mat-list-item class="item">{{ 'home.testConnection' | translate }}</mat-list-item>
-          <mat-divider></mat-divider>
-
           <mat-list-item class="item">{{ 'home.testConnection' | translate }}</mat-list-item>
           <mat-divider></mat-divider>
         </mat-list>
@@ -65,8 +56,7 @@
     </div>
   </div>
 
-
   <div class="actions">
-    <button class="select-button" (click)="confirmConnections()">Select</button>
+    <button class="select-button" (click)="confirmConnections()">Обрати</button>
   </div>
 </div>

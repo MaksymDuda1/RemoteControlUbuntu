@@ -7,8 +7,8 @@
     <!-- HEADER -->
     <div class="header-container">
       <div class="title-section">
-        <h2 class="title">Create Command</h2>
-        <p class="subtitle secondary-text">Create New Command</p>
+        <h2 class="title">Створити команду</h2>
+        <p class="subtitle secondary-text">Створення нової команди</p>
       </div>
     </div>
     <!-- / HEADER -->
@@ -17,17 +17,16 @@
     <div class="content-card mt-0">
       <form [formGroup]="commandForm" class="command-form">
         <div class="form-group">
-          <input id="name" type="text" formControlName="name" placeholder="Name"/>
+          <input id="name" type="text" formControlName="name" placeholder="Назва"/>
         </div>
 
         <div class="form-group">
-          <input id="type" type="text" formControlName="type" placeholder="Type"/>
+          <input id="type" type="text" formControlName="type" placeholder="Тип"/>
         </div>
-
 
         <div class="hint-container d-flex" [class.expanded]="hintWindowsIsOpen">
           <button class="ask-button" mat-flat-button (click)="openDialog('0ms', '0ms')">
-            <ng-container *ngIf="!hintWindowsIsOpen">Ask AI</ng-container>
+            <ng-container *ngIf="!hintWindowsIsOpen">Запитати AI</ng-container>
             <ng-container *ngIf="hintWindowsIsOpen">✕</ng-container>
           </button>
 
@@ -39,18 +38,18 @@
             ></kendo-chat>
 
             <div class="chat-error d-flex justify-content-between">
-              <span> Your command is related to Black List and might be dangerous. Please try again with another request!</span>
+              <span> Ваша команда стосується чорного списку та може бути небезпечною. Спробуйте інший запит!</span>
               <mat-icon>info</mat-icon>
             </div>
           </div>
         </div>
 
         <div class="form-group">
-          <input id="command" type="text" formControlName="command" placeholder="Command"/>
+          <input id="command" type="text" formControlName="command" placeholder="Команда"/>
         </div>
 
         <button class="create-button" mat-flat-button (click)="toggleChat()">
-          Next Step
+          Наступний крок
         </button>
       </form>
     </div>

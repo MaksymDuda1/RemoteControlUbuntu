@@ -1,22 +1,22 @@
 <div class="content">
   <div class="confirmation-page">
-    <div class="header">Congratulations! You have successfully created a command. Quick summary below:</div>
+    <div class="header">Вітаємо! Ви успішно створили команду. Короткий підсумок нижче:</div>
 
     <div class="summary d-flex justify-content-between">
       <div class="entities">
         <div class="section">
-          <div class="section-title">Command:</div>
+          <div class="section-title">Команда:</div>
           <div>{{ command }}</div>
         </div>
         <div class="section">
-          <div class="section-title">Connection:</div>
+          <div class="section-title">З'єднання:</div>
           <div>{{ connection }}</div>
         </div>
       </div>
 
       <div class="description">
         <div class="section">
-          <div class="section-title">What will be executed:</div>
+          <div class="section-title">Що буде виконано:</div>
           <div>{{ description }}</div>
         </div>
       </div>
@@ -24,11 +24,11 @@
 
     <div class="footer d-flex justify-content-between">
       <div class="warning">
-        <strong>Warning!</strong> A <strong>custom command</strong> will be executed. Please verify the settings before proceeding.
+        <strong>Увага!</strong> Буде виконано <strong>кастомну команду</strong>. Будь ласка, перевірте налаштування перед підтвердженням.
       </div>
 
       <div class="actions">
-        <button class="confirm-button" (click)="confirmAction()">Yes, I confirm</button>
+        <button class="confirm-button" (click)="confirmAction()">Так, підтверджую</button>
       </div>
     </div>
   </div>
