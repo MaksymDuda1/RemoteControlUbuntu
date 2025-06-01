@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "7ncE45QzgIYVY1AbI7HCpvLZykfdagH+FVoVNUQsnYSdQIfi038YFkKn7PhXx0PAWQDyOpeYhKGFZQOtUThuGQ==",
+  "dgSpecHash": "/85qWCi+V7ZpE61Igfg2ffOOXUk0AbGt+DqskkofmxU+nGYX78MQft0V1tIhHidVuopiE/6lLBoe7YEUoMei7A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\petro.horokh\\Source\\Repos\\RemoteControlUbuntu\\RemoteControlUbuntu.Infrastructure\\RemoteControlUbuntu.InfrastructureTest.csproj",
+  "projectFilePath": "C:\\Users\\petro.horokh\\source\\repos\\RemoteControlUbuntu\\RemoteControlUbuntu.Infrastructure\\RemoteControlUbuntu.Infrastructure.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\petro.horokh\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\petro.horokh\\.nuget\\packages\\azure.ai.openai\\2.1.0\\azure.ai.openai.2.1.0.nupkg.sha512",
     "C:\\Users\\petro.horokh\\.nuget\\packages\\azure.core\\1.44.1\\azure.core.1.44.1.nupkg.sha512",
     "C:\\Users\\petro.horokh\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

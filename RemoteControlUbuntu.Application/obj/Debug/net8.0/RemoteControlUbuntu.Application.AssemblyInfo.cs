@@ -11,11 +11,10 @@
 using System;
 using System.Reflection;
 
-[assembly: Microsoft.AspNetCore.Identity.UI.UIFrameworkAttribute("Bootstrap5")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("RemoteControlUbuntu.Application")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+951f9240d553923a12e5065f2c3832a883f4c677")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6ec18420e9a42be43cbe01b99766745dc0ab0dab")]
 [assembly: System.Reflection.AssemblyProductAttribute("RemoteControlUbuntu.Application")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RemoteControlUbuntu.Application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

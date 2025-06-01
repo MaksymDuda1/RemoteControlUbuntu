@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\petro.horokh\\Source\\Repos\\RemoteControlUbuntu\\RemoteControlUbuntu.Domain\\RemoteControlUbuntu.Domain.csproj": {}
+    "C:\\Users\\petro.horokh\\source\\repos\\RemoteControlUbuntu\\RemoteControlUbuntu.Domain\\RemoteControlUbuntu.Domain.csproj": {}
   },
   "projects": {
-    "C:\\Users\\petro.horokh\\Source\\Repos\\RemoteControlUbuntu\\RemoteControlUbuntu.Domain\\RemoteControlUbuntu.Domain.csproj": {
+    "C:\\Users\\petro.horokh\\source\\repos\\RemoteControlUbuntu\\RemoteControlUbuntu.Domain\\RemoteControlUbuntu.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\petro.horokh\\Source\\Repos\\RemoteControlUbuntu\\RemoteControlUbuntu.Domain\\RemoteControlUbuntu.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\petro.horokh\\source\\repos\\RemoteControlUbuntu\\RemoteControlUbuntu.Domain\\RemoteControlUbuntu.Domain.csproj",
         "projectName": "RemoteControlUbuntu.Domain",
-        "projectPath": "C:\\Users\\petro.horokh\\Source\\Repos\\RemoteControlUbuntu\\RemoteControlUbuntu.Domain\\RemoteControlUbuntu.Domain.csproj",
+        "projectPath": "C:\\Users\\petro.horokh\\source\\repos\\RemoteControlUbuntu\\RemoteControlUbuntu.Domain\\RemoteControlUbuntu.Domain.csproj",
         "packagesPath": "C:\\Users\\petro.horokh\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\petro.horokh\\Source\\Repos\\RemoteControlUbuntu\\RemoteControlUbuntu.Domain\\obj\\",
+        "outputPath": "C:\\Users\\petro.horokh\\source\\repos\\RemoteControlUbuntu\\RemoteControlUbuntu.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\DevExpress 23.2\\Components\\Offline Packages",

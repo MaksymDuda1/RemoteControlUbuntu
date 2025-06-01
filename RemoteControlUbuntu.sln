@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34622.214
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RemoteControlUbuntu.Web", "RemoteControlUbuntu.API\RemoteControlUbuntu.Web.csproj", "{F7DD3028-5C79-4341-9535-C1CF927B1F66}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RemoteControlUbuntu.Domain", "RemoteControlUbuntu.Domain\RemoteControlUbuntu.Domain.csproj", "{63B8721F-A39B-4514-8A57-16081EDFA024}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RemoteControlUbuntu.Application", "RemoteControlUbuntu.UseCase\RemoteControlUbuntu.Application.csproj", "{966B6EDB-F235-40F7-B3BA-369BF1909F58}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RemoteControlUbuntu.Infrastructure", "RemoteControlUbuntu.Infrastructure\RemoteControlUbuntu.Infrastructure.csproj", "{1E8DA19B-555C-4010-A248-E75BC4DFAF4B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RemoteControlUbuntu.Infrastructure", "RemoteControlUbuntu.InterfaceAdapters\RemoteControlUbuntu.Infrastructure.csproj", "{B55778AF-4CAC-4749-B11A-A770BF417448}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RemoteControlUbuntu.Web", "RemoteControlUbuntu.Web\RemoteControlUbuntu.Web.csproj", "{0F6C6314-DA32-4E29-9590-1D05C9138D20}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RemoteControlUbuntu.Application", "RemoteControlUbuntu.Application\RemoteControlUbuntu.Application.csproj", "{9B478D1B-6DEE-4D41-990C-B098078A8513}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,22 +17,22 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{F7DD3028-5C79-4341-9535-C1CF927B1F66}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F7DD3028-5C79-4341-9535-C1CF927B1F66}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F7DD3028-5C79-4341-9535-C1CF927B1F66}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F7DD3028-5C79-4341-9535-C1CF927B1F66}.Release|Any CPU.Build.0 = Release|Any CPU
 		{63B8721F-A39B-4514-8A57-16081EDFA024}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{63B8721F-A39B-4514-8A57-16081EDFA024}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{63B8721F-A39B-4514-8A57-16081EDFA024}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{63B8721F-A39B-4514-8A57-16081EDFA024}.Release|Any CPU.Build.0 = Release|Any CPU
-		{966B6EDB-F235-40F7-B3BA-369BF1909F58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{966B6EDB-F235-40F7-B3BA-369BF1909F58}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{966B6EDB-F235-40F7-B3BA-369BF1909F58}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{966B6EDB-F235-40F7-B3BA-369BF1909F58}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B55778AF-4CAC-4749-B11A-A770BF417448}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B55778AF-4CAC-4749-B11A-A770BF417448}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B55778AF-4CAC-4749-B11A-A770BF417448}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B55778AF-4CAC-4749-B11A-A770BF417448}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E8DA19B-555C-4010-A248-E75BC4DFAF4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E8DA19B-555C-4010-A248-E75BC4DFAF4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E8DA19B-555C-4010-A248-E75BC4DFAF4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E8DA19B-555C-4010-A248-E75BC4DFAF4B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F6C6314-DA32-4E29-9590-1D05C9138D20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F6C6314-DA32-4E29-9590-1D05C9138D20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F6C6314-DA32-4E29-9590-1D05C9138D20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F6C6314-DA32-4E29-9590-1D05C9138D20}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B478D1B-6DEE-4D41-990C-B098078A8513}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B478D1B-6DEE-4D41-990C-B098078A8513}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B478D1B-6DEE-4D41-990C-B098078A8513}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B478D1B-6DEE-4D41-990C-B098078A8513}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
