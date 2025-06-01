@@ -74,7 +74,8 @@ public class ValidationService(IUnitOfWork unitOfWork, IMapper mapper, IOpenAISe
                                     Instructions:
                                     1. Check if command  matches or relates to any item in the `blackList`.
                                     2. If it is related to a forbidden command, return: `BlackListedCommand`
-                                    3. Write just response, without any additional text
+                                    3. Check if command contains any dangerous code, if yes return: `BlackListedCommand`
+                                    4. Write just response, without any additional text
                                    """;
         
         var blackListValidationResponse = await openAIService.AskChatGPT(blackListCheckPrompt);
@@ -139,23 +140,23 @@ public class ValidationService(IUnitOfWork unitOfWork, IMapper mapper, IOpenAISe
         };
     }
 
-    public async Task<string?> GetCommandToCheckExecutionPossibility(string type)
-    {
-        var prompt = $@"""Your task is to return a Linux terminal command that checks for all related objects (e.g., folders or programs) 
-                            to ensure that the next user command can be executed.
+        public async Task<string?> GetCommandToCheckExecutionPossibility(string userCommand)
+        {
+            var prompt = $@"""Your task is to return a Linux terminal command that checks for all related objects (e.g., folders or programs) 
+                                to ensure that the next user command can be executed.
 
-                            Type:
-                            {type}
+                                Type:
+                                {userCommand}
 
-                            Instructions:
-                            1. If this check is possible, return only the Linux terminal command.
-                            2. If this check is not possible, return absolutely no output at all — not even an empty string or placeholder.
-                            3. Do not explain or include any additional text — only return the command or nothing.""";    
+                                Instructions:
+                                1. If this check is possible, return only the Linux terminal command.
+                                2. If this check is not possible, return absolutely no output at all — not even an empty string or placeholder.
+                                3. Do not explain or include any additional text — only return the command or nothing.""";    
 
-        var response = await openAIService.AskChatGPT(prompt);
+            var response = await openAIService.AskChatGPT(prompt);
 
-        return string.IsNullOrWhiteSpace(response) ? null : response.Trim();
-    }
+            return string.IsNullOrWhiteSpace(response) ? null : response.Trim();
+        }
     
     public async Task<bool> GetExecutionPossibility(string objects, string command)
     {

@@ -6,6 +6,8 @@ public class AddCommandDto
     
     public string TerminalCommand { get; set; } = null!;
 
+    public string Type { get; set; }
+
     public string? IconPath { get; set; }
     public Guid? UserId { get; set; }
     
