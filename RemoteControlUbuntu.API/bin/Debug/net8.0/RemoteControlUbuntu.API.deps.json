@@ -91,6 +91,18 @@
           }
         }
       },
+      "FluentResults/3.16.0": {
+        "dependencies": {
+          "Microsoft.Extensions.Logging.Abstractions": "8.0.0",
+          "System.Threading.Tasks.Extensions": "4.5.4"
+        },
+        "runtime": {
+          "lib/netstandard2.1/FluentResults.dll": {
+            "assemblyVersion": "3.16.0.0",
+            "fileVersion": "3.16.0.0"
+          }
+        }
+      },
       "Humanizer.Core/2.14.1": {
         "runtime": {
           "lib/net6.0/Humanizer.dll": {
@@ -1099,6 +1111,7 @@
       "RemoteControlUbuntu.Application/1.0.0": {
         "dependencies": {
           "AutoMapper": "13.0.1",
+          "FluentResults": "3.16.0",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "8.0.6",
           "Microsoft.AspNetCore.Identity.UI": "8.0.6",
           "RemoteControlUbuntu.Domain": "1.0.0",
@@ -1184,6 +1197,13 @@
       "sha512": "sha512-SwXsAV3sMvAU/Nn31pbjhWurYSjJ+/giI/0n6tCrYoupEK34iIHCuk3STAd9fx8yudM85KkLSVdn951vTng/vQ==",
       "path": "bouncycastle.cryptography/2.4.0",
       "hashPath": "bouncycastle.cryptography.2.4.0.nupkg.sha512"
+    },
+    "FluentResults/3.16.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-VWacGzOyN9k7LOKqiNLnFvqTDLbFvepHlINdM3pPTD0YWI+a+VW/Q9gcx4gmJDpDZ32cAsczz5vmRjLCL5UOhA==",
+      "path": "fluentresults/3.16.0",
+      "hashPath": "fluentresults.3.16.0.nupkg.sha512"
     },
     "Humanizer.Core/2.14.1": {
       "type": "package",

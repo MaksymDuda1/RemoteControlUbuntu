@@ -2,5 +2,5 @@
 
 public interface IOpenAIService
 { 
-    Task AskChatGPT(string request);
+    Task<string?> AskChatGPT(string request);
 }

@@ -1,4 +1,62 @@
 <div class="container">
-    <h3 class="text-center">{{ 'statistics.availableCommands' | translate }}</h3>
-    <p-chart type="bar" [data]="chartData" [options]="chartOptions" [height]="'300px'"></p-chart>
+  <h3 class="text-center"> Аналітика</h3>
+
+  <div class="chart-controls">
+    <div class="dropdown-group">
+      <div class="dropdown">
+      <label for="analyticsType">Тип аналітики</label>
+      <p-dropdown
+        id="analyticsType"
+        [options]="analyticsTypes"
+        [(ngModel)]="selectedAnalyticsType"
+        placeholder="Оберіть тип аналітики"
+        (onChange)="onAnalyticsTypeChange()">
+      </p-dropdown>
+    </div>
+    </div>
+
+    <div class="dropdown-group">
+      <label for="chartType">Тип графіка</label>
+      <p-dropdown
+        id="chartType"
+        [options]="availableChartTypes"
+        [(ngModel)]="selectedChartType"
+        placeholder="Оберіть тип графіка"
+        (onChange)="onChartTypeChange()">
+      </p-dropdown>
+    </div>
+
+    <div class="dropdown-group" *ngIf="selectedAnalyticsType !== 'successRate' && selectedAnalyticsType !== 'averageTime'">
+      <label for="categoryFilter">Фільтр по командах</label>
+      <p-multiSelect
+        id="categoryFilter"
+        [options]="availableCategories"
+        [(ngModel)]="selectedCategories"
+        placeholder="Оберіть команди"
+        (onChange)="updateChartData()">
+      </p-multiSelect>
+    </div>
+  </div>
+
+  <div class="stats-summary">
+    <div class="stat-card">
+      <h4>Загальна кількість виконань</h4>
+      <span class="stat-value">{{ totalExecutions }}</span>
+    </div>
+    <div class="stat-card">
+      <h4>Середній відсоток успіху</h4>
+      <span class="stat-value">{{ averageSuccessRate }}%</span>
+    </div>
+    <div class="stat-card">
+      <h4>Найчастіша команда</h4>
+      <span class="stat-value">{{ mostFrequentCommand }}</span>
+    </div>
+  </div>
+
+  <p-chart
+    [type]="selectedChartType"
+    [data]="currentChartData"
+    [options]="currentChartOptions"
+    [height]="'500px'">
+  </p-chart>
 </div>

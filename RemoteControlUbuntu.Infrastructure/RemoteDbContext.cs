@@ -37,24 +37,28 @@ public class RemoteDbContext(DbContextOptions<RemoteDbContext> options)
                 {
                     Id = Guid.NewGuid(),
                     Name = "Off",
+                    Type = "Off",
                     TerminalCommand = "shutdown"
                 },
                 new Command()
                 {
                     Id = Guid.NewGuid(),
                     Name = "Telegram",
+                    Type = "OpenApp",
                     TerminalCommand = "telegram-desktop"
                 },
                 new Command()
                 {
                     Id = Guid.NewGuid(),
                     Name = "Firefox",
+                    Type = "OpenApp",
                     TerminalCommand = "firefox"
                 },
                 new Command()
                 {
                     Id = Guid.NewGuid(),
                     Name = "List",
+                    Type = "List",
                     TerminalCommand = "ls -l"
                 }
             );

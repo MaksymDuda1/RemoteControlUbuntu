@@ -11,7 +11,7 @@ import { errorInterceptor } from '../interceptor/errorHandingInterceptor';
 import { routes } from './app.routes';
 import {provideTranslateService, TranslateLoader} from "@ngx-translate/core";
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
-import { provideAnimations } from '@angular/platform-browser/animations';
+import {BrowserAnimationsModule, provideAnimations} from '@angular/platform-browser/animations';
 import {provideNativeDateAdapter} from '@angular/material/core';
 
 const httpLoaderFactory: (http: HttpClient) => TranslateHttpLoader = (http: HttpClient) =>
@@ -35,6 +35,7 @@ export const appConfig: ApplicationConfig = {
     RouterModule,
     HttpClientModule,
     BrowserModule,
+    BrowserAnimationsModule,
     JwtModule.forRoot({
       jwtOptionsProvider: {
         provide: JWT_OPTIONS,

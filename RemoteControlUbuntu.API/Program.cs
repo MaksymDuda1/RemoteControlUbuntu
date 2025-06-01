@@ -21,18 +21,26 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddControllers();
 builder.Services.AddAutoMapper(typeof(MappingProfile));
 
+//Repositories
 builder.Services.AddScoped(typeof(IBaseRepository<>), typeof(BaseRepository<>));
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IConnectionRepository, ConnectionRepository>();
+builder.Services.AddScoped<ICommandRepository, CommandRepository>();
+builder.Services.AddScoped<ICommandsBlackListRepository, CommandsBlackListRepository>();
+builder.Services.AddScoped<ICommandsWhiteListRepository, CommandsWhiteListRepository>();
+builder.Services.AddScoped<IUserCommandsWhiteListRepository, UserCommandsWhiteListRepository>();
+
+//Services
 builder.Services.AddScoped<IConnectionService, ConnectionService>();
 builder.Services.AddTransient<IConnector, Connector>();
 builder.Services.AddScoped<ICommandService, CommandService>();
-builder.Services.AddScoped<ICommandRepository, CommandRepository>();
-builder.Services.AddTransient<IExecuteCommandService, ExecuteCommandService>();
+// builder.Services.AddTransient<IExecuteCommandService, ExecuteCommandService>();
 builder.Services.AddScoped<ITokenService, TokenService>();
 builder.Services.AddScoped<IAuthorizationService, AuthorizationService>();
 builder.Services.AddScoped(typeof(Lazy<>), typeof(LazyInstance<>));
+
+//Infrastructure
 builder.Services.AddScoped<IOpenAICaller, OpenAICaller>();
 builder.Services.AddScoped<IOpenAIService, OpenAIService>();
 

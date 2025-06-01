@@ -6,7 +6,7 @@
   </div>
 
   <div class="top-actions">
-    <button class="create-button" mat-flat-button>Створити з'єднання</button>
+    <button (click)="openDialog(null)" class="create-button">Створити з'єднання</button>
   </div>
 
   <div class="role-section">
@@ -16,7 +16,7 @@
       </div>
       <div class="brick">
         <mat-list>
-          <mat-list-item class="item">{{ 'home.testCommand' | translate }}</mat-list-item>
+          <mat-list-item class="item">Відкрити Chrome</mat-list-item>
         </mat-list>
       </div>
     </div>
@@ -34,23 +34,23 @@
 
       <div class="brick">
         <mat-list>
-          <mat-list-item class="item">{{ 'home.testConnection' | translate }}</mat-list-item>
+          <mat-list-item class="item">Персональний ком'ютер</mat-list-item>
           <mat-divider></mat-divider>
-          <!-- Повтори для інших елементів з'єднання -->
-          <mat-list-item class="item">{{ 'home.testConnection' | translate }}</mat-list-item>
+          <mat-list-item class="item">192.168.0.102</mat-list-item>
           <mat-divider></mat-divider>
-          <mat-list-item class="item">{{ 'home.testConnection' | translate }}</mat-list-item>
+          <mat-list-item class="item">dev-pc-01.local</mat-list-item>
           <mat-divider></mat-divider>
-          <mat-list-item class="item">{{ 'home.testConnection' | translate }}</mat-list-item>
+          <mat-list-item class="item">workstation-dev-02</mat-list-item>
           <mat-divider></mat-divider>
-          <mat-list-item class="item">{{ 'home.testConnection' | translate }}</mat-list-item>
+          <mat-list-item class="item">laptop-dev (DHCP)</mat-list-item>
           <mat-divider></mat-divider>
-          <mat-list-item class="item">{{ 'home.testConnection' | translate }}</mat-list-item>
+          <mat-list-item class="item">build-node-01 (CI/CD)</mat-list-item>
           <mat-divider></mat-divider>
-          <mat-list-item class="item">{{ 'home.testConnection' | translate }}</mat-list-item>
+          <mat-list-item class="item">staging-vm</mat-list-item>
           <mat-divider></mat-divider>
-          <mat-list-item class="item">{{ 'home.testConnection' | translate }}</mat-list-item>
+          <mat-list-item class="item">SSH — test-env</mat-list-item>
           <mat-divider></mat-divider>
+          <mat-list-item class="item">SSH — archlinux-dev</mat-list-item>
         </mat-list>
       </div>
     </div>

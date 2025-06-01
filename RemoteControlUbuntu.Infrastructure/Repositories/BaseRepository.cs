@@ -2,12 +2,9 @@ using System.Linq.Expressions;
 using Microsoft.EntityFrameworkCore;
 using RemoteControlUbuntu.Domain.Abstractions;
 
-
 namespace RemoteControlUbuntu.Infrastructure.Repositories;
 
-
-public class BaseRepository<T>(RemoteDbContext context)
-    : IBaseRepository<T> where T : class
+public class BaseRepository<T>(RemoteDbContext context) : IBaseRepository<T> where T : class
 {
     public async Task<List<T>> GetAllAsync(
         params Expression<Func<T, object>>[] includes)

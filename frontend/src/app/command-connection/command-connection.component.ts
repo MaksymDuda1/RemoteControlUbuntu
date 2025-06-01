@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, inject} from '@angular/core';
 import {MatOption} from '@angular/material/core';
 import {MatSelect} from '@angular/material/select';
 import {MatFormField, MatInput} from '@angular/material/input';
@@ -9,6 +9,8 @@ import {MatDivider} from '@angular/material/divider';
 import {MatList, MatListItem} from '@angular/material/list';
 import {TranslatePipe} from '@ngx-translate/core';
 import {ReactiveFormsModule} from '@angular/forms';
+import {ConnectionComponent} from '../connections/connection/connection.component';
+import {MatDialog} from '@angular/material/dialog';
 
 @Component({
   selector: 'app-command-connection',
@@ -31,6 +33,8 @@ import {ReactiveFormsModule} from '@angular/forms';
   styleUrl: './command-connection.component.scss'
 })
 export class CommandConnectionComponent {
+  readonly dialog = inject(MatDialog);
+
   commands = [
     { name: 'Команда 1', connection: null },
     { name: 'Команда 2', connection: null },
@@ -50,10 +54,11 @@ export class CommandConnectionComponent {
     { id: 'conn10', name: 'Testing-VPN-Node' },
   ];
 
-
-  createNewConnection() {
-    // Відкрити діалог або перенаправити на сторінку створення
-    console.log('Створити новий коннекшин');
+  openDialog(id: string | null): void {
+    const dialogRef = this.dialog.open(ConnectionComponent, {
+      panelClass: 'custom-dialog',
+      data: {id: id},
+    });
   }
 
   confirmConnections() {

@@ -2,5 +2,5 @@
 
 public interface IOpenAICaller
 {
-    Task CallOpenAI(string request);
+    Task<string?> CallOpenAI(string request);
 }

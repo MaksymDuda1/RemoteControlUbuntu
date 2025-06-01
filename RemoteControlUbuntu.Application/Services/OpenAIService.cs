@@ -5,8 +5,8 @@ namespace RemoteControlUbuntu.Application.Services;
 
 public class OpenAIService(IOpenAICaller openAiCaller) : IOpenAIService
 {
-    public async Task AskChatGPT(string request)
+    public async Task<string?> AskChatGPT(string request)
     {
-        await openAiCaller.CallOpenAI(request);
+         return await openAiCaller.CallOpenAI(request);
     }
 }

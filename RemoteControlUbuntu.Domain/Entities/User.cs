@@ -13,5 +13,7 @@ public class User : IdentityUser<Guid>
     
     public List<Connection> Connections { get; set; } = new List<Connection>();
 
+    public List<UserCommandsWhiteList> UserWhiteList { get; set; }
+
     public List<Command> UsersCommands { get; set; } = new List<Command>();
 }

@@ -55,11 +55,11 @@ export class CommandComponent implements OnInit {
   public messages: Message[] = [
     {
       author: this.user,
-      text: 'Write a command to remove root folder',
+      text: 'Напиши команду, яка видалить Root папку',
     },
     {
       author: this.bot,
-      text: 'Command is not allowed'
+      text: 'Команда не дозволена'
     },
   ];
 

@@ -9,6 +9,12 @@ public interface IUnitOfWork
     ICommandRepository Commands { get; }
     
     IUserRepository Users { get; }
-    
+
+    ICommandsBlackListRepository CommandsBlackList { get; }
+
+    ICommandsWhiteListRepository CommandsWhiteList { get; }
+
+    IUserCommandsWhiteListRepository UserCommandsWhiteList { get; }
+
     Task SaveAsync();
 }

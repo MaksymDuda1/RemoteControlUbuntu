@@ -291,3 +291,4 @@ D:\projects\RemoteControlUbuntu\RemoteControlUbuntu.API\bin\Debug\net8.0\Azure.A
 D:\projects\RemoteControlUbuntu\RemoteControlUbuntu.API\bin\Debug\net8.0\BouncyCastle.Cryptography.dll
 D:\projects\RemoteControlUbuntu\RemoteControlUbuntu.API\bin\Debug\net8.0\OpenAI.dll
 D:\projects\RemoteControlUbuntu\RemoteControlUbuntu.API\bin\Debug\net8.0\System.ClientModel.dll
+D:\projects\RemoteControlUbuntu\RemoteControlUbuntu.API\bin\Debug\net8.0\FluentResults.dll
