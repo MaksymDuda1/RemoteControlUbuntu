@@ -1,19 +1,19 @@
-using System.Text;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
-using RemoteControlUbuntu.API.Middlewares;
-using RemoteControlUbuntu.Application.Abstractions;
-using RemoteControlUbuntu.Application.MappingProfile;
-using RemoteControlUbuntu.Application.Models;
-using RemoteControlUbuntu.Application.Services;
-using RemoteControlUbuntu.Domain.Abstractions;
-using RemoteControlUbuntu.Domain.Entities;
+using RemoteControlUbuntu.Application.Abstractions.Repositories;
+using RemoteControlUbuntu.Application.Abstractions.Services;
 using RemoteControlUbuntu.Infrastructure;
-using RemoteControlUbuntu.Infrastructure.Connectors;
-using RemoteControlUbuntu.Infrastructure.OpenAIIntegration;
+using RemoteControlUbuntu.Infrastructure.Abstractions.Repositories;
+using RemoteControlUbuntu.Infrastructure.Abstractions.Services;
+using RemoteControlUbuntu.Infrastructure.Entities;
+using RemoteControlUbuntu.Infrastructure.MappingProfile;
+using RemoteControlUbuntu.Infrastructure.Model;
 using RemoteControlUbuntu.Infrastructure.Repositories;
+using RemoteControlUbuntu.Infrastructure.Services;
+using RemoteControlUbuntu.Web.Middlewares;
+using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -34,7 +34,7 @@ builder.Services.AddScoped<ITokenService, TokenService>();
 builder.Services.AddScoped<IAuthorizationService, AuthorizationService>();
 builder.Services.AddScoped(typeof(Lazy<>), typeof(LazyInstance<>));
 builder.Services.AddScoped<IOpenAICaller, OpenAICaller>();
-builder.Services.AddScoped<IOpenAIService, OpenAIService>();
+builder.Services.AddScoped<IOpenAIService, OpenAiService>();
 
 builder.Services.AddIdentity<User, Role>(options =>
     {

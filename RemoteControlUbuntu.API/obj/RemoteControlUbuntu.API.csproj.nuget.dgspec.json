@@ -1,20 +1,26 @@
 {
   "format": 1,
   "restore": {
-    "D:\\projects\\RemoteControlUbuntu\\RemoteControlUbuntu.API\\RemoteControlUbuntu.API.csproj": {}
+    "C:\\Users\\petro.horokh\\Source\\Repos\\RemoteControlUbuntu\\RemoteControlUbuntu.API\\RemoteControlUbuntu.API.csproj": {}
   },
   "projects": {
-    "D:\\projects\\RemoteControlUbuntu\\RemoteControlUbuntu.API\\RemoteControlUbuntu.API.csproj": {
+    "C:\\Users\\petro.horokh\\Source\\Repos\\RemoteControlUbuntu\\RemoteControlUbuntu.API\\RemoteControlUbuntu.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\projects\\RemoteControlUbuntu\\RemoteControlUbuntu.API\\RemoteControlUbuntu.API.csproj",
+        "projectUniqueName": "C:\\Users\\petro.horokh\\Source\\Repos\\RemoteControlUbuntu\\RemoteControlUbuntu.API\\RemoteControlUbuntu.API.csproj",
         "projectName": "RemoteControlUbuntu.API",
-        "projectPath": "D:\\projects\\RemoteControlUbuntu\\RemoteControlUbuntu.API\\RemoteControlUbuntu.API.csproj",
-        "packagesPath": "C:\\Users\\maksi\\.nuget\\packages\\",
-        "outputPath": "D:\\projects\\RemoteControlUbuntu\\RemoteControlUbuntu.API\\obj\\",
+        "projectPath": "C:\\Users\\petro.horokh\\Source\\Repos\\RemoteControlUbuntu\\RemoteControlUbuntu.API\\RemoteControlUbuntu.API.csproj",
+        "packagesPath": "C:\\Users\\petro.horokh\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\petro.horokh\\Source\\Repos\\RemoteControlUbuntu\\RemoteControlUbuntu.API\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\DevExpress 23.2\\Components\\Offline Packages",
+          "C:\\Program Files\\DevExpress 24.1\\Components\\Offline Packages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\maksi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\petro.horokh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 23.2.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 24.1.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,18 +28,16 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
+          "C:\\Program Files\\DevExpress 23.2\\Components\\System\\Components\\Packages": {},
+          "C:\\Program Files\\DevExpress 24.1\\Components\\System\\Components\\Packages": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\projects\\RemoteControlUbuntu\\RemoteControlUbuntu.Application\\RemoteControlUbuntu.Application.csproj": {
-                "projectPath": "D:\\projects\\RemoteControlUbuntu\\RemoteControlUbuntu.Application\\RemoteControlUbuntu.Application.csproj"
-              },
-              "D:\\projects\\RemoteControlUbuntu\\RemoteControlUbuntu.Infrastructure\\RemoteControlUbuntu.Infrastructure.csproj": {
-                "projectPath": "D:\\projects\\RemoteControlUbuntu\\RemoteControlUbuntu.Infrastructure\\RemoteControlUbuntu.Infrastructure.csproj"
+              "C:\\Users\\petro.horokh\\Source\\Repos\\RemoteControlUbuntu\\RemoteControlUbuntu.Infrastructure\\RemoteControlUbuntu.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\petro.horokh\\Source\\Repos\\RemoteControlUbuntu\\RemoteControlUbuntu.Infrastructure\\RemoteControlUbuntu.Infrastructure.csproj"
               }
             }
           }
@@ -115,103 +119,27 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\projects\\RemoteControlUbuntu\\RemoteControlUbuntu.Application\\RemoteControlUbuntu.Application.csproj": {
+    "C:\\Users\\petro.horokh\\Source\\Repos\\RemoteControlUbuntu\\RemoteControlUbuntu.Domain\\RemoteControlUbuntu.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\projects\\RemoteControlUbuntu\\RemoteControlUbuntu.Application\\RemoteControlUbuntu.Application.csproj",
-        "projectName": "RemoteControlUbuntu.Application",
-        "projectPath": "D:\\projects\\RemoteControlUbuntu\\RemoteControlUbuntu.Application\\RemoteControlUbuntu.Application.csproj",
-        "packagesPath": "C:\\Users\\maksi\\.nuget\\packages\\",
-        "outputPath": "D:\\projects\\RemoteControlUbuntu\\RemoteControlUbuntu.Application\\obj\\",
-        "projectStyle": "PackageReference",
-        "configFilePaths": [
-          "C:\\Users\\maksi\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-        ],
-        "originalTargetFrameworks": [
-          "net8.0"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "net8.0": {
-            "targetAlias": "net8.0",
-            "projectReferences": {
-              "D:\\projects\\RemoteControlUbuntu\\RemoteControlUbuntu.Domain\\RemoteControlUbuntu.Domain.csproj": {
-                "projectPath": "D:\\projects\\RemoteControlUbuntu\\RemoteControlUbuntu.Domain\\RemoteControlUbuntu.Domain.csproj"
-              },
-              "D:\\projects\\RemoteControlUbuntu\\RemoteControlUbuntu.Infrastructure\\RemoteControlUbuntu.Infrastructure.csproj": {
-                "projectPath": "D:\\projects\\RemoteControlUbuntu\\RemoteControlUbuntu.Infrastructure\\RemoteControlUbuntu.Infrastructure.csproj"
-              }
-            }
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
-        }
-      },
-      "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
-          "dependencies": {
-            "AutoMapper": {
-              "target": "Package",
-              "version": "[13.0.1, )"
-            },
-            "Microsoft.AspNetCore.Authentication.JwtBearer": {
-              "target": "Package",
-              "version": "[8.0.6, )"
-            },
-            "Microsoft.AspNetCore.Identity.UI": {
-              "target": "Package",
-              "version": "[8.0.6, )"
-            }
-          },
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48",
-            "net481"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
-        }
-      }
-    },
-    "D:\\projects\\RemoteControlUbuntu\\RemoteControlUbuntu.Domain\\RemoteControlUbuntu.Domain.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "D:\\projects\\RemoteControlUbuntu\\RemoteControlUbuntu.Domain\\RemoteControlUbuntu.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\petro.horokh\\Source\\Repos\\RemoteControlUbuntu\\RemoteControlUbuntu.Domain\\RemoteControlUbuntu.Domain.csproj",
         "projectName": "RemoteControlUbuntu.Domain",
-        "projectPath": "D:\\projects\\RemoteControlUbuntu\\RemoteControlUbuntu.Domain\\RemoteControlUbuntu.Domain.csproj",
-        "packagesPath": "C:\\Users\\maksi\\.nuget\\packages\\",
-        "outputPath": "D:\\projects\\RemoteControlUbuntu\\RemoteControlUbuntu.Domain\\obj\\",
+        "projectPath": "C:\\Users\\petro.horokh\\Source\\Repos\\RemoteControlUbuntu\\RemoteControlUbuntu.Domain\\RemoteControlUbuntu.Domain.csproj",
+        "packagesPath": "C:\\Users\\petro.horokh\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\petro.horokh\\Source\\Repos\\RemoteControlUbuntu\\RemoteControlUbuntu.Domain\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\DevExpress 23.2\\Components\\Offline Packages",
+          "C:\\Program Files\\DevExpress 24.1\\Components\\Offline Packages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\maksi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\petro.horokh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 23.2.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 24.1.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -219,7 +147,8 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
+          "C:\\Program Files\\DevExpress 23.2\\Components\\System\\Components\\Packages": {},
+          "C:\\Program Files\\DevExpress 24.1\\Components\\System\\Components\\Packages": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -242,16 +171,6 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "dependencies": {
-            "Microsoft.AspNetCore.Identity.UI": {
-              "target": "Package",
-              "version": "[8.0.6, )"
-            },
-            "Microsoft.EntityFrameworkCore": {
-              "target": "Package",
-              "version": "[8.0.6, )"
-            }
-          },
           "imports": [
             "net461",
             "net462",
@@ -268,21 +187,27 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\projects\\RemoteControlUbuntu\\RemoteControlUbuntu.Infrastructure\\RemoteControlUbuntu.Infrastructure.csproj": {
+    "C:\\Users\\petro.horokh\\Source\\Repos\\RemoteControlUbuntu\\RemoteControlUbuntu.Infrastructure\\RemoteControlUbuntu.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\projects\\RemoteControlUbuntu\\RemoteControlUbuntu.Infrastructure\\RemoteControlUbuntu.Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\petro.horokh\\Source\\Repos\\RemoteControlUbuntu\\RemoteControlUbuntu.Infrastructure\\RemoteControlUbuntu.Infrastructure.csproj",
         "projectName": "RemoteControlUbuntu.Infrastructure",
-        "projectPath": "D:\\projects\\RemoteControlUbuntu\\RemoteControlUbuntu.Infrastructure\\RemoteControlUbuntu.Infrastructure.csproj",
-        "packagesPath": "C:\\Users\\maksi\\.nuget\\packages\\",
-        "outputPath": "D:\\projects\\RemoteControlUbuntu\\RemoteControlUbuntu.Infrastructure\\obj\\",
+        "projectPath": "C:\\Users\\petro.horokh\\Source\\Repos\\RemoteControlUbuntu\\RemoteControlUbuntu.Infrastructure\\RemoteControlUbuntu.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\petro.horokh\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\petro.horokh\\Source\\Repos\\RemoteControlUbuntu\\RemoteControlUbuntu.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\DevExpress 23.2\\Components\\Offline Packages",
+          "C:\\Program Files\\DevExpress 24.1\\Components\\Offline Packages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\maksi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\petro.horokh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 23.2.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 24.1.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -290,15 +215,16 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
+          "C:\\Program Files\\DevExpress 23.2\\Components\\System\\Components\\Packages": {},
+          "C:\\Program Files\\DevExpress 24.1\\Components\\System\\Components\\Packages": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\projects\\RemoteControlUbuntu\\RemoteControlUbuntu.Domain\\RemoteControlUbuntu.Domain.csproj": {
-                "projectPath": "D:\\projects\\RemoteControlUbuntu\\RemoteControlUbuntu.Domain\\RemoteControlUbuntu.Domain.csproj"
+              "C:\\Users\\petro.horokh\\Source\\Repos\\RemoteControlUbuntu\\RemoteControlUbuntu.Domain\\RemoteControlUbuntu.Domain.csproj": {
+                "projectPath": "C:\\Users\\petro.horokh\\Source\\Repos\\RemoteControlUbuntu\\RemoteControlUbuntu.Domain\\RemoteControlUbuntu.Domain.csproj"
               }
             }
           }
@@ -367,7 +293,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

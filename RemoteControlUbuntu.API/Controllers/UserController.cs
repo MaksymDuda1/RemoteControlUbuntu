@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
-using RemoteControlUbuntu.Domain.Abstractions;
+using RemoteControlUbuntu.Infrastructure.Abstractions.Repositories;
 
-namespace RemoteControlUbuntu.API.Controllers;
+namespace RemoteControlUbuntu.Web.Controllers;
 
 [ApiController]
 [Route("api/user")]

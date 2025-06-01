@@ -1,6 +1,4 @@
-using RemoteControlUbuntu.Domain.Entities;
-
-namespace RemoteControlUbuntu.Domain.Dtos;
+namespace RemoteControlUbuntu.Domain.DTOs;
 
 public class ConnectionCommandDto
 {

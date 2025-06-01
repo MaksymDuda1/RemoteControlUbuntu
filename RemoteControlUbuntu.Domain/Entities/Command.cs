@@ -1,8 +1,6 @@
-using System.Text.Json.Serialization;
-
 namespace RemoteControlUbuntu.Domain.Entities;
 
-public class Command
+public partial class Command
 {
     public Guid Id { get; set; }
 
@@ -13,7 +11,4 @@ public class Command
     public string? IconPath { get; set; }
 
     public Guid? UserId { get; set; }
-
-    [JsonIgnore]
-    public User? User { get; set; }
 }

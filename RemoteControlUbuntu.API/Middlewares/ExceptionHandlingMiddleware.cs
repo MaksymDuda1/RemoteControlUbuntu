@@ -1,11 +1,10 @@
 using System.Security.Authentication;
 using Microsoft.AspNetCore.Mvc;
-using RemoteControlUbuntu.Application.Exceptions;
+using RemoteControlUbuntu.Domain.Exceptions;
 
-namespace RemoteControlUbuntu.API.Middlewares;
+namespace RemoteControlUbuntu.Web.Middlewares;
 
-public class ExceptionHandlingMiddleware(
-    RequestDelegate next,
+public class ExceptionHandlingMiddleware(RequestDelegate next,
     ILogger<ExceptionHandlingMiddleware> logger)
 {
     public async Task Invoke(HttpContext context)
@@ -16,14 +15,14 @@ public class ExceptionHandlingMiddleware(
         }
         catch (Exception e)
         {
-            var code = StatusCodes.Status500InternalServerError;
+            int code;
 
             switch (e)
             {
-                case EntityNotFoundException entityNotFoundException:
+                case EntityNotFoundException:
                     code = StatusCodes.Status404NotFound;
                     break;
-                case AuthenticationException authenticationException:
+                case AuthenticationException:
                     code = StatusCodes.Status401Unauthorized;
                     break;
                 default:

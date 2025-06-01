@@ -1,10 +1,11 @@
 using Microsoft.AspNetCore.Mvc;
 using RemoteControlUbuntu.Application.Abstractions;
-using RemoteControlUbuntu.Domain.Abstractions;
-using RemoteControlUbuntu.Domain.Dtos;
-using RemoteControlUbuntu.Domain.Models;
+using RemoteControlUbuntu.Application.Models;
+using RemoteControlUbuntu.Domain.DTOs;
+using RemoteControlUbuntu.Infrastructure.Abstractions.Repositories;
+using RemoteControlUbuntu.Infrastructure.Abstractions.Services;
 
-namespace RemoteControlUbuntu.API.Controllers;
+namespace RemoteControlUbuntu.Web.Controllers;
 
 [ApiController]
 [Route("api/connection")]

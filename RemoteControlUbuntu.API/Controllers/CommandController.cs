@@ -1,11 +1,10 @@
-using System.ComponentModel;
 using Microsoft.AspNetCore.Mvc;
-using RemoteControlUbuntu.Application.Abstractions;
-using RemoteControlUbuntu.Domain.Abstractions;
-using RemoteControlUbuntu.Domain.Dtos;
-using RemoteControlUbuntu.Domain.Entities;
+using RemoteControlUbuntu.Domain.DTOs;
+using RemoteControlUbuntu.Infrastructure.Abstractions.Repositories;
+using RemoteControlUbuntu.Infrastructure.Abstractions.Services;
+using RemoteControlUbuntu.Infrastructure.DTOs;
 
-namespace RemoteControlUbuntu.API.Controllers;
+namespace RemoteControlUbuntu.Web.Controllers;
 
 [ApiController]
 [Route("api/command")]

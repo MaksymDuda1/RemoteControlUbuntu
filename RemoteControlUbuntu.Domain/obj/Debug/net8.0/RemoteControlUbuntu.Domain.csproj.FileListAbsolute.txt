@@ -24,3 +24,15 @@ D:\projects\RemoteControlUbuntu\RemoteControlUbuntu.Domain\obj\Debug\net8.0\Remo
 D:\projects\RemoteControlUbuntu\RemoteControlUbuntu.Domain\obj\Debug\net8.0\refint\RemoteControlUbuntu.Domain.dll
 D:\projects\RemoteControlUbuntu\RemoteControlUbuntu.Domain\obj\Debug\net8.0\RemoteControlUbuntu.Domain.pdb
 D:\projects\RemoteControlUbuntu\RemoteControlUbuntu.Domain\obj\Debug\net8.0\ref\RemoteControlUbuntu.Domain.dll
+C:\Users\petro.horokh\Source\Repos\RemoteControlUbuntu\RemoteControlUbuntu.Domain\obj\Debug\net8.0\RemoteControlUbuntu.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\petro.horokh\Source\Repos\RemoteControlUbuntu\RemoteControlUbuntu.Domain\obj\Debug\net8.0\RemoteControlUbuntu.Domain.AssemblyInfoInputs.cache
+C:\Users\petro.horokh\Source\Repos\RemoteControlUbuntu\RemoteControlUbuntu.Domain\obj\Debug\net8.0\RemoteControlUbuntu.Domain.AssemblyInfo.cs
+C:\Users\petro.horokh\Source\Repos\RemoteControlUbuntu\RemoteControlUbuntu.Domain\obj\Debug\net8.0\RemoteControlUbuntu.Domain.csproj.CoreCompileInputs.cache
+C:\Users\petro.horokh\Source\Repos\RemoteControlUbuntu\RemoteControlUbuntu.Domain\obj\Debug\net8.0\RemoteControlUbuntu.Domain.sourcelink.json
+C:\Users\petro.horokh\Source\Repos\RemoteControlUbuntu\RemoteControlUbuntu.Domain\obj\Debug\net8.0\RemoteControlUbuntu.Domain.dll
+C:\Users\petro.horokh\Source\Repos\RemoteControlUbuntu\RemoteControlUbuntu.Domain\obj\Debug\net8.0\refint\RemoteControlUbuntu.Domain.dll
+C:\Users\petro.horokh\Source\Repos\RemoteControlUbuntu\RemoteControlUbuntu.Domain\obj\Debug\net8.0\RemoteControlUbuntu.Domain.pdb
+C:\Users\petro.horokh\Source\Repos\RemoteControlUbuntu\RemoteControlUbuntu.Domain\bin\Debug\net8.0\RemoteControlUbuntu.Domain.deps.json
+C:\Users\petro.horokh\Source\Repos\RemoteControlUbuntu\RemoteControlUbuntu.Domain\bin\Debug\net8.0\RemoteControlUbuntu.Domain.dll
+C:\Users\petro.horokh\Source\Repos\RemoteControlUbuntu\RemoteControlUbuntu.Domain\bin\Debug\net8.0\RemoteControlUbuntu.Domain.pdb
+C:\Users\petro.horokh\Source\Repos\RemoteControlUbuntu\RemoteControlUbuntu.Domain\obj\Debug\net8.0\ref\RemoteControlUbuntu.Domain.dll

@@ -1,8 +1,6 @@
-using System.Text.Json.Serialization;
-
 namespace RemoteControlUbuntu.Domain.Entities;
 
-public class Connection
+public partial class Connection
 {
     public Guid Id { get; set; }
 
@@ -16,6 +14,5 @@ public class Connection
     
     public Guid UserId { get; set; }
     
-    [JsonIgnore]
-    public User? User { get; set; } = null!;
+    
 }

@@ -1,4 +1,4 @@
-namespace RemoteControlUbuntu.Domain.Dtos;
+namespace RemoteControlUbuntu.Domain.DTOs;
 
 public class UpdateCommandDto
 {
