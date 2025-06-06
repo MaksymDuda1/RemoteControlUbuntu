@@ -47,7 +47,7 @@ input {
 }
 
 .btn-primary {
-  background-color: #0b0a0a; /* light blue */
+  background-color: #1a6072; /* light blue */
   color: white !important; /* black text for contrast */
   border: none;
 }
@@ -71,4 +71,52 @@ input {
   .cdk-overlay-pane.mat-mdc-dialog-panel{
     max-width: 72vw;
   }
+}
+
+.help-icon {
+  font-size: 16px;
+  color: #666;
+  margin-left: 5px;
+  cursor: help;
+  vertical-align: middle;
+}
+
+.help-icon:hover {
+  color: #333;
+}
+
+.form-group label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.label-with-icon {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.label-with-icon label {
+  margin-right: 5px;
+  margin-bottom: 0;
+}
+
+.help-icon {
+  font-size: 16px;
+  color: #666;
+  cursor: help;
+  height: 16px;
+  width: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.help-icon:hover {
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 15px;
 }

@@ -6,10 +6,12 @@ import {ConnectionModel} from '../../../models/connection.mode';
 import {FormBuilder, FormControl, FormGroup, ReactiveFormsModule, Validators} from '@angular/forms';
 import {TokenService} from '../../../services/token.service';
 import {ConnectionsComponent} from '../connections.component';
+import {MatTooltip} from '@angular/material/tooltip';
+import {MatIcon} from '@angular/material/icon';
 
 @Component({
   selector: 'app-connection',
-  imports: [MatDialogModule, MatButton, ReactiveFormsModule],
+  imports: [MatDialogModule, MatButton, ReactiveFormsModule, MatIcon, MatTooltip],
   templateUrl: './connection.component.html',
   styleUrl: './connection.component.scss'
 })
