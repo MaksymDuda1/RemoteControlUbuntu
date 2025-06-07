@@ -1,0 +1,183 @@
+<div class="command-set-builder">
+  <!-- Header -->
+  <div class="builder-header">
+    <div class="header-container">
+      <div class="title-section">
+        <h1 class="title">{{ isEditMode ? 'Edit' : 'Create' }} Command Set</h1>
+        <p class="subtitle">Build and organize your command sequences with drag & drop</p>
+      </div>
+    </div>
+    <div class="header-actions">
+      <button class="btn btn-secondary" (click)="previewExecution()"
+              [disabled]="selectedCommands.length === 0">
+        👁️ Preview
+      </button>
+      <button class="btn btn-secondary" (click)="exportCommandSet()"
+              [disabled]="selectedCommands.length === 0">
+        📤 Export
+      </button>
+      <button class="create-button" (click)="saveCommandSet()"
+              [disabled]="selectedCommands.length === 0">
+        💾 {{ isEditMode ? 'Update' : 'Save' }}
+      </button>
+    </div>
+  </div>
+
+  <!-- Command Set Info -->
+  <div class="command-set-info">
+    <div class="command-form">
+      <div class="form-group">
+        <label for="setName">Command Set Name *</label>
+        <input
+          id="setName"
+          type="text"
+          [(ngModel)]="currentCommandSet.name"
+          placeholder="Enter command set name">
+      </div>
+      <div class="form-group">
+        <label for="setDescription">Description</label>
+        <textarea
+          id="setDescription"
+          [(ngModel)]="currentCommandSet.description"
+          placeholder="Describe what this command set does"
+          rows="2"></textarea>
+      </div>
+    </div>
+  </div>
+
+  <div class="builder-content">
+    <!-- Available Commands Panel -->
+    <div class="commands-panel">
+      <div class="panel-header">
+        <h2>Available Commands</h2>
+        <div class="search-filters">
+          <div class="search-box">
+            <input
+              type="text"
+              [(ngModel)]="searchTerm"
+              (input)="filterCommands()"
+              placeholder="Search commands..."
+              class="form-control">
+            <span class="search-icon">🔍</span>
+          </div>
+
+          <select
+            [(ngModel)]="selectedCategory"
+            (change)="filterCommands()"
+            class="form-control category-select">
+            <option *ngFor="let category of commandCategories" [value]="category.value">
+              {{ category.icon }} {{ category.label }}
+            </option>
+          </select>
+        </div>
+      </div>
+
+      <div
+        class="commands-list"
+        cdkDropList
+        #availableList="cdkDropList"
+        [cdkDropListData]="filteredCommands"
+        [cdkDropListConnectedTo]="[selectedList]"
+        cdkDropListSortingDisabled="true">
+
+        <div
+          *ngFor="let command of filteredCommands"
+          class="command-item available-command"
+          cdkDrag>
+          <div class="command-content">
+            <div class="command-header">
+              <span class="command-icon">{{ command.icon || getCommandIcon(command.type) }}</span>
+              <div class="command-info">
+                <h4>{{ command.name }}</h4>
+                <p>{{ command.description }}</p>
+              </div>
+              <span class="command-type">{{ command.type }}</span>
+            </div>
+            <div class="command-code">
+              <code>{{ command.terminalCommand }}</code>
+            </div>
+            <div *ngIf="command.parameters && command.parameters.length > 0" class="command-params">
+              <small>
+                📋 Parameters:
+                <span *ngFor="let param of command.parameters; let last = last">
+                  {{ param.name }}{{ param.required ? '*' : '' }}{{ !last ? ', ' : '' }}
+                </span>
+              </small>
+            </div>
+          </div>
+
+          <div class="drag-placeholder" *cdkDragPlaceholder>
+            <div class="placeholder-content">Drop here to add command</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Selected Commands Panel -->
+    <div class="selected-panel">
+      <div class="panel-header">
+        <h2>Command Set ({{ selectedCommands.length }})</h2>
+        <div class="panel-actions">
+          <button class="btn btn-sm btn-secondary" (click)="clearCommandSet()"
+                  [disabled]="selectedCommands.length === 0">
+            🗑️ Clear All
+          </button>
+        </div>
+      </div>
+
+      <div
+        class="selected-commands-list"
+        cdkDropList
+        #selectedList="cdkDropList"
+        [cdkDropListData]="selectedCommands"
+        [cdkDropListConnectedTo]="[availableList]"
+        (cdkDropListDropped)="onCommandDrop($event)">
+
+        <div class="drop-zone"
+             *ngIf="selectedCommands.length === 0">
+          <div class="drop-zone-content">
+            <div class="drop-icon">📋</div>
+            <h4>Drop Commands Here</h4>
+            <p>Drag commands from the left panel to build your command set</p>
+          </div>
+        </div>
+
+        <div
+          *ngFor="let command of selectedCommands; let i = index"
+          class="command-item selected-command"
+          cdkDrag>
+          <div class="command-order">{{ i + 1 }}</div>
+          <div class="command-content">
+            <div class="command-header">
+              <span class="command-icon">{{ command.icon || getCommandIcon(command.type) }}</span>
+              <div class="command-info">
+                <h4>{{ command.name }}</h4>
+                <p>{{ command.description }}</p>
+              </div>
+              <div class="command-actions">
+                <button class="btn-icon" (click)="duplicateCommand(command)" title="Duplicate">
+                  📋
+                </button>
+                <button class="btn-icon danger" (click)="removeCommand(i)" title="Remove">
+                  🗑️
+                </button>
+              </div>
+            </div>
+            <div class="command-code">
+              <code>{{ command.terminalCommand }}</code>
+            </div>
+          </div>
+
+          <div class="drag-handle" cdkDragHandle>
+            <svg width="20" height="20" viewBox="0 0 20 20">
+              <circle cx="5" cy="6" r="1.5" fill="currentColor"/>
+              <circle cx="15" cy="6" r="1.5" fill="currentColor"/>
+              <circle cx="5" cy="14" r="1.5" fill="currentColor"/>
+              <circle cx="15" cy="14" r="1.5" fill="currentColor"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
