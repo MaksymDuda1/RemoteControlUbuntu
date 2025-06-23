@@ -18,4 +18,6 @@ public class Command
 
     [JsonIgnore]
     public User? User { get; set; }
+
+    public List<CommandSet> CommandSets { get; set; }
 }

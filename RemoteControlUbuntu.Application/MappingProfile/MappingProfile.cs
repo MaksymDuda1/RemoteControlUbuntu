@@ -14,6 +14,6 @@ public class MappingProfile : Profile
         CreateMap<AddCommandDto, Command>();
         CreateMap<AddCommandDto, UserCommandsWhiteList>().ForMember(dest => dest.Name, opt => opt.MapFrom(src => src.Name));
         CreateMap<AddCommandDto, UserCommandsWhiteList>().ForMember(dest => dest.Command, opt => opt.MapFrom(src => src.TerminalCommand));
-
+        CreateMap<CommandSetDto, CommandSet>();
     }
 }

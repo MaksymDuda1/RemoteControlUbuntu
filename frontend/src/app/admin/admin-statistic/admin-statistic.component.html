@@ -1,0 +1,163 @@
+<div class="statistics-container">
+  <div class="statistics-header">
+    <div class="header-container">
+      <div class="title-section">
+        <h1 class="title">User Statistics</h1>
+        <p class="subtitle">Monitor user activity and command usage</p>
+      </div>
+    </div>
+    <div class="header-actions">
+      <button class="btn btn-secondary" routerLink="/admin">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+          <path d="M19 12H5M12 19l-7-7 7-7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        Back to Dashboard
+      </button>
+    </div>
+  </div>
+
+  <div class="statistics-content">
+    <div class="users-panel">
+      <div class="panel-header">
+        <h2>Users</h2>
+        <div class="search-filters">
+          <div class="search-box">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Search users..."
+              [(ngModel)]="searchQuery"
+            >
+            <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <circle cx="11" cy="11" r="8" stroke-width="2"/>
+              <path d="M21 21l-4.35-4.35" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <select class="form-control status-select" [(ngModel)]="selectedStatus">
+            <option *ngFor="let status of statuses" [value]="status.value">{{ status.label }}</option>
+          </select>
+        </div>
+      </div>
+      <div class="users-list">
+        <div *ngFor="let user of filteredUsers"
+             class="user-item"
+             [class.selected]="selectedUser?.id === user.id"
+             (click)="selectUser(user)">
+          <div class="user-avatar">
+            {{ user.name.charAt(0) }}
+          </div>
+          <div class="user-info">
+            <h4>{{ user.name }}</h4>
+            <p>{{ user.email }}</p>
+            <small>Last active: {{ user.lastActive | date:'short' }}</small>
+          </div>
+          <span class="user-status" [ngClass]="getStatusClass(user.status)">
+            {{ user.status }}
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <div class="statistics-panel" *ngIf="selectedUser && userStatistics">
+      <div class="panel-header">
+        <h2>{{ selectedUser.name }}'s Statistics</h2>
+        <div class="panel-actions">
+          <select class="form-control time-select" [(ngModel)]="selectedTimeRange" (change)="loadUserStatistics(selectedUser.id)">
+            <option *ngFor="let range of timeRanges" [value]="range.value">{{ range.label }}</option>
+          </select>
+          <button class="btn btn-sm btn-outline" (click)="exportUserData()">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            Export
+          </button>
+          <button *ngIf="selectedUser.status !== 'suspended'"
+                  class="btn btn-sm btn-outline danger"
+                  (click)="suspendUser(selectedUser)">
+            Suspend User
+          </button>
+          <button *ngIf="selectedUser.status === 'suspended'"
+                  class="btn btn-sm btn-primary"
+                  (click)="activateUser(selectedUser)">
+            Activate User
+          </button>
+        </div>
+      </div>
+
+      <div class="stats-overview">
+        <div class="stat-card">
+          <h4>Total Commands</h4>
+          <p class="stat-value">{{ userStatistics.totalCommands }}</p>
+        </div>
+        <div class="stat-card success">
+          <h4>Allowed Commands</h4>
+          <p class="stat-value">{{ userStatistics.allowedCommands }}</p>
+        </div>
+        <div class="stat-card danger">
+          <h4>Blocked Commands</h4>
+          <p class="stat-value">{{ userStatistics.blockedCommands }}</p>
+        </div>
+        <div class="stat-card">
+          <h4>Success Rate</h4>
+          <p class="stat-value">{{ userStatistics.successRate }}%</p>
+        </div>
+      </div>
+
+      <div class="activity-chart">
+        <h3>Daily Activity</h3>
+        <div class="chart-container">
+          <div class="chart-bars">
+            <div *ngFor="let day of userStatistics.dailyActivity" class="chart-day">
+              <div class="bars-container">
+                <div class="bar allowed"
+                     [style.height.%]="(day.commands - day.blocked) / getMaxCommands() * 100"
+                     [title]="'Allowed: ' + (day.commands - day.blocked)">
+                </div>
+                <div class="bar blocked"
+                     [style.height.%]="day.blocked / getMaxCommands() * 100"
+                     [title]="'Blocked: ' + day.blocked">
+                </div>
+              </div>
+              <span class="chart-label">{{ day.date | date:'MMM d' }}</span>
+            </div>
+          </div>
+        </div>
+        <div class="chart-legend">
+          <span class="legend-item allowed">Allowed Commands</span>
+          <span class="legend-item blocked">Blocked Commands</span>
+        </div>
+      </div>
+
+      <div class="command-history">
+        <h3>Recent Command History</h3>
+        <div class="history-list">
+          <div *ngFor="let cmd of userStatistics.commandHistory" class="history-item">
+            <span class="status-indicator" [ngClass]="getStatusClass(cmd.status)"></span>
+            <div class="command-details">
+              <code>{{ cmd.command }}</code>
+              <small>{{ cmd.timestamp | date:'short' }} • {{ cmd.type }}</small>
+            </div>
+            <span class="command-status" [ngClass]="getStatusClass(cmd.status)">
+              {{ cmd.status }}
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="last-command-info">
+        <h4>Last Command</h4>
+        <code>{{ userStatistics.lastCommand }}</code>
+        <small>Executed at {{ userStatistics.lastCommandTime | date:'medium' }}</small>
+      </div>
+    </div>
+
+    <div class="empty-state" *ngIf="!selectedUser">
+      <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" opacity="0.3">
+        <path d="M16 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2M8.5 11a4 4 0 100-8 4 4 0 000 8z" stroke-width="2"/>
+        <path d="M20 8v6M23 11h-6" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+      <h3>Select a User</h3>
+      <p>Choose a user from the list to view their statistics</p>
+    </div>
+  </div>
+</div>

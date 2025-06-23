@@ -1,16 +1,22 @@
-using System.Runtime.InteropServices;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using RemoteControlUbuntu.Domain.Entities;
 
 namespace RemoteControlUbuntu.Infrastructure;
 
-public class RemoteDbContext(DbContextOptions<RemoteDbContext> options)
-    : IdentityDbContext<User, Role, Guid>(options)
+public class RemoteDbContext(DbContextOptions<RemoteDbContext> options) : IdentityDbContext<User, Role, Guid>(options)
 {
     public DbSet<Connection> Connections { get; set; }
 
     public DbSet<Command> Commands { get; set; }
+    
+    public DbSet<CommandSet> CommandSets { get; set; }
+
+    public DbSet<CommandsWhiteList> commandsWhiteLists { get; set; }
+    
+    public DbSet<CommandsBlackList> commandsBlackLists { get; set; }
+    
+    public DbSet<UserCommandsWhiteList> UserCommandsWhiteLists { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -66,17 +72,15 @@ public class RemoteDbContext(DbContextOptions<RemoteDbContext> options)
         modelBuilder.Entity<User>(entity =>
         {
             entity.HasKey(u => u.Id);
-
-            // entity.HasMany(u => u.Connections)
-            //     .WithOne(c => c.User)
-            //     .HasForeignKey(c => c.User)
-            //     .OnDelete(DeleteBehavior.Cascade);
-            //
-            // entity.HasMany(u => u.UsersCommands)
-            //     .WithOne(c => c.User)
-            //     .HasForeignKey(c => c.User)
-            //     .OnDelete(DeleteBehavior.Cascade);
         });
-        
+
+        modelBuilder.Entity<CommandSet>(entity =>
+        {
+            entity.HasKey(c => c.Id);
+
+            entity.HasMany(c => c.Commands)
+                .WithMany(c => c.CommandSets)
+                .UsingEntity(j => j.ToTable("CommandCommandSet"));
+        });
     }
 }

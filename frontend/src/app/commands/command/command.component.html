@@ -25,7 +25,7 @@
         </div>
 
         <div class="hint-container d-flex" [class.expanded]="hintWindowsIsOpen">
-          <button class="ask-button" mat-flat-button (click)="openDialog('0ms', '0ms')">
+          <button class="ask-button" mat-flat-button (click)="toggleChat()">
             <ng-container *ngIf="!hintWindowsIsOpen">Запитати AI</ng-container>
             <ng-container *ngIf="hintWindowsIsOpen">✕</ng-container>
           </button>
@@ -48,7 +48,7 @@
           <input id="command" type="text" formControlName="command" placeholder="Команда"/>
         </div>
 
-        <button class="create-button" mat-flat-button (click)="toggleChat()">
+        <button class="create-button" mat-flat-butto (click)="navigateToNext()">
           Наступний крок
         </button>
       </form>

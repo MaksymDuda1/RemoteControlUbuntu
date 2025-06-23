@@ -4,12 +4,13 @@ using RemoteControlUbuntu.Application.Exceptions;
 using RemoteControlUbuntu.Domain.Abstractions;
 using RemoteControlUbuntu.Domain.Dtos;
 using RemoteControlUbuntu.Domain.Entities;
+using RemoteControlUbuntu.Domain.Enums;
 
 namespace RemoteControlUbuntu.Application.Services;
 
 public class CommandService(
     IMapper mapper,
-    IUnitOfWork unitOfWork) : ICommandService
+    IUnitOfWork unitOfWork, IValidationService validationService) : ICommandService
 {
     public async Task<List<CommandDto>> GetAllUserCommand(Guid userId)
     {
@@ -30,18 +31,26 @@ public class CommandService(
         return mapper.Map<CommandDto>(command);
     }
 
-    public async Task AddCommand(AddCommandDto commandDto)
+    public async Task<ValidationResultDto> AddCommand(AddCommandDto commandDto)
     {
-        var user = await unitOfWork.Users
-            .GetSingleByConditionAsync(u => u.Id == commandDto.UserId);
+        var user = await unitOfWork.Users.GetSingleByConditionAsync(u => u.Id == commandDto.UserId);
 
         if (user == null)
             throw new EntityNotFoundException("User Not Found");
+        
+        var validationResultDto = await validationService.ValidateCommandAndCheckOnAbsenceOfDangerousCode(user.Id, commandDto);
+
+        if (validationResultDto.CommandValidationResult == CommandValidationResult.BlackListed)
+        {
+            return validationResultDto;
+        }
 
         var command = mapper.Map<Command>(commandDto);
 
         await unitOfWork.Commands.InsertAsync(command);
         await unitOfWork.SaveAsync();
+        
+        return validationResultDto;
     }
 
     public async Task UpdateCommand(UpdateCommandDto updateCommandDto)

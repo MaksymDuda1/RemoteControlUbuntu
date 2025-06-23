@@ -1,5 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
-using FluentResults;
+﻿using FluentResults;
+using Microsoft.ApplicationInsights.Extensibility.Implementation;
 using RemoteControlUbuntu.Application.Abstractions;
 using RemoteControlUbuntu.Application.Models;
 using RemoteControlUbuntu.Domain.Abstractions;
@@ -7,13 +7,15 @@ using RemoteControlUbuntu.Domain.Constants;
 using RemoteControlUbuntu.Domain.Dtos;
 using RemoteControlUbuntu.Domain.Entities;
 using RemoteControlUbuntu.Domain.Enums;
+using RemoteControlUbuntu.Domain.Models;
 using IMapper = AutoMapper.IMapper;
+using JsonSerializer = System.Text.Json.JsonSerializer;
 
 namespace RemoteControlUbuntu.Application.Services;
 
 public interface IValidationService
 {
-    Task<Result<string?>> GetCommandFromUserRequestAndCheckBlackListMatches(string request);
+    Task<Result<string?>> GetCommandFromUserRequestAndCheckBlackListMatches(string request, PlatformType os);
     Task<ValidationResultDto> ValidateCommandAndCheckOnAbsenceOfDangerousCode(Guid userId, AddCommandDto addCommandDto);
 
     Task<string?> GetCommandToCheckExecutionPossibility(string type);
@@ -23,9 +25,12 @@ public interface IValidationService
 
 public class ValidationService(IUnitOfWork unitOfWork, IMapper mapper, IOpenAIService openAIService) : IValidationService
 {
-    public async Task<Result<string?>> GetCommandFromUserRequestAndCheckBlackListMatches(string request)
+    public async Task<Result<string?>> GetCommandFromUserRequestAndCheckBlackListMatches(string request, PlatformType os)
     {
-        var getCommandPrompt = $@""" Below is a user request for a Linux terminal command.  
+        var primaryOs = os == PlatformType.Windows ? "Windows" : "Linux";
+        
+        var getCommandPrompt = $@""" Below is a user request for a {primaryOs} terminal command.
+                        If the os i Windows, return the command in cmd format, starts with 'start'  
                         You should return the terminal command in the following JSON format:
 
                         {{
@@ -39,25 +44,33 @@ public class ValidationService(IUnitOfWork unitOfWork, IMapper mapper, IOpenAISe
         
         var commandResponse =  await openAIService.AskChatGPT(getCommandPrompt);
 
-        var blackList = await unitOfWork.CommandsBlackList.GetAllAsync();
+        var cleanJson = commandResponse
+            .Replace("```json", "")
+            .Replace("```", "")
+            .Trim();
+        
+        var deserialized = JsonSerializer.Deserialize<CommandModel>(cleanJson);
 
+        var blackList = await unitOfWork.CommandsBlackList.GetAllAsync();
+        
         var blackListCheckPrompt = $@""" Your task is to validate the command provided below.
                                     Command to validate:
                                     {commandResponse}
                                     
                                     List of forbidden commands:
-                                    {blackList}
+                                    {JsonSerializer.Serialize(blackList)}
                                     
                                     Instructions:
-                                    1. Check if the `general_command_name` or the `terminal_command` from `commandResponse` matches or relates to any item in the `blackList`.
+                                    1. Check if the `general_command_name` or the `terminal_command` from command to validate matches or relates to any item in the `blackList`.
                                     2. If it is related to a forbidden command, return: `Command is not allowed`
                                     3. If the command is safe, return: true
                                     4. Write just response, without any additional text
+                                    5. If the request is not related to the purpose of command return, you should return `Command is not allowed`
                                    """;
         
         var validationResponse = await openAIService.AskChatGPT(blackListCheckPrompt);
         
-        return bool.Parse(validationResponse) ? Result.Ok(commandResponse) : Result.Fail(blackListCheckPrompt);
+        return validationResponse != "Command is not allowed" ? Result.Ok(deserialized.TerminalCommand) : Result.Fail(blackListCheckPrompt);
     }
     
     public async Task<ValidationResultDto> ValidateCommandAndCheckOnAbsenceOfDangerousCode(Guid userId, AddCommandDto addCommandDto)

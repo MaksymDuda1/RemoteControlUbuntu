@@ -13,6 +13,8 @@ public class Connection
     public string Username { get; set; } = null!;
 
     public string Password { get; set; } = null!;
+
+    public string Os { get; set; } = "windows";
     
     public Guid UserId { get; set; }
     

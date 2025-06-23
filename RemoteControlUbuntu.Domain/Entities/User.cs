@@ -11,9 +11,11 @@ public class User : IdentityUser<Guid>
 
     public DateTime? RefreshTokenExpiration { get; set; }
     
-    public List<Connection> Connections { get; set; } = new List<Connection>();
+    public List<Connection> Connections { get; set; } = [];
 
     public List<UserCommandsWhiteList> UserWhiteList { get; set; }
 
-    public List<Command> UsersCommands { get; set; } = new List<Command>();
+    public List<Command> UsersCommands { get; set; } = [];
+    
+    
 }

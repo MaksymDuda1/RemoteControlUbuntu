@@ -1,0 +1,179 @@
+<div class="command-set-builder">
+  <div class="builder-header">
+    <div class="header-container">
+      <div class="title-section">
+        <h1 class="title">Black List Commands</h1>
+        <p class="subtitle">Manage commands that should be blocked from execution</p>
+      </div>
+    </div>
+    <div class="header-actions">
+      <button class="btn btn-secondary" routerLink="/admin">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+          <path d="M19 12H5M12 19l-7-7 7-7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        Back to Dashboard
+      </button>
+      <button class="btn btn-primary" (click)="saveBlacklist()">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+          <path d="M19 21H5a2 2 0 01-2-2V5a2 2 0 012-2h11l5 5v11a2 2 0 01-2 2z" stroke-width="2"/>
+          <path d="M17 21v-8H7v8M7 3v5h8" stroke-width="2"/>
+        </svg>
+        Save Blacklist
+      </button>
+    </div>
+  </div>
+
+  <div class="builder-content">
+    <div class="commands-panel">
+      <div class="panel-header">
+        <h2>Available Commands</h2>
+        <div class="search-filters">
+          <div class="search-box">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Search commands..."
+              [(ngModel)]="searchQuery"
+            >
+            <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <circle cx="11" cy="11" r="8" stroke-width="2"/>
+              <path d="M21 21l-4.35-4.35" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <select class="form-control category-select" [(ngModel)]="selectedCategory">
+            <option *ngFor="let cat of categories" [value]="cat.value">{{ cat.label }}</option>
+          </select>
+        </div>
+      </div>
+      <div class="commands-list"
+           cdkDropList
+           #availableList="cdkDropList"
+           [cdkDropListData]="filteredAvailableCommands"
+           [cdkDropListConnectedTo]="[blacklist]"
+           (cdkDropListDropped)="drop($event)">
+        <div *ngFor="let command of filteredAvailableCommands"
+             class="command-item available-command"
+             cdkDrag>
+          <div class="command-content">
+            <div class="command-header">
+              <span class="command-icon">{{ command.icon }}</span>
+              <div class="command-info">
+                <h4>{{ command.name }}</h4>
+                <p>{{ command.description }}</p>
+              </div>
+              <span class="command-type">{{ command.type }}</span>
+            </div>
+            <div class="command-code">
+              <code>{{ command.terminalCommand }}</code>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="selected-panel">
+      <div class="panel-header">
+        <h2>Blacklisted Commands</h2>
+        <div class="panel-actions">
+          <button class="btn btn-sm btn-outline" (click)="openAddModal()">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path d="M12 5v14M5 12h14" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            Add Custom
+          </button>
+          <button class="btn btn-sm btn-outline" (click)="clearBlacklist()">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path d="M3 6h18M8 6V4a2 2 0 012-2h4a2 2 0 012 2v2m3 0v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6h14zM10 11v6M14 11v6" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            Clear All
+          </button>
+        </div>
+      </div>
+      <div class="selected-commands-list"
+           cdkDropList
+           #blacklist="cdkDropList"
+           [cdkDropListData]="blacklistedCommands"
+           [cdkDropListConnectedTo]="[availableList]"
+           (cdkDropListDropped)="drop($event)">
+        <div *ngIf="blacklistedCommands.length === 0" class="drop-zone">
+          <div class="drop-zone-content">
+            <span class="drop-icon">🚫</span>
+            <h4>No Blacklisted Commands</h4>
+            <p>Drag commands here to block them</p>
+          </div>
+        </div>
+        <div *ngFor="let command of blacklistedCommands; let i = index"
+             class="command-item selected-command"
+             cdkDrag>
+          <span class="command-order">{{ i + 1 }}</span>
+          <div class="command-content">
+            <div class="command-header">
+              <span class="command-icon">{{ command.icon }}</span>
+              <div class="command-info">
+                <h4>{{ command.name }}</h4>
+                <p>{{ command.description }}</p>
+              </div>
+              <span class="command-type">{{ command.type }}</span>
+              <div class="command-actions">
+                <button class="btn-icon danger" (click)="removeFromBlacklist(command, i)">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <path d="M6 18L18 6M6 6l12 12" stroke-width="2" stroke-linecap="round"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="command-code">
+              <code>{{ command.terminalCommand }}</code>
+            </div>
+          </div>
+          <div class="drag-handle">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" stroke-width="2"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Add Command Modal -->
+<div class="modal-overlay" *ngIf="showAddModal" (click)="closeAddModal()">
+  <div class="modal-dialog" (click)="$event.stopPropagation()">
+    <div class="modal-header">
+      <h3>Add Custom Command to Blacklist</h3>
+      <button class="btn-close" (click)="closeAddModal()">×</button>
+    </div>
+    <div class="modal-body">
+      <form class="parameters-form">
+        <div class="form-group">
+          <label>Command Name <span class="required">*</span></label>
+          <input type="text" class="form-control" [(ngModel)]="newCommand.name" name="name" placeholder="e.g., Dangerous Command">
+        </div>
+        <div class="form-group">
+          <label>Description</label>
+          <input type="text" class="form-control" [(ngModel)]="newCommand.description" name="description" placeholder="Why this command is dangerous">
+        </div>
+        <div class="form-group">
+          <label>Command Code <span class="required">*</span></label>
+          <input type="text" class="form-control" [(ngModel)]="newCommand.terminalCommand" name="code" placeholder="e.g., rm -rf /*">
+        </div>
+        <div class="form-group">
+          <label>Category</label>
+          <select class="form-control" [(ngModel)]="newCommand.type" name="type">
+            <option value="custom">Custom</option>
+            <option value="destructive">Destructive</option>
+            <option value="system">System</option>
+            <option value="database">Database</option>
+          </select>
+        </div>
+      </form>
+    </div>
+    <div class="modal-footer">
+      <div class="dialog-actions">
+        <button class="btn btn-secondary" (click)="closeAddModal()">Cancel</button>
+        <button class="btn btn-primary" (click)="addNewCommand()">Add to Blacklist</button>
+      </div>
+    </div>
+  </div>
+</div>

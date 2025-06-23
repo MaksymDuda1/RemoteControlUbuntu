@@ -1,0 +1,448 @@
+<div class="page-layout carded fullwidth inner-scroll configuration-page">
+  <!-- TOP BACKGROUND -->
+  <div class="top-bg"></div>
+
+  <!-- CENTER -->
+  <div class="center pb-2">
+    <!-- HEADER -->
+    <div class="header-container">
+      <div class="title-section">
+        <h2 class="title">Налаштування віддаленого підключення</h2>
+        <p class="subtitle secondary-text">Покрокова інструкція для налаштування SSH/Remote доступу</p>
+      </div>
+    </div>
+    <!-- / HEADER -->
+
+    <!-- CONTENT CARD -->
+    <div class="content-card mt-0">
+      <div class="setup-guide">
+
+        <!-- OS SELECTOR -->
+        <div class="os-selector-container">
+          <h3>Оберіть операційну систему:</h3>
+          <div class="os-dropdown">
+            <select
+              [(ngModel)]="selectedOS"
+              (change)="onOSChange()"
+              class="os-select">
+              <option value="">-- Оберіть ОС --</option>
+              <option value="windows">Windows</option>
+              <option value="linux">Linux (Ubuntu/Debian)</option>
+              <option value="centos">Linux (CentOS/RHEL)</option>
+              <option value="macos">macOS</option>
+              <option value="android">Android (Termux)</option>
+              <option value="ios">iOS (iSH Shell)</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- INSTRUCTIONS CONTENT -->
+        <div class="instructions-container" *ngIf="selectedOS">
+
+          <!-- Windows Instructions -->
+          <div class="instruction-card" *ngIf="selectedOS === 'windows'">
+            <div class="os-header">
+              <mat-icon class="os-icon">desktop_windows</mat-icon>
+              <h3>Windows SSH налаштування</h3>
+            </div>
+
+            <div class="instruction-steps">
+              <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                  <h4>Увімкнути OpenSSH Server</h4>
+                  <p>Відкрийте PowerShell як адміністратор та виконайте:</p>
+                  <div class="code-block">
+                    <code>Add-WindowsCapability -Online -Name OpenSSH.Server~~~~0.0.1.0</code>
+                    <button mat-icon-button class="copy-btn" (click)="copyToClipboard('Add-WindowsCapability -Online -Name OpenSSH.Server~~~~0.0.1.0')">
+                      <mat-icon>content_copy</mat-icon>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                  <h4>Запустити SSH сервіс</h4>
+                  <div class="code-block">
+                    <code>Start-Service sshd</code>
+                    <button mat-icon-button class="copy-btn" (click)="copyToClipboard('Start-Service sshd')">
+                      <mat-icon>content_copy</mat-icon>
+                    </button>
+                  </div>
+                  <div class="code-block">
+                    <code>Set-Service -Name sshd -StartupType 'Automatic'</code>
+                    <button mat-icon-button class="copy-btn" (click)="copyToClipboard('Set-Service -Name sshd -StartupType Automatic')">
+                      <mat-icon>content_copy</mat-icon>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                  <h4>Налаштувати Firewall</h4>
+                  <div class="code-block">
+                    <code>New-NetFirewallRule -Name sshd -DisplayName 'OpenSSH SSH Server' -Enabled True -Direction Inbound -Protocol TCP -Action Allow -LocalPort 22</code>
+                    <button mat-icon-button class="copy-btn" (click)="copyToClipboard('New-NetFirewallRule -Name sshd -DisplayName OpenSSH SSH Server -Enabled True -Direction Inbound -Protocol TCP -Action Allow -LocalPort 22')">
+                      <mat-icon>content_copy</mat-icon>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="step">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                  <h4>Перевірити підключення</h4>
+                  <p>Знайдіть IP адресу комп'ютера:</p>
+                  <div class="code-block">
+                    <code>ipconfig</code>
+                    <button mat-icon-button class="copy-btn" (click)="copyToClipboard('ipconfig')">
+                      <mat-icon>content_copy</mat-icon>
+                    </button>
+                  </div>
+                  <p>Підключіться: <code>ssh username&#64;IP_ADDRESS</code></p>
+                </div>
+              </div>
+            </div>
+
+            <div class="warning-box">
+              <mat-icon>warning</mat-icon>
+              <span>За замовчуванням SSH використовує порт 22. Переконайтеся що порт відкритий в firewall.</span>
+            </div>
+          </div>
+
+          <!-- Linux Instructions -->
+          <div class="instruction-card" *ngIf="selectedOS === 'linux'">
+            <div class="os-header">
+              <mat-icon class="os-icon">computer</mat-icon>
+              <h3>Linux (Ubuntu/Debian) SSH налаштування</h3>
+            </div>
+
+            <div class="instruction-steps">
+              <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                  <h4>Встановити OpenSSH Server</h4>
+                  <div class="code-block">
+                    <code>sudo apt update && sudo apt install openssh-server -y</code>
+                    <button mat-icon-button class="copy-btn" (click)="copyToClipboard('sudo apt update && sudo apt install openssh-server -y')">
+                      <mat-icon>content_copy</mat-icon>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                  <h4>Запустити SSH сервіс</h4>
+                  <div class="code-block">
+                    <code>sudo systemctl enable ssh</code>
+                    <button mat-icon-button class="copy-btn" (click)="copyToClipboard('sudo systemctl enable ssh')">
+                      <mat-icon>content_copy</mat-icon>
+                    </button>
+                  </div>
+                  <div class="code-block">
+                    <code>sudo systemctl start ssh</code>
+                    <button mat-icon-button class="copy-btn" (click)="copyToClipboard('sudo systemctl start ssh')">
+                      <mat-icon>content_copy</mat-icon>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                  <h4>Налаштувати Firewall (UFW)</h4>
+                  <div class="code-block">
+                    <code>sudo ufw allow ssh</code>
+                    <button mat-icon-button class="copy-btn" (click)="copyToClipboard('sudo ufw allow ssh')">
+                      <mat-icon>content_copy</mat-icon>
+                    </button>
+                  </div>
+                  <div class="code-block">
+                    <code>sudo ufw enable</code>
+                    <button mat-icon-button class="copy-btn" (click)="copyToClipboard('sudo ufw enable')">
+                      <mat-icon>content_copy</mat-icon>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="step">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                  <h4>Перевірити статус та IP</h4>
+                  <div class="code-block">
+                    <code>sudo systemctl status ssh</code>
+                    <button mat-icon-button class="copy-btn" (click)="copyToClipboard('sudo systemctl status ssh')">
+                      <mat-icon>content_copy</mat-icon>
+                    </button>
+                  </div>
+                  <div class="code-block">
+                    <code>ip addr show</code>
+                    <button mat-icon-button class="copy-btn" (click)="copyToClipboard('ip addr show')">
+                      <mat-icon>content_copy</mat-icon>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="info-box">
+              <mat-icon>info</mat-icon>
+              <span>SSH конфігурація знаходиться в /etc/ssh/sshd_config</span>
+            </div>
+          </div>
+
+          <!-- Android Instructions -->
+          <div class="instruction-card" *ngIf="selectedOS === 'android'">
+            <div class="os-header">
+              <mat-icon class="os-icon">smartphone</mat-icon>
+              <h3>Android (Termux) SSH налаштування</h3>
+            </div>
+
+            <div class="instruction-steps">
+              <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                  <h4>Встановити Termux</h4>
+                  <p>Завантажте Termux з <strong>F-Droid</strong> (не з Google Play)</p>
+                  <a href="https://f-droid.org/packages/com.termux/" target="_blank" class="download-link">
+                    <mat-icon>download</mat-icon>
+                    Завантажити Termux з F-Droid
+                  </a>
+                </div>
+              </div>
+
+              <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                  <h4>Встановити SSH в Termux</h4>
+                  <div class="code-block">
+                    <code>pkg update && pkg upgrade</code>
+                    <button mat-icon-button class="copy-btn" (click)="copyToClipboard('pkg update && pkg upgrade')">
+                      <mat-icon>content_copy</mat-icon>
+                    </button>
+                  </div>
+                  <div class="code-block">
+                    <code>pkg install openssh</code>
+                    <button mat-icon-button class="copy-btn" (click)="copyToClipboard('pkg install openssh')">
+                      <mat-icon>content_copy</mat-icon>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                  <h4>Налаштувати пароль та запустити SSH</h4>
+                  <div class="code-block">
+                    <code>passwd</code>
+                    <button mat-icon-button class="copy-btn" (click)="copyToClipboard('passwd')">
+                      <mat-icon>content_copy</mat-icon>
+                    </button>
+                  </div>
+                  <div class="code-block">
+                    <code>sshd</code>
+                    <button mat-icon-button class="copy-btn" (click)="copyToClipboard('sshd')">
+                      <mat-icon>content_copy</mat-icon>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="step">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                  <h4>Знайти IP адресу</h4>
+                  <div class="code-block">
+                    <code>ip addr show wlan0</code>
+                    <button mat-icon-button class="copy-btn" (click)="copyToClipboard('ip addr show wlan0')">
+                      <mat-icon>content_copy</mat-icon>
+                    </button>
+                  </div>
+                  <p>Підключіться: <code>ssh -p 8022 username&#64;IP_ADDRESS</code></p>
+                </div>
+              </div>
+            </div>
+
+            <div class="warning-box">
+              <mat-icon>warning</mat-icon>
+              <span>Termux SSH використовує порт 8022, не 22!</span>
+            </div>
+          </div>
+
+          <!-- macOS Instructions -->
+          <div class="instruction-card" *ngIf="selectedOS === 'macos'">
+            <div class="os-header">
+              <mat-icon class="os-icon">laptop_mac</mat-icon>
+              <h3>macOS SSH налаштування</h3>
+            </div>
+
+            <div class="instruction-steps">
+              <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                  <h4>Увімкнути Remote Login</h4>
+                  <p>System Preferences → Sharing → Remote Login (поставити галочку)</p>
+                  <p>Або через термінал:</p>
+                  <div class="code-block">
+                    <code>sudo systemsetup -setremotelogin on</code>
+                    <button mat-icon-button class="copy-btn" (click)="copyToClipboard('sudo systemsetup -setremotelogin on')">
+                      <mat-icon>content_copy</mat-icon>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                  <h4>Перевірити статус SSH</h4>
+                  <div class="code-block">
+                    <code>sudo systemsetup -getremotelogin</code>
+                    <button mat-icon-button class="copy-btn" (click)="copyToClipboard('sudo systemsetup -getremotelogin')">
+                      <mat-icon>content_copy</mat-icon>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                  <h4>Знайти IP адресу</h4>
+                  <div class="code-block">
+                    <code>ifconfig | grep "inet " | grep -v 127.0.0.1</code>
+                    <button mat-icon-button class="copy-btn" (click)="copyToClipboard('ifconfig | grep inet | grep -v 127.0.0.1')">
+                      <mat-icon>content_copy</mat-icon>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="info-box">
+              <mat-icon>info</mat-icon>
+              <span>SSH сервер в macOS вже встановлений за замовчуванням</span>
+            </div>
+          </div>
+
+          <!-- CentOS Instructions -->
+          <div class="instruction-card" *ngIf="selectedOS === 'centos'">
+            <div class="os-header">
+              <mat-icon class="os-icon">computer</mat-icon>
+              <h3>CentOS/RHEL SSH налаштування</h3>
+            </div>
+
+            <div class="instruction-steps">
+              <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                  <h4>Встановити OpenSSH Server</h4>
+                  <div class="code-block">
+                    <code>sudo yum install openssh-server -y</code>
+                    <button mat-icon-button class="copy-btn" (click)="copyToClipboard('sudo yum install openssh-server -y')">
+                      <mat-icon>content_copy</mat-icon>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                  <h4>Запустити SSH сервіс</h4>
+                  <div class="code-block">
+                    <code>sudo systemctl enable sshd</code>
+                    <button mat-icon-button class="copy-btn" (click)="copyToClipboard('sudo systemctl enable sshd')">
+                      <mat-icon>content_copy</mat-icon>
+                    </button>
+                  </div>
+                  <div class="code-block">
+                    <code>sudo systemctl start sshd</code>
+                    <button mat-icon-button class="copy-btn" (click)="copyToClipboard('sudo systemctl start sshd')">
+                      <mat-icon>content_copy</mat-icon>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                  <h4>Налаштувати Firewall</h4>
+                  <div class="code-block">
+                    <code>sudo firewall-cmd --permanent --add-service=ssh</code>
+                    <button mat-icon-button class="copy-btn" (click)="copyToClipboard('sudo firewall-cmd --permanent --add-service=ssh')">
+                      <mat-icon>content_copy</mat-icon>
+                    </button>
+                  </div>
+                  <div class="code-block">
+                    <code>sudo firewall-cmd --reload</code>
+                    <button mat-icon-button class="copy-btn" (click)="copyToClipboard('sudo firewall-cmd --reload')">
+                      <mat-icon>content_copy</mat-icon>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- GENERAL TIPS -->
+        <div class="tips-section" *ngIf="selectedOS">
+          <h3>💡 Загальні поради:</h3>
+          <div class="tips-grid">
+            <div class="tip-card">
+              <mat-icon>security</mat-icon>
+              <h4>Безпека</h4>
+              <p>Використовуйте складні паролі або SSH ключі для автентифікації</p>
+            </div>
+            <div class="tip-card">
+              <mat-icon>network_check</mat-icon>
+              <h4>Мережа</h4>
+              <p>Переконайтеся що пристрої знаходяться в одній мережі</p>
+            </div>
+            <div class="tip-card">
+              <mat-icon>router</mat-icon>
+              <h4>Firewall</h4>
+              <p>Перевірте налаштування firewall та роутера</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- TEST CONNECTION -->
+        <div class="test-section" *ngIf="selectedOS">
+          <div class="test-connection-card">
+            <h3>🔍 Тест підключення</h3>
+            <p>Після налаштування перевірте підключення:</p>
+            <div class="test-commands">
+              <div class="test-command" *ngIf="selectedOS !== 'android'">
+                <code>ssh username&#64;IP_ADDRESS</code>
+                <button mat-icon-button class="copy-btn" (click)="copyToClipboard('ssh username@IP_ADDRESS')">
+                  <mat-icon>content_copy</mat-icon>
+                </button>
+              </div>
+              <div class="test-command" *ngIf="selectedOS === 'android'">
+                <code>ssh -p 8022 username&#64;IP_ADDRESS</code>
+                <button mat-icon-button class="copy-btn" (click)="copyToClipboard('ssh -p 8022 username@IP_ADDRESS')">
+                  <mat-icon>content_copy</mat-icon>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

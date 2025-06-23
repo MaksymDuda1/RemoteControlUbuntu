@@ -1,0 +1,53 @@
+<div class="admin-dashboard">
+  <div class="dashboard-header">
+    <div class="header-container">
+      <div class="title-section">
+        <h1 class="title">Admin Dashboard</h1>
+        <p class="subtitle">Manage commands and monitor user activities</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="dashboard-content">
+    <div class="navigation-grid">
+      <div
+        *ngFor="let card of navigationCards"
+        class="navigation-card"
+        [style.border-color]="card.color"
+        (click)="navigateTo(card.route)"
+      >
+        <div class="card-icon" [style.background-color]="card.color">
+          {{ card.icon }}
+        </div>
+        <div class="card-content">
+          <h3>{{ card.title }}</h3>
+          <p>{{ card.description }}</p>
+        </div>
+        <div class="card-arrow">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path d="M9 18l6-6-6-6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <div class="quick-stats">
+      <div class="stat-card">
+        <h4>Total Users</h4>
+        <p class="stat-value">1,234</p>
+      </div>
+      <div class="stat-card">
+        <h4>Active Commands</h4>
+        <p class="stat-value">456</p>
+      </div>
+      <div class="stat-card">
+        <h4>Blocked Commands</h4>
+        <p class="stat-value">78</p>
+      </div>
+      <div class="stat-card">
+        <h4>Today's Activity</h4>
+        <p class="stat-value">892</p>
+      </div>
+    </div>
+  </div>
+</div>

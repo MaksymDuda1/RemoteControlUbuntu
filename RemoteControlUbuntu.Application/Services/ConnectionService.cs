@@ -58,7 +58,7 @@ public class ConnectionService(
         connection.Name = updateConnectionDto.Name;
         connection.Host = updateConnectionDto.Host;
         connection.Username = updateConnectionDto.Username;
-        connection.Password = connection.Password;
+        connection.Password = updateConnectionDto.Password;
 
         unitOfWork.Connections.Update(connection);
         await unitOfWork.SaveAsync();

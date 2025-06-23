@@ -9,9 +9,10 @@ export interface Command {
   name: string;
   description: string;
   terminalCommand: string;
-  type: CommandType;
+  type: string;
   parameters?: CommandParameter[];
   icon?: string;
+  isBlocked: boolean;
 }
 
 export interface CommandParameter {
@@ -59,7 +60,8 @@ export class CommandSetBuilderComponent implements OnInit {
       description: 'List directory contents',
       terminalCommand: 'ls -la',
       type: CommandType.File,
-      icon: '📁'
+      icon: '📁',
+      isBlocked: false
     },
     {
       id: 'ps',
@@ -67,7 +69,8 @@ export class CommandSetBuilderComponent implements OnInit {
       description: 'Show running processes',
       terminalCommand: 'ps aux',
       type: CommandType.Process,
-      icon: '⚙️'
+      icon: '⚙️',
+      isBlocked: false
     },
     {
       id: 'top',
@@ -75,23 +78,9 @@ export class CommandSetBuilderComponent implements OnInit {
       description: 'Display system processes',
       terminalCommand: 'top',
       type: CommandType.System,
-      icon: '📊'
-    },
-    {
-      id: 'ping',
-      name: 'Ping Host',
-      description: 'Ping a network host',
-      terminalCommand: 'ping -c 4 {{host}}',
-      type: CommandType.Network,
-      icon: '🌐',
-      parameters: [
-        {
-          name: 'host',
-          type: 'string',
-          required: true,
-          placeholder: 'Enter hostname or IP'
-        }
-      ]
+      icon: '📊',
+      isBlocked: false
+
     },
     {
       id: 'disk_usage',
@@ -99,7 +88,8 @@ export class CommandSetBuilderComponent implements OnInit {
       description: 'Check disk space usage',
       terminalCommand: 'df -h',
       type: CommandType.System,
-      icon: '💾'
+      icon: '💾',
+      isBlocked: false
     },
     {
       id: 'memory_info',
@@ -107,7 +97,8 @@ export class CommandSetBuilderComponent implements OnInit {
       description: 'Display memory information',
       terminalCommand: 'free -h',
       type: CommandType.System,
-      icon: '🧠'
+      icon: '🧠',
+      isBlocked: false
     },
     {
       id: 'network_interfaces',
@@ -115,70 +106,9 @@ export class CommandSetBuilderComponent implements OnInit {
       description: 'Show network interfaces',
       terminalCommand: 'ip addr show',
       type: CommandType.Network,
-      icon: '🔌'
+      icon: '🔌',
+      isBlocked: false
     },
-    {
-      id: 'find_file',
-      name: 'Find File',
-      description: 'Search for files',
-      terminalCommand: 'find {{path}} -name "{{filename}}" -type f',
-      type: CommandType.File,
-      icon: '🔍',
-      parameters: [
-        {
-          name: 'path',
-          type: 'string',
-          required: true,
-          defaultValue: '/',
-          placeholder: 'Search path'
-        },
-        {
-          name: 'filename',
-          type: 'string',
-          required: true,
-          placeholder: 'File name pattern'
-        }
-      ]
-    },
-    {
-      id: 'service_status',
-      name: 'Service Status',
-      description: 'Check service status',
-      terminalCommand: 'systemctl status {{service}}',
-      type: CommandType.System,
-      icon: '🔧',
-      parameters: [
-        {
-          name: 'service',
-          type: 'string',
-          required: true,
-          placeholder: 'Service name (e.g., nginx, ssh)'
-        }
-      ]
-    },
-    {
-      id: 'kill_process',
-      name: 'Kill Process',
-      description: 'Terminate a process by PID',
-      terminalCommand: 'kill {{signal}} {{pid}}',
-      type: CommandType.Process,
-      icon: '🛑',
-      parameters: [
-        {
-          name: 'signal',
-          type: 'select',
-          required: false,
-          defaultValue: '-TERM',
-          options: ['-TERM', '-KILL', '-HUP', '-USR1', '-USR2']
-        },
-        {
-          name: 'pid',
-          type: 'number',
-          required: true,
-          placeholder: 'Process ID'
-        }
-      ]
-    }
   ];
 
   // Current command set being built

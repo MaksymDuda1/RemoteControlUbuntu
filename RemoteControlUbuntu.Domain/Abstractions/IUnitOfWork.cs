@@ -15,6 +15,8 @@ public interface IUnitOfWork
     ICommandsWhiteListRepository CommandsWhiteList { get; }
 
     IUserCommandsWhiteListRepository UserCommandsWhiteList { get; }
+    
+    ICommandSetRepository CommandSets { get; }
 
     Task SaveAsync();
 }

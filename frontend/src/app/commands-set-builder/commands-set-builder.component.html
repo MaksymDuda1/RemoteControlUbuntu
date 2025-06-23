@@ -86,7 +86,7 @@
           cdkDrag>
           <div class="command-content">
             <div class="command-header">
-              <span class="command-icon">{{ command.icon || getCommandIcon(command.type) }}</span>
+              <span class="command-icon">{{ command.icon }}</span>
               <div class="command-info">
                 <h4>{{ command.name }}</h4>
                 <p>{{ command.description }}</p>
@@ -104,10 +104,6 @@
                 </span>
               </small>
             </div>
-          </div>
-
-          <div class="drag-placeholder" *cdkDragPlaceholder>
-            <div class="placeholder-content">Drop here to add command</div>
           </div>
         </div>
       </div>
@@ -149,7 +145,7 @@
           <div class="command-order">{{ i + 1 }}</div>
           <div class="command-content">
             <div class="command-header">
-              <span class="command-icon">{{ command.icon || getCommandIcon(command.type) }}</span>
+              <span class="command-icon">{{ command.icon }}</span>
               <div class="command-info">
                 <h4>{{ command.name }}</h4>
                 <p>{{ command.description }}</p>

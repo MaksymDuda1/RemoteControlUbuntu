@@ -29,16 +29,21 @@ builder.Services.AddScoped<IConnectionRepository, ConnectionRepository>();
 builder.Services.AddScoped<ICommandRepository, CommandRepository>();
 builder.Services.AddScoped<ICommandsBlackListRepository, CommandsBlackListRepository>();
 builder.Services.AddScoped<ICommandsWhiteListRepository, CommandsWhiteListRepository>();
+builder.Services.AddScoped<ICommandSetRepository, CommandSetRepository>();
 builder.Services.AddScoped<IUserCommandsWhiteListRepository, UserCommandsWhiteListRepository>();
 
 //Services
 builder.Services.AddScoped<IConnectionService, ConnectionService>();
 builder.Services.AddTransient<IConnector, Connector>();
 builder.Services.AddScoped<ICommandService, CommandService>();
-// builder.Services.AddTransient<IExecuteCommandService, ExecuteCommandService>();
+builder.Services.AddTransient<IExecuteCommandService, ExecuteCommandService>();
+builder.Services.AddScoped<ICommandSetRepository, CommandSetRepository>();
 builder.Services.AddScoped<ITokenService, TokenService>();
+builder.Services.AddScoped<ICommandsManagementService, CommandsManagementService>();
 builder.Services.AddScoped<IAuthorizationService, AuthorizationService>();
 builder.Services.AddScoped(typeof(Lazy<>), typeof(LazyInstance<>));
+builder.Services.AddScoped<IValidationService, ValidationService>();
+
 
 //Infrastructure
 builder.Services.AddScoped<IOpenAICaller, OpenAICaller>();

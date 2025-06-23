@@ -16,7 +16,16 @@
       </div>
       <div class="brick">
         <mat-list>
-          <mat-list-item class="item">Відкрити Chrome</mat-list-item>
+          <mat-list-item
+            *ngFor="let command of commands"
+            class="item">
+            {{command.name || command.command}}
+          </mat-list-item>
+
+          <!-- Показати повідомлення якщо команди не завантажились -->
+          <mat-list-item *ngIf="commands.length === 0" class="item no-commands">
+            Команди не знайдено
+          </mat-list-item>
         </mat-list>
       </div>
     </div>

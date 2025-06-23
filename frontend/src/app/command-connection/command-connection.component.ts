@@ -1,27 +1,21 @@
-import {Component, inject} from '@angular/core';
-import {MatOption} from '@angular/material/core';
-import {MatSelect} from '@angular/material/select';
+import {Component, inject, Input, OnInit} from '@angular/core';
 import {MatFormField, MatInput} from '@angular/material/input';
-import {MatButton} from '@angular/material/button';
 import {MatIcon} from '@angular/material/icon';
-import {NgForOf, NgIf} from '@angular/common';
 import {MatDivider} from '@angular/material/divider';
 import {MatList, MatListItem} from '@angular/material/list';
 import {TranslatePipe} from '@ngx-translate/core';
 import {ReactiveFormsModule} from '@angular/forms';
 import {ConnectionComponent} from '../connections/connection/connection.component';
 import {MatDialog} from '@angular/material/dialog';
+import {CommandModel} from '../../models/command.model';
+import {CommandService} from '../../services/command.service';
+import {TokenService} from '../../services/token.service';
 
 @Component({
   selector: 'app-command-connection',
   imports: [
-    MatOption,
-    MatSelect,
     MatFormField,
-    MatButton,
     MatIcon,
-    NgForOf,
-    NgIf,
     MatDivider,
     MatList,
     MatListItem,
@@ -32,14 +26,24 @@ import {MatDialog} from '@angular/material/dialog';
   templateUrl: './command-connection.component.html',
   styleUrl: './command-connection.component.scss'
 })
-export class CommandConnectionComponent {
-  readonly dialog = inject(MatDialog);
+export class CommandConnectionComponent implements OnInit {
+  ngOnInit(): void {
+      if (!(this.commands.length > 0)) {
+        this.commandService.getAllByUserId(this.tokenService.getUserId()).subscribe((data) => {
+          this.commands = data.items
+        },
+          (err) => {
+            console.log(err);
+          });
+      }
+  }
 
-  commands = [
-    { name: 'Команда 1', connection: null },
-    { name: 'Команда 2', connection: null },
-    // ...
-  ];
+  constructor(private commandService: CommandService, private tokenService: TokenService) {
+  }
+
+  @Input() commands: CommandModel[] = [];
+
+  readonly dialog = inject(MatDialog);
 
   availableConnections = [
     { id: 'conn1', name: 'Production-DB-01' },

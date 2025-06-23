@@ -9,7 +9,8 @@ public class UnitOfWork(
     Lazy<ICommandRepository> commandRepository,
     Lazy<IUserCommandsWhiteListRepository> userCommandsListRepository,
     Lazy<ICommandsBlackListRepository> commandsBlackListRepository,
-    Lazy<ICommandsWhiteListRepository> commandsWhiteListRepository) : IUnitOfWork
+    Lazy<ICommandsWhiteListRepository> commandsWhiteListRepository,
+    Lazy<ICommandSetRepository> commandsSetRepository) : IUnitOfWork
 {
     public IUserRepository Users => userRepository.Value;
     public IConnectionRepository Connections => connectionRepository.Value;
@@ -21,6 +22,8 @@ public class UnitOfWork(
     public ICommandsWhiteListRepository CommandsWhiteList => commandsWhiteListRepository.Value;
     
     public IUserCommandsWhiteListRepository UserCommandsWhiteList => userCommandsListRepository.Value;
+    
+    public ICommandSetRepository CommandSets => commandsSetRepository.Value;
     
     public async Task SaveAsync() => await context.SaveChangesAsync();
 }
